@@ -1,15 +1,42 @@
 import './App.css';
-import { Button } from 'react-bootstrap';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavbarComponent from './components/NavbarComponent';
+import HomeComponent from './components/HomeComponent';
+import AboutComponent from './components/AboutComponent';
+import CouncilComponent from './components/CouncilComponent';
+import WorkComponent from './components/WorkComponent';
+import ContactComponent from './components/ContactComponent';
 
 function App() {
   return (
     <>
-      <NavbarComponent />
-      <div className="App mt-3">
-        <h1>Hello World!</h1>
-        <Button className="mt-2">Click Me!</Button>
-      </div>
+      <BrowserRouter>  
+        <div className="App">
+          <NavbarComponent />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <HomeComponent />
+              </Route>
+              <Route exact path="/home">
+                <HomeComponent />
+              </Route>
+              <Route exact path="/about">
+                <AboutComponent />
+              </Route>
+              <Route exact path="/council">
+                <CouncilComponent />
+              </Route>
+              <Route exact path="/work">
+                <WorkComponent />
+              </Route>
+              <Route exact path="/contact">
+                <ContactComponent />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </BrowserRouter>
     </>
   );
 }

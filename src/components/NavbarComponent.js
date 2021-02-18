@@ -1,26 +1,50 @@
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import logo from '../csi_logo.png';
 
 const NavbarComponent = () => {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <LinkContainer to="/home">
+                <Navbar.Brand>
+                    <img
+                        src={logo}
+                        width="50"
+                        height="50"
+                        className="d-inline-block align-top"
+                        alt="CSI-VESIT Logo"
+                    />
+                </Navbar.Brand>
+            </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <Nav className="mx-auto">
+                    <LinkContainer to="/home">
+                        <Nav.Link className="ml-3 mr-3">Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/about">
+                        <Nav.Link className="ml-3 mr-3">About Us</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/council">
+                        <Nav.Link className="ml-3 mr-3">Council</Nav.Link>
+                    </LinkContainer>
+                    <NavDropdown className="ml-3 mr-3" title="Our Work" id="basic-nav-dropdown">
+                        <LinkContainer to='/work'>
+                            <NavDropdown.Item>Intuitive Workshops</NavDropdown.Item>
+                        </LinkContainer>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <LinkContainer to='/work'>
+                            <NavDropdown.Item>Spectacular Events</NavDropdown.Item>
+                        </LinkContainer>
+                        <NavDropdown.Divider />
+                        <LinkContainer to='/work'>
+                            <NavDropdown.Item>Amazing Collabs</NavDropdown.Item>
+                        </LinkContainer>
                     </NavDropdown>
+                    <LinkContainer to="/contact">
+                        <Nav.Link className="ml-3 mr-3">Get In Touch</Nav.Link>
+                    </LinkContainer>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
-                </Form>
             </Navbar.Collapse>
         </Navbar>
     );
