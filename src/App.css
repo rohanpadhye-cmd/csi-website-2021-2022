@@ -6,6 +6,25 @@
     scroll-behavior: smooth;
 }
 
+.navbar {
+    font-size: 120%;
+    font-weight: 500;
+    background-color: lightblue;
+}
+
+.dropdown-menu {
+    background-color: lightblue;
+}
+
+.dropdown-item.active {
+    color: #363537;
+    background-color: lightblue;
+}
+
+.dropdown-item:hover {
+    background-color: floralwhite;
+}
+
 @media(max-width: 768px) {
     .tgl-btn {
         margin-top: 2%;
