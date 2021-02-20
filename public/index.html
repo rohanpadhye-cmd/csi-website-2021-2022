@@ -25,6 +25,29 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <select name="role">
+        <option value="Visitor">Visitor</option>
+        <option value="Student">Student</option>
+        <option value="Faculty">Faculty</option>
+      </select>
+      <input type="text" name="studentClass" />
+      <select name="facultyDpt">
+        <option value="IT">IT</option>
+        <option value="CMPN">CMPN</option>
+        <option value="EXTC">EXTC</option>
+        <option value="ETRX">ETRX</option>
+        <option value="INST">INST</option>
+        <option value="Humanities &amp; Applied Sciences">Humanities &amp; Applied Sciences</option>
+        <option value="AI &amp; Data Science">AI &amp; Data Science</option>
+        <option value="MCA | ME">MCA | ME</option>
+      </select>
+      <input type="email" name="email" />
+      <textarea name="body"></textarea>
+    </form>
+
     <div id="root"></div>
   </body>
 </html>

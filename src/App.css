@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
 
+::selection {
+    color: #363537;
+    background-color: lightblue;
+}
+
 .content {
     margin: 2%;
     font-family: 'Nunito', sans-serif;
@@ -23,6 +28,12 @@
 
 .dropdown-item:hover {
     background-color: floralwhite;
+}
+
+.contact-btn, .contact-btn:hover {
+    border-color: #363537;
+    color: #363537;
+    background-color: lightblue;
 }
 
 @media(max-width: 768px) {
