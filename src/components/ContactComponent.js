@@ -28,7 +28,7 @@ const ContactForm = () => {
         .then(() => alert("Success!"))
         .catch(error => alert(error));
 
-        console.log("Submitted");
+        console.log(submission);
         e.preventDefault();
     }
 
