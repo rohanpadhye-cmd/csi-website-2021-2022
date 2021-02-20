@@ -5,6 +5,7 @@ import CouncilComponent from './components/CouncilComponent';
 import WorkComponent from './components/WorkComponent';
 import ContactComponent from './components/ContactComponent';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import FooterComponent from './components/FooterComponent';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <FooterComponent/>
       </div>
     </BrowserRouter>
   );
