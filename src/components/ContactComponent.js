@@ -18,7 +18,7 @@ const ContactForm = () => {
     
     const handleSubmit = (e) => {
 
-        const submission = { name, role, studentClass, facultyDpt, email, body };
+        const submission = {{ name, role, studentClass, facultyDpt, email, body }};
         
         fetch("/", {
             method: "POST",
