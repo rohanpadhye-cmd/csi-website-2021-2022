@@ -7,10 +7,10 @@ const FooterComponent=()=>{
             <div className='mx-auto my-auto'>Made with <FaHeart/> by CSI Web Team</div>
             <div className='mr-5'>
                 <IconContext.Provider value={{ color:'#363537',className: "fa-icons",size:'2em' }}>
-                    <a href='' className='ml-2'><FaEnvelope/></a>
-                    <a href='' className='ml-2'><FaInstagram/></a>
-                    <a href='' className='ml-2'><FaFacebook/></a>
-                    <a href='' className='ml-2'><FaLinkedinIn/></a>
+                    <a href='http://mail.google.com/mail/?view=cm&fs=1&tf=1&to=csi.vesit@ves.ac.in' className='ml-2'><FaEnvelope/></a>
+                    <a href='https://www.instagram.com/csi_vesit/?hl=en' className='ml-2'><FaInstagram/></a>
+                    <a href='https://www.facebook.com/csivesit/' className='ml-2'><FaFacebook/></a>
+                    <a href='https://www.linkedin.com/company/csi-vesit/' className='ml-2'><FaLinkedinIn/></a>
                 </IconContext.Provider>               
             </div>
         </footer>
