@@ -16,7 +16,6 @@ const NavbarComponent = () => {
     if (!mountedComponent) return <div />
     return (
         <ThemeProvider theme={themeMode}>
-            <>
             <GlobalStyles />
             <Navbar expand="lg">
                 <LinkContainer to="/home">
@@ -62,7 +61,6 @@ const NavbarComponent = () => {
                     <Toggle theme={theme} toggleTheme={themeToggler} />
                 </Navbar.Collapse>
             </Navbar>
-            </>
         </ThemeProvider>
     );
 }

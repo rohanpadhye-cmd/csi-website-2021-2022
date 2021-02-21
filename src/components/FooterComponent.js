@@ -1,6 +1,8 @@
 import {IconContext} from 'react-icons'
 import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedinIn,FaHeart} from 'react-icons/fa';
+
 const FooterComponent=()=>{
+
     return(
         <footer className='d-flex'>
             <div className='ml-5 my-auto'>&copy;CSI-VESIT 2020</div>
@@ -11,6 +13,7 @@ const FooterComponent=()=>{
                     <a href='https://www.instagram.com/csi_vesit/?hl=en' className='ml-2'><FaInstagram/></a>
                     <a href='https://www.facebook.com/csivesit/' className='ml-2'><FaFacebook/></a>
                     <a href='https://www.linkedin.com/company/csi-vesit/' className='ml-2'><FaLinkedinIn/></a>
+
                 </IconContext.Provider>               
             </div>
         </footer>
