@@ -1,11 +1,11 @@
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './globalStyles';
-import { lightTheme, darkTheme } from './Theme';
-import { useDarkMode } from './useDarkMode';
-import Toggle from './Toggler';
-import logo from '../csi_logo.png';
+import { GlobalStyles } from '../darkMode/GlobalStylesComponent';
+import { lightTheme, darkTheme } from '../darkMode/Theme';
+import { useDarkMode } from '../darkMode/useDarkMode';
+import Toggle from '../darkMode/Toggler';
+import logo from '../assets/csi_logo.png';
 
 const NavbarComponent = () => {
 
