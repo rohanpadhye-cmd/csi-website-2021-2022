@@ -6,7 +6,7 @@ import WorkComponent from './components/WorkComponent';
 import ContactComponent from './components/ContactComponent';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import FooterComponent from './components/FooterComponent';
-import './App.css';
+import './assets/App.css';
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <hr className="mx-4 mt-5" />
         <FooterComponent/>
       </div>
     </BrowserRouter>
