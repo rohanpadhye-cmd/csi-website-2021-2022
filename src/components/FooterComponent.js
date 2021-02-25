@@ -5,7 +5,7 @@ const FooterComponent = () => {
 
     return(
         <footer>
-            <Container fluid className="d-none d-md-block">
+            <Container fluid className="d-none d-md-block mb-3">
                 <Row>
                     <Col md={{ span: 3, offset: 0 }} className="ml-md-5">
                         &copy;CSI - VESIT 2021
@@ -93,7 +93,7 @@ const FooterComponent = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container fluid className="d-md-none">
+            <Container fluid className="d-md-none mb-3">
                 <Row>
                     <div className="mx-auto mt-1">
                         &copy;CSI - VESIT 2021

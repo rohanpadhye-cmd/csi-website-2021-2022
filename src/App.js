@@ -36,7 +36,7 @@ function App() {
           </Switch>
         </div>
         <hr className="mx-4 mt-5" />
-        <FooterComponent/>
+        <FooterComponent />
       </div>
     </BrowserRouter>
   );

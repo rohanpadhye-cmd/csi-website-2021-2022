@@ -1,6 +1,6 @@
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
-import db from './FirestoreConnection';
+// import db from './FirestoreConnection';
 
 const ContactForm = () => {
 
@@ -121,7 +121,7 @@ const ContactForm = () => {
         // Populating Firestore using Appropriate Fields
         if (studentClass) {
             console.log("Student Success!");
-            // db.collection("contactForm").add({ name, role, studentClass,  email, body, date: new Date() })
+            // db.collection("contactForm").add({ name, role, studentClass, email, body, date: new Date() })
             //     .then((docRef) => {
             //         setShow(true); // Displaying Success Modal
             //     }).catch((error) => {
