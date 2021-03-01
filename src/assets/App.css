@@ -52,10 +52,24 @@ a {
     text-decoration: none;
 }
 
+.contact-text {
+    font-size: 70%;
+}
+
+.contact-list {
+    list-style-type: none;
+    font-size: 120%;
+}
+
+.contact-list-header {
+    font-size: 180%;
+}
+
 @media(max-width: 768px) {
     .tgl-btn {
         margin-top: 2%;
     }
+
     footer {
         font-size: 110%;
     }

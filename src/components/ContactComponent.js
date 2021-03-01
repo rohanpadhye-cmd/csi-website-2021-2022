@@ -1,6 +1,6 @@
 import { Container, Row, Col, Modal, Button, Form , Card ,Carousel} from 'react-bootstrap';
 import { useState } from 'react';
-import db from './FirestoreConnection';
+// import db from './FirestoreConnection';
 
 const ContactForm = () => {
 
@@ -121,7 +121,7 @@ const ContactForm = () => {
         // Populating Firestore using Appropriate Fields
         if (studentClass) {
             console.log("Student Success!");
-            // db.collection("contactForm").add({ name, role, studentClass,  email, body, date: new Date() })
+            // db.collection("contactForm").add({ name, role, studentClass, email, body, date: new Date() })
             //     .then((docRef) => {
             //         setShow(true); // Displaying Success Modal
             //     }).catch((error) => {
@@ -233,9 +233,13 @@ const ContactForm = () => {
                         onChange={(e) => setBody(e.target.value)} />
                 </Form.Group>
 
-                <Button className="contact-btn mt-2" variant="success" type="submit">
-                    Submit
-            </Button>
+                <Container className="mt-4">
+                    <Row>
+                        <Button className="contact-btn mx-auto" variant="success" type="submit">
+                            Submit
+                        </Button>
+                    </Row>
+                </Container>
 
             </Form>
         </>
@@ -244,136 +248,159 @@ const ContactForm = () => {
 
 const ContactComponent = () => {
     return (
-        <Container>
-            <Row className='mb-sm-5 mb-md-0'>
-            <Col sm={{span:12}} lg={{span: 5}}>            
-                    <ContactForm />
-            </Col>
-            <Col className='mb-5 mb-sm-0' sm={{span:12}} lg={{span:6,offset:1}}>
-            <Card className='mt-2' border='info' style={{width:'100%',height:'75%'}}>
-            <Card.Body className='px-0 py-0'>
-            <iframe 
-            title='map'
-            width="100%" 
-            height="100%" 
-            id="gmap_canvas" 
-            src="https://maps.google.com/maps?q=vivekanand%20education%20socie&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-            frameborder="0" 
-            scrolling="no" 
-            marginheight="0" 
-            marginwidth="0"/>
-            </Card.Body>
-            </Card>
-            <Container className='ml-lg-4 mt-lg-4 ml-2 mt-2'>
-                <Row >
-                    <Col>
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                    class="icon icon-tabler icon-tabler-map-2" 
-                    width="40" 
-                    height="40" 
-                    viewBox="0 0 24 24" 
-                    stroke-width="2" 
-                    stroke="#363537" 
-                    fill="#add8e6" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15"></polyline>
-                    <line x1="9" y1="4" x2="9" y2="17"></line>
-                    <line x1="15" y1="15" x2="15" y2="20"></line>
-                    <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5"></path>
-                    <line x1="18" y1="6" x2="18" y2="6.01"></line>
-                    </svg>
-                    <div className='contact-text'>
-                        Vivekanand Education Society's Institute of Technology,
-                        Collector's Colony, Chembur, Mumbai-74
-                    </div>
+        <>
+            <Container>
+                <Row>
+                    <h1 className="mx-auto mb-5 mt-1">Let Your Curiosity Take Flight ✈️</h1>    
+                </Row>
+            </Container>
+            <Container>
+                <Row className='mb-5'>
+                    <Col sm={{span: 12}} md={{span: 5}}>
+                            <Container>
+                                <Row>
+                                    <h3 className="mx-auto">Have a Query? 📝</h3>
+                                </Row>
+                            </Container>
+                            <hr />
+                        <ContactForm />
                     </Col>
-                    <Col>
-                    <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="icon icon-tabler icon-tabler-mail" 
-                    width="40" 
-                    height="40" 
-                    viewBox="0 0 24 24" 
-                    stroke-width="2" 
-                    stroke="#363537" 
-                    fill="#add8e6" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                    <polyline points="3 7 12 13 21 7"></polyline>
-                    </svg>
-                    <div className='contact-text'>
-                    csi.vesit@ves.ac.in 
-                    2017.jatin.bhagchandani@ves.ac.in</div> 
+                    <Col className='mb-0 mb-md-5' sm={{span: 12}} md={{span: 6,offset: 1}}>
+                        <Container>
+                            <Row>
+                                <h3 className="mx-auto">Locate Us 🗺️</h3>
+                            </Row>
+                        </Container>
+                        <hr className="mb-4" />
+                        <Card className='mt-md-2' border='info' style={{width:'100%',height:'75%'}}>
+                            <Card.Body className='px-0 py-0'>
+                                <iframe 
+                                title='map'
+                                width="100%" 
+                                height="100%" 
+                                id="gmap_canvas" 
+                                src="https://maps.google.com/maps?q=vivekanand%20education%20socie&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                                frameBorder="0" 
+                                scrolling="no" 
+                                marginHeight="0" 
+                                marginWidth="0"/>
+                            </Card.Body>
+                        </Card>
+                        <Container fluid className='ml-md-3 mt-md-4'>
+                            <Row>
+                                <Col md={{span: 4}}>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        className="icon icon-tabler icon-tabler-map-2"
+                                        width="40"
+                                        height="40"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="2"
+                                        stroke="#363537"
+                                        fill="#add8e6"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15"></polyline>
+                                        <line x1="9" y1="4" x2="9" y2="17"></line>
+                                        <line x1="15" y1="15" x2="15" y2="20"></line>
+                                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5"></path>
+                                        <line x1="18" y1="6" x2="18" y2="6.01"></line>
+                                    </svg>
+                                    <div className='contact-text mt-md-2'>
+                                        Vivekanand Education Society's Institute of Technology,
+                                        Collector's Colony, Chembur, Mumbai-74
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    className="icon icon-tabler icon-tabler-mail" 
+                                    width="40" 
+                                    height="40" 
+                                    viewBox="0 0 24 24" 
+                                    strokeWidth="2" 
+                                    stroke="#363537" 
+                                    fill="#add8e6" 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <polyline points="3 7 12 13 21 7"></polyline>
+                                    </svg>
+                                    <div className='contact-text mt-md-2'>
+                                        csi.vesit@ves.ac.in
+                                        2017.jatin.bhagchandani@ves.ac.in
+                                    </div> 
+                                </Col>
+                                <Col>
+                                    <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    className="icon icon-tabler icon-tabler-phone-call" 
+                                    width="40" 
+                                    height="40" 
+                                    viewBox="0 0 24 24" 
+                                    strokeWidth="2" 
+                                    stroke="#363537" 
+                                    fill="#add8e6" 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                    </svg>
+                                    <div className='contact-text mt-md-2'>
+                                        Jatin Bhagchandani:
+                                        +919619447077
+                                        (Chairperson)
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Col>
+                </Row>
+                <Row>
                     <Col>
-                    <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="icon icon-tabler icon-tabler-phone-call" 
-                    width="40" 
-                    height="40" 
-                    viewBox="0 0 24 24" 
-                    stroke-width="2" 
-                    stroke="#363537" 
-                    fill="#add8e6" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                    <path d="M15 7a2 2 0 0 1 2 2"></path>
-                    <path d="M15 3a6 6 0 0 1 6 6"></path>
-                    </svg>
-                    <div className='contact-text'>
-                    Jatin Bhagchandani:
-                    +919619447077
-                    (Chairperson)</div>
+                        <Carousel
+                            indicators={false}
+                            fade={true}
+                            interval={4000}
+                            style={{ textAlign: 'center', height: '100px', width:'100%'}}
+                            className="mt-5 mb-4" >
+                            <Carousel.Item>
+                                <h3 className='contact-list-header'>For Queries:</h3>
+                                <ul className='contact-list'>
+                                    <li>Jatin Bhagchandani (Chairperson): +919619447077</li>
+                                    <li>Apoorva Sudheesh (Sr.Secretary): +918358802335</li>
+                                    <li>Fayzaan Qureshi (Co-Chairperson): +919819186523</li>
+                                </ul>   
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <h3 className='contact-list-header'>For Memberships:</h3>
+                                <ul className='contact-list'>
+                                    <li>Yash Diwan (Treasurer): +919834571848</li>
+                                    <li>Saloni Ingle (Jr.Treasurer): +91 9370550921</li>
+                                </ul>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <h3 className='contact-list-header'>For Technical Help:</h3>
+                                <ul className='contact-list'>
+                                    <li>Anish Chhabria (Executive Committee): +91 9619287840</li>
+                                    <li>Saurav Telge (Operations-Secretary): +91 9821505562</li>
+                                </ul>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <h3 className='contact-list-header'>For any other assistance:</h3>
+                                <ul className='contact-list'>
+                                    <li>Shreya Shah (Managing Secretary): +91 9359729644</li>
+                                    <li>Pooja Prasad (Public Relations Head): +91 8657206488</li>  
+                                </ul>
+                            </Carousel.Item>
+                        </Carousel>
                     </Col>
                 </Row>
             </Container>
-            </Col>
-            </Row>
-            <Row className='mt-5'>
-            <Col className='mt-5 mb-5 mb-sm-0 mt-sm-0'>
-            <Carousel indicators={false} style={{
-                textAlign: 'center',
-                height: '100px',
-                width:'100%'}}>
-                <Carousel.Item>
-                    <h3>For Queries:</h3>
-                    <ul className='contact-list'>
-                        <li>Jatin Bhagchandani(Chairperson): +919619447077</li>
-                        <li>Apoorva Sudheesh(Sr.Secretary): +918358802335</li>
-                        <li>Fayzaan Qureshi(Co-Chairperson): +919819186523</li>
-                    </ul>   
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h3>For Membership:</h3>
-                    <ul className='contact-list'>
-                        <li>Yash Diwan(Treasurer): +919834571848</li>
-                        <li>Saloni Ingle(Jr.Treasurer): +91 9370550921</li>
-                    </ul>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h3>For Technical Help:</h3>
-                    <ul className='contact-list'>
-                        <li>Anish Chhabria(Executive Committee): +91 9619287840</li>
-                        <li>Saurav Telge(Operations-Secretary): +91 9821505562</li>
-                    </ul>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h3>For any other assistance:</h3>
-                    <ul className='contact-list'>
-                        <li>Shreya Shah(Managing Secretary): +91 9359729644</li>
-                        <li>Pooja Prasad(Public Relations Head): +91 8657206488</li>  
-                    </ul>
-                </Carousel.Item>
-            </Carousel>
-            </Col>
-            </Row>
-        </Container>
+        </>
     );
 }
  
