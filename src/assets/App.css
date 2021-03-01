@@ -41,6 +41,13 @@ footer svg {
     background-color: #add8e6;
 }
 
+.contact-text{
+    font-size: x-small;
+}
+
+.contact-list{
+    list-style-type: none;
+}
 a {
     text-decoration: none;
 }

@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiHeartBattery, GiCoffeeMug } from 'react-icons/gi';
 
-const FooterComponent = () => {
+const FooterComponent=()=>{
 
     return(
         <footer>
