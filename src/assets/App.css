@@ -1,50 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
-::selection, .dropdown-item.active {
-    color: #363537;
-    background-color: #add8e6;
+::selection,
+.dropdown-item.active {
+  color: #363537;
+  background-color: #add8e6;
 }
 
 .content {
-    margin: 2%;
-    font-family: 'Nunito', sans-serif;
-    scroll-behavior: smooth;
+  margin: 2%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-    font-size: 120%;
-    font-weight: 500;
-    background-color: #add8e6;
+  font-size: 120%;
+  font-weight: 500;
+  background-color: #add8e6;
 }
 
 .dropdown-menu {
-    background-color: #add8e6;
+  background-color: #add8e6;
 }
 
 .dropdown-item:hover {
-    background-color: floralwhite;
+  background-color: floralwhite;
+}
+
+.about-mission, .about-csi ,.about-testimonials {
+  width: 100%;
 }
 
 footer {
-    font-size: 120%;
-    font-weight: 400;
+  font-size: 120%;
+  font-weight: 400;
 }
 
 footer svg {
-    font-size: 150%;
+  font-size: 150%;
 }
 
-.contact-btn, .contact-btn:hover {
-    border-color: #363537;
-    color: #363537;
-    font-weight: 800;
-    background-color: #add8e6;
+.contact-btn,
+.contact-btn:hover {
+  border-color: #363537;
+  color: #363537;
+  font-weight: 800;
+  background-color: #add8e6;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+<<<<<<< HEAD
+@media (max-width: 768px) {
+  .tgl-btn {
+    margin-top: 2%;
+  }
+  footer {
+    font-size: 110%;
+  }
+}
+=======
 .contact-text {
     font-size: 70%;
 }
@@ -152,4 +168,5 @@ a {
   
   
   
+
 
