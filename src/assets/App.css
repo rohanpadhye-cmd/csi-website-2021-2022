@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
-::selection,
-.dropdown-item.active {
+::selection, .dropdown-item.active {
   color: #363537;
   background-color: #add8e6;
 }
@@ -39,8 +38,7 @@ footer svg {
   font-size: 150%;
 }
 
-.contact-btn,
-.contact-btn:hover {
+.contact-btn, .contact-btn:hover {
   border-color: #363537;
   color: #363537;
   font-weight: 800;
@@ -51,122 +49,94 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-@media (max-width: 768px) {
-  .tgl-btn {
-    margin-top: 2%;
-  }
-  footer {
-    font-size: 110%;
-  }
-}
-=======
 .contact-text {
-    font-size: 70%;
+  font-size: 70%;
 }
 
 .contact-list {
-    list-style-type: none;
-    font-size: 120%;
+  list-style-type: none;
+  font-size: 120%;
 }
 
 .contact-list-header {
-    font-size: 180%;
+  font-size: 180%;
 }
 
 @media(max-width: 768px) {
-    .tgl-btn {
-        margin-top: 2%;
-    }
+  .tgl-btn {
+    margin-top: 2%;
+  }
 
-    footer {
-        font-size: 110%;
-    }
+  footer {
+    font-size: 110%;
+  }
 }
 
 /* Home Component */
 
 .csi-vesit{
-    text-align: center;
-    font-size: 100px;
-    margin: 100px auto;
-    color: white;
-  }
-  .content {
-      margin: 2%;
-  }
-  .container-fluid{
-     text-align: center;
-     padding: 5.5rem;
-  }
+  text-align: center;
+  font-size: 600%;
+  margin-top: 15%;
+  color: floralwhite;
+}
+
+.jumbotron {
+  background-image: url("./back-img.jpeg");
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.counter{
+  text-align: center;  
+  padding: 3rem;
+  width: 100%;
+}
+
+.registrations{
+  margin-top: 30px;
+  width: 100%;
+}
+
+.poster{
+  margin-left: 175px;
+}
+
+.registration-buttons{
+  margin: 90px 0 0 350px;
+  width: 300px;
+}
   
+@media screen and (max-width: 576px) {
+  .jumbotron{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 94%;
+    margin: 0 auto 5% auto;
+  }
+
   .council-pic-info{
-    margin-top: 70px;
-    width: 100%;
+    width: 95%;
+    margin: 2.5%;
   }
-  
+
   .counter{
-    text-align: center;  
-    padding: 3rem;
-    width: 100%;
+    padding-right: 0;
   }
-  
-  .registrations{
-    margin-top: 30px;
-    width: 100%;
+
+  .counter-item h3{
+    font-size: 100%;
+    text-align: center;
   }
-  
-  .jumbotron {
-      background-image: url("../back-img.jpeg");
-      background-size: cover;
-      background-repeat:no-repeat;
-  }
-  
+
   .poster{
-    margin-left: 175px;
+    margin: 0 0 0 15px;
   }
   
   .registration-buttons{
-    margin: 90px 0 0 350px;
-    width: 300px;
+    margin: 10% 0 0 8%;
+    width: 40%;
+    height: 50px;
+    font-size: 0.80rem;
   }
-  
-  @media screen and (max-width: 576px) {
-    .jumbotron{
-      padding-top: 1px;
-      padding-bottom: 1px;
-      width: 94%;
-      margin: 0 auto 5% auto;
-    }
-  
-    .council-pic-info{
-      width: 95%;
-      margin: 2.5%;
-    }
-  
-    .counter{
-      padding-right: 0;
-    }
-  
-    .counter-item h3{
-      font-size: 100%;
-      text-align: center;
-    }
-  
-    .poster{
-      margin: 0 0 0 15px;
-    }
-    
-    .registration-buttons{
-      margin: 10% 0 0 8%;
-      width: 40%;
-      height: 50px;
-      font-size: 0.80rem;
-    }
-  }
-  
-  
-  
-  
-
-
+}

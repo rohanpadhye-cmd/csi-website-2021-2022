@@ -1,50 +1,43 @@
 import { Jumbotron, Container, Card, Button, Col, Row} from 'react-bootstrap';
-import groupImg from "../group-img.jpg";
-import poster from "../poster.jpeg";
-const HomeComponent = () => {
-  
-  var grpImgBack = {
-    backgroundImage: "url(" + { groupImg } + ")"
-  }
+import groupImg from "../assets/group-img.jpg";
+import poster from "../assets/poster.jpeg";
 
+const HomeComponent = () => {
     return (
     <div className="home">
 
-        <Jumbotron fluid>
-          <Container className="jumbotron">
-            <h1 className="csi-vesit">CSI VESIT</h1>
-          </Container>
-        </Jumbotron>
+        <Container fluid className="m-0">
+          <Jumbotron>
+            <Container className="jumbotron">
+              <h1 className="csi-vesit">CSI VESIT</h1>
+            </Container>
+          </Jumbotron>
+        </Container>
 
-        <Container fluid="xs">
-        <Card className="council-pic-info">
+        <Container fluid className="mt-5">
           <Row>
-            <Col lg={5}>
-              <Card.Img src={groupImg}/>
+            <Col md={6}>
+              <Card className="council-pic-info">
+                <Card.Img src={groupImg} />
+              </Card>
             </Col>
-            <Col lg={5}>
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Col>
+            <div className="mx-auto mt-3">
+              <h3>Our Team!</h3>
+              <p>Lorem Ipsum</p>
+            </div>
           </Row>
-        </Card>
         </Container>
     
         <Row className="counter">
-          <Col lg={4} sm={4} xs={4} className="counter-item">
+          <Col lg={4} sm={4} className="counter-item">
             <div>45+</div>
             <h3>Workshops</h3>
           </Col>
-          <Col lg={4} sm={4} xs={4} className="counter-item">
+          <Col lg={4} sm={4} className="counter-item">
             <div>40+</div>
             <h3>Council</h3>
           </Col>
-          <Col lg={4} sm={4} xs={4} className="counter-item">
+          <Col lg={4} sm={4} className="counter-item">
             <div>30+</div>
             <h3>Years</h3>
           </Col>
