@@ -15,27 +15,27 @@ const AboutComponent = () => {
                 Sed placerat pellentesque ex ut dictum. Pellentesque posuere accumsan felis et dapibus.</p>
             </div>
                 <CardDeck>
-                    <Card style={{backgroundColor: "darkslategrey", margin: "40px"}}>
+                    <Card style={{backgroundColor: "darkslategrey", margin: "40px", textAlign: 'center'}}>
                         <Card.Img variant="top" src={knowledge} />
-                        <Card.Body>
+                        <Card.Body style={{color: "white"}}>
                         <Card.Title>Knowledge</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card style={{backgroundColor: "darkslategrey", margin: "40px"}}>
+                    <Card style={{backgroundColor: "darkslategrey", margin: "40px", textAlign: 'center'}}>
                         <Card.Img variant="top" src={skill} />
-                        <Card.Body>
+                        <Card.Body style={{color: "white"}}>
                         <Card.Title>Technical Skills</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card style={{backgroundColor: "darkslategrey", margin: "40px"}}>
+                    <Card style={{backgroundColor: "darkslategrey", margin: "40px", textAlign: 'center'}}>
                         <Card.Img variant="top" src={workshop} />
-                        <Card.Body>
+                        <Card.Body style={{color: "white"}}>
                         <Card.Title>Certified Workshops</Card.Title>
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -45,7 +45,8 @@ const AboutComponent = () => {
                 </CardDeck>
             <div className="about-mission text-center">
             <h2 style={{paddingTop: "70px", paddingBottom: "25px", textDecoration: "underline", fontWeight: "bold"}}>What is CSI?</h2>
-            <ul style={{ justifyContent: "center"}}>
+            
+            <ul style={{ textAlign: "left", paddingLeft: "140px" }}>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel ex porttitor, auctor dolor eu,</li>
                 <li>volutpat magna. Aliquam fermentum pulvinar enim sit amet pretium. Curabitur ut lectus sed tortor elementum</li>
                 <li>sodales. Pellentesque porttitor faucibus libero, nec lobortis sem finibus et. Sed congue ipsum ut tempor</li>
@@ -58,25 +59,25 @@ const AboutComponent = () => {
             <h2 style={{paddingTop: "70px", paddingBottom: "25px", textDecoration: "underline", fontWeight: "bold"}}>Testimonials</h2>
             <Carousel indicators={false} style={{height: "250px", weight: "60%"}}>
                 <Carousel.Item style={{paddingTop: "50px"}}>
-                    <h4 style={{paddingBottom: "10px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</h4>
+                    <p style={{paddingBottom: "10px"}}>1.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     <img src={dummy} alt="dummy"/>
                     <p>Blah blah name - div</p>
                 </Carousel.Item>
                 
                 <Carousel.Item style={{paddingTop: "50px"}}>
-                    <h4 style={{paddingBottom: "10px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</h4>
+                    <p style={{paddingBottom: "10px"}}>2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     <img src={dummy} alt="dummy"/>
                     <p>Blah blah name - div</p>
                 </Carousel.Item>
 
                 <Carousel.Item style={{paddingTop: "50px"}}>
-                    <h4 style={{paddingBottom: "10px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</h4>
+                    <p style={{paddingBottom: "10px"}}>3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     <img src={dummy} alt="dummy"/>
                     <p>Blah blah name - div</p>
                 </Carousel.Item>
 
                 <Carousel.Item style={{paddingTop: "50px"}}>
-                    <h4 style={{paddingTop: "30px", paddingBottom: "10px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</h4>
+                    <p style={{paddingBottom: "10px"}}>4.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     <img src={dummy} alt="dummy"/>
                     <p>Blah blah name - div</p>
                 </Carousel.Item>
