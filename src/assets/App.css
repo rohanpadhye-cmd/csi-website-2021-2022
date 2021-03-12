@@ -1,44 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
 ::selection, .dropdown-item.active {
-    color: #363537;
-    background-color: #add8e6;
+  color: #363537;
+  background-color: #add8e6;
 }
 
 .content {
-    margin: 2%;
-    font-family: 'Nunito', sans-serif;
-    scroll-behavior: smooth;
+  margin: 2%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-    font-size: 120%;
-    font-weight: 500;
-    background-color: #add8e6;
+  font-size: 120%;
+  font-weight: 500;
+  background-color: #add8e6;
 }
 
 .dropdown-menu {
-    background-color: #add8e6;
+  background-color: #add8e6;
 }
 
 .dropdown-item:hover {
-    background-color: floralwhite;
+  background-color: floralwhite;
+}
+
+.about-mission, .about-csi ,.about-testimonials {
+  width: 100%;
 }
 
 footer {
-    font-size: 120%;
-    font-weight: 400;
+  font-size: 120%;
+  font-weight: 400;
 }
 
 footer svg {
-    font-size: 150%;
+  font-size: 150%;
 }
 
 .contact-btn, .contact-btn:hover {
-    border-color: #363537;
-    color: #363537;
-    font-weight: 800;
-    background-color: #add8e6;
+  border-color: #363537;
+  color: #363537;
+  font-weight: 800;
+  background-color: #add8e6;
 }
 
 .contact-text{
@@ -49,28 +53,97 @@ footer svg {
     list-style-type: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .contact-text {
-    font-size: 70%;
+  font-size: 70%;
 }
 
 .contact-list {
-    list-style-type: none;
-    font-size: 120%;
+  list-style-type: none;
+  font-size: 120%;
 }
 
 .contact-list-header {
-    font-size: 180%;
+  font-size: 180%;
 }
 
 @media(max-width: 768px) {
-    .tgl-btn {
-        margin-top: 2%;
-    }
+  .tgl-btn {
+    margin-top: 2%;
+  }
 
-    footer {
-        font-size: 110%;
-    }
+  footer {
+    font-size: 110%;
+  }
+}
+
+/* Home Component */
+
+.csi-vesit{
+  text-align: center;
+  font-size: 600%;
+  margin-top: 15%;
+  color: floralwhite;
+}
+
+.jumbotron {
+  background-image: url("./back-img.jpeg");
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.counter{
+  text-align: center;  
+  padding: 3rem;
+  width: 100%;
+}
+
+.registrations{
+  margin-top: 30px;
+  width: 100%;
+}
+
+.poster{
+  margin-left: 175px;
+}
+
+.registration-buttons{
+  margin: 90px 0 0 350px;
+  width: 300px;
+}
+  
+@media screen and (max-width: 576px) {
+  .jumbotron{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 94%;
+    margin: 0 auto 5% auto;
+  }
+
+  .council-pic-info{
+    width: 95%;
+    margin: 2.5%;
+  }
+
+  .counter{
+    padding-right: 0;
+  }
+
+  .counter-item h3{
+    font-size: 100%;
+    text-align: center;
+  }
+
+  .poster{
+    margin: 0 0 0 15px;
+  }
+  
+  .registration-buttons{
+    margin: 10% 0 0 8%;
+    width: 40%;
+    height: 50px;
+    font-size: 0.80rem;
+  }
 }
