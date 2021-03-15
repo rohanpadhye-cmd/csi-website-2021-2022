@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
 
 ::selection, .dropdown-item.active {
   color: #363537;
@@ -6,27 +6,23 @@
 }
 
 .content {
-  margin: 2%;
-  font-family: "Nunito", sans-serif;
-  scroll-behavior: smooth;
+    margin: 2%;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .navbar {
-  font-size: 120%;
-  font-weight: 500;
-  background-color: #add8e6;
+    font-size: 120%;
+    font-weight: 500;
+    background-color: #add8e6;
 }
 
 .dropdown-menu {
-  background-color: #add8e6;
+    background-color: #add8e6;
 }
 
 .dropdown-item:hover {
   background-color: floralwhite;
-}
-
-.about-mission, .about-csi ,.about-testimonials {
-  width: 100%;
 }
 
 footer {
