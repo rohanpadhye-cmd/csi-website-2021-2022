@@ -249,7 +249,7 @@ const ContactForm = () => {
 const ContactComponent = () => {
     return (
         <>
-            <Container>
+            <Container >
                 <Row>
                     <h1 className="mx-auto mb-5 mt-1">Let Your Curiosity Take Flight ✈️</h1>    
                 </Row>
