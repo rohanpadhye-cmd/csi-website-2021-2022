@@ -1,7 +1,7 @@
 import React from "react";
 import {Card} from "react-bootstrap";
 import { IconContext } from 'react-icons';
-import { FaGithub, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 
 function Cards(props) {
@@ -15,9 +15,9 @@ function Cards(props) {
         <Card.Title>{props.name}</Card.Title>
         <Card.Text>{props.role}</Card.Text>
         <IconContext.Provider value={{ color: '#363537', className:'fa-icons', size:'2em' }}>
-                    <a href='https://www.google.com/' className='ml-2'><FaInstagram/></a>
-                    <a href='https://www.google.com/' className='ml-2'><FaGithub/></a>
-                    <a href='https://www.google.com/' className='ml-2'><FaLinkedinIn/></a>
+          <a href='https://www.google.com/' className='ml-2'><FaInstagram /></a>
+          <a href='mailto:csi.vesit@ves.ac.in' className='ml-2'><FaEnvelope /></a>
+          <a href='https://www.google.com/' className='ml-2'><FaLinkedinIn /></a>
         </IconContext.Provider>
       </Card.Body>
     </Card>
