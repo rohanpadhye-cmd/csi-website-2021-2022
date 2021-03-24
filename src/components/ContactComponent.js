@@ -1,6 +1,8 @@
 import { Container, Row, Col, Modal, Button, Form , Card ,Carousel} from 'react-bootstrap';
 import { useState } from 'react';
-import db from './FirestoreConnection';
+
+// Handle for Firestore
+// import db from './FirestoreConnection';
 
 const ContactForm = () => {
 
@@ -121,28 +123,28 @@ const ContactForm = () => {
         // Populating Firestore using Appropriate Fields
         if (studentClass) {
             console.log("Student Success!");
-            db.collection("contactForm").add({ name, role, studentClass, email, body, date: new Date() })
-                .then((docRef) => {
-                    setShow(true); // Displaying Success Modal
-                }).catch((error) => {
-                    console.error("Error adding document: ", error);
-                });
+            // db.collection("contactForm").add({ name, role, studentClass, email, body, date: new Date() })
+            //     .then((docRef) => {
+            //         setShow(true); // Displaying Success Modal
+            //     }).catch((error) => {
+            //         console.error("Error adding document: ", error);
+            //     });
         } else if (role === 'Faculty') {
             console.log("Faculty Success!");
-            db.collection("contactForm").add({ name, role, facultyDpt, email, body, date: new Date() })
-                .then((docRef) => {
-                    setShow(true); // Displaying Success Modal
-                }).catch((error) => {
-                    console.error("Error adding document: ", error);
-                });
+            // db.collection("contactForm").add({ name, role, facultyDpt, email, body, date: new Date() })
+            //     .then((docRef) => {
+            //         setShow(true); // Displaying Success Modal
+            //     }).catch((error) => {
+            //         console.error("Error adding document: ", error);
+            //     });
         } else {
             console.log("Visitor Success!");
-            db.collection("contactForm").add({ name, role, email, body, date: new Date() })
-                .then((docRef) => {
-                    setShow(true); // Displaying Success Modal
-                }).catch((error) => {
-                    console.error("Error adding document: ", error);
-                });
+            // db.collection("contactForm").add({ name, role, email, body, date: new Date() })
+            //     .then((docRef) => {
+            //         setShow(true); // Displaying Success Modal
+            //     }).catch((error) => {
+            //         console.error("Error adding document: ", error);
+            //     });
         }
     }
 
