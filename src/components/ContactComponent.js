@@ -385,7 +385,6 @@ const ContactComponent = () => {
                             <Carousel.Item>
                                 <h3 className='contact-list-header'>For Technical Help:</h3>
                                 <ul className='contact-list'>
-                                    <li>Anish Chhabria (Executive Committee): +91 9619287840</li>
                                     <li>Saurav Telge (Operations-Secretary): +91 9821505562</li>
                                 </ul>
                             </Carousel.Item>
