@@ -31,7 +31,7 @@ const WsCards=({name,img,desc})=>{
       show={show}
       handleClose={handleClose}
       />
-      <Col md={6} xs={12} sm={6}>
+      <Col xs={12} sm={6}>
       <Card className='mt-2' onClick={handleShow} style={{backgroundColor: "#add8e6"}}>
       <Card.Img src={img} />
       </Card>

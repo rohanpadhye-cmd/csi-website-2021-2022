@@ -1,4 +1,4 @@
-import {Modal,Button} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 const WorkShopModal=({name,desc,img,handleClose,show})=>{
     
     return(
