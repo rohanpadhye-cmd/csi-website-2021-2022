@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from '../darkMode/Theme';
 import { useDarkMode } from '../darkMode/useDarkMode';
 import Toggle from '../darkMode/Toggler';
 import logo from '../assets/csi_logo.png';
+import { motion } from 'framer-motion';
 
 const NavbarComponent = () => {
 
@@ -20,12 +21,13 @@ const NavbarComponent = () => {
             <Navbar expand="lg">
                 <LinkContainer to="/home">
                     <Navbar.Brand>
-                        <img
+                        <motion.img
                             src={logo}
                             width="50"
                             height="50"
                             className="d-inline-block align-top"
                             alt="CSI-VESIT Logo"
+                            animate={{ scale: [0, 0.5, 0.8, 1.3], rotate: [0, 360] }}
                         />
                     </Navbar.Brand>
                 </LinkContainer>
@@ -54,5 +56,5 @@ const NavbarComponent = () => {
         </ThemeProvider>
     );
 }
- 
+
 export default NavbarComponent;
