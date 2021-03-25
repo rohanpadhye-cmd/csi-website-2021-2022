@@ -10,8 +10,7 @@ import Loader from './components/Loader';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import './assets/App.css';
-import { AnimatePresence } from 'framer-motion'
-
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   
