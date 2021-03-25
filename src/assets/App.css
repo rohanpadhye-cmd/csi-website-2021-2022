@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
-::selection, .dropdown-item.active {
+::selection,
+.dropdown-item.active {
   color: #363537;
   background-color: #add8e6;
 }
 
 .content {
-    margin: 2%;
-    font-family: 'Nunito', sans-serif;
-    scroll-behavior: smooth;
+  margin: 2%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-    font-size: 120%;
-    font-weight: 500;
-    background-color: #add8e6;
+  font-size: 120%;
+  font-weight: 500;
+  background-color: #add8e6;
 }
 
 .dropdown-menu {
-    background-color: #add8e6;
+  background-color: #add8e6;
 }
 
 .dropdown-item:hover {
@@ -34,19 +35,29 @@ footer svg {
   font-size: 150%;
 }
 
-.contact-btn, .contact-btn:hover {
+.contact-btn,
+.contact-btn:hover {
   border-color: #363537;
   color: #363537;
   font-weight: 800;
   background-color: #add8e6;
 }
 
+<<<<<<< HEAD
 .contact-text{
     font-size: x-small;
 }
 
 .contact-list{
     list-style-type: none;
+=======
+.contact-text {
+  font-size: x-small;
+}
+
+.contact-list {
+  list-style-type: none;
+>>>>>>> upstream/main
 }
 a {
   text-decoration: none;
@@ -66,19 +77,27 @@ a {
 }
 
 .loaderBack {
-  background: linear-gradient(to right bottom, #add8e6, #a4ebf3, #add8e6, #a4ebf3, #add8e6) no-repeat;
+  background: linear-gradient(
+      to right bottom,
+      #add8e6,
+      #a4ebf3,
+      #add8e6,
+      #a4ebf3,
+      #add8e6
+    )
+    no-repeat;
   height: 100vh;
 }
 
 .loaderText {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   color: floralwhite;
   font-size: 300%;
   font-weight: bolder;
   -webkit-text-stroke: 0.1vw #5353f1;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .tgl-btn {
     margin-top: 2%;
   }
@@ -89,70 +108,195 @@ a {
 }
 
 /* Home Component */
+@font-face {
+  font-family: "BATIK WORLDWIDE";
+  src: local("BATIK WORLDWIDE"), url(../fonts/BATIKWORLDWIDE.otf);
+}
 
-.csi-vesit{
+.csi-vesit {
   text-align: center;
-  font-size: 600%;
-  margin-top: 15%;
+  font-family: "BATIK WORLDWIDE";
+  font-size: 800%;
+  margin-top: 13%;
   color: floralwhite;
 }
 
 .jumbotron {
-  background-image: url("./back-img.jpeg");
+  background-image: url("./back-img1.jpeg");
   background-size: cover;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
 
-.counter{
-  text-align: center;  
+.counter {
+  text-align: center;
   padding: 3rem;
   width: 100%;
 }
 
-.registrations{
+.registrations {
   margin-top: 30px;
   width: 100%;
 }
 
-.poster{
+.poster {
   margin-left: 175px;
 }
 
-.registration-buttons{
+.registration-buttons {
   margin: 90px 0 0 350px;
   width: 300px;
 }
-  
+
 @media screen and (max-width: 576px) {
-  .jumbotron{
+  .jumbotron {
     padding-top: 1px;
     padding-bottom: 1px;
     width: 94%;
     margin: 0 auto 5% auto;
   }
 
-  .council-pic-info{
+  .council-pic-info {
     width: 95%;
     margin: 2.5%;
   }
 
-  .counter{
+  .counter {
     padding-right: 0;
   }
 
-  .counter-item h3{
+  .counter-item h3 {
     font-size: 100%;
     text-align: center;
   }
 
-  .poster{
+  .poster {
     margin: 0 0 0 15px;
   }
-  
-  .registration-buttons{
+
+  .registration-buttons {
     margin: 10% 0 0 8%;
     width: 40%;
     height: 50px;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+/*CentreButtons */
+.centerWorkBtn{
+  text-align: center ;
+  margin-top: 5px;
+}
+
+/* Council Card / Page */
+/* Cards styling */
+
+#team{
+    justify-self: center;
+    box-shadow: 5px 4px 8px 0 #add8e6;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+  }
+  .center{
+    text-align:center;
+    margin-bottom: 100px;
+  }
+  
+  .cardText{
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 22, 21);
+    font-size: larger;
+    font-weight: 900;
+  }
+  @media (min-width: 400px){
+  .card {    
+    justify-content:left;
+    height: auto;
+    width: 160px;
+    margin: 0px;
+    margin-top: 55px;
+    margin-left: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardImg{
+    width: 95px;
+    height: 95px;
+    margin-top: -50px;
+    border-radius: 50%;
+  }
+  }
+  @media (min-width: 550px){
+    .card {    
+      justify-content:left;
+      height: auto;
+      width: 200px;
+      margin: 30px;
+      margin-top: 50px;
+      margin-left:20%;;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .cardImg{
+      width: 160px;
+      height: 160px;
+      margin-top: -50px;
+      border-radius: 50%;
+  
+    }
+  }
+  @media (min-width: 786px){
+    .card {    
+      justify-content:left;
+      height: auto;
+      width: 245px;
+      margin: 50px;
+      margin-top: 30px;
+      margin-left: 20%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .cardImg{
+      width: 180px;
+      height: 180px;
+      margin-top: -50px;
+      border-radius: 50%;
+  
+    }
+  }
+  
+  @media (min-width: 1200px){
+    .card {    
+      justify-content:left;
+      height: auto;
+      width: 280px;
+      margin: 30px;
+      margin-top: 50px;
+      margin-left: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .cardImg{
+      width: 200px;
+      height: 200px;
+      margin-top: -50px;
+      border-radius: 50%;
+  
+    }
+  }
+>>>>>>> upstream/main

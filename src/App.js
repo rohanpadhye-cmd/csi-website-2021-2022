@@ -7,12 +7,15 @@ import WorkComponent from './components/WorkComponent';
 import ContactComponent from './components/ContactComponent';
 import FooterComponent from './components/FooterComponent';
 import Loader from './components/Loader';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import './assets/App.css';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   
+  const location = useLocation();
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -24,11 +27,11 @@ function App() {
     <>
       {
         isLoading === true? ( <Loader /> ) : (
-          <BrowserRouter>  
             <div className = "App">
               <NavbarComponent />
               <div className="content">
-                <Switch>
+              <AnimatePresence exitBeforeEnter>
+              <Switch  location = {location} key={location.key}>
                   <Route exact path="/">
                     <HomeComponent />
                   </Route>
@@ -48,11 +51,11 @@ function App() {
                     <ContactComponent />
                   </Route>
                 </Switch>
+                </AnimatePresence>
               </div>
               <hr className="mx-4 mt-5" />
               <FooterComponent />
             </div >
-          </BrowserRouter >
         )
       }
     </>

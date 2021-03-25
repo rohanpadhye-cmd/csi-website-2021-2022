@@ -1,5 +1,28 @@
 import { Container, Row, Col, Modal, Button, Form , Card ,Carousel} from 'react-bootstrap';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: '100vw',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+        type: 'tween',
+        duration: 1,
+    }
+  },
+  exit: {
+    x: '-100vw',
+    transition: {
+        type: 'tween',
+        duration: 1,
+    }
+  }
+}
 
 // Handle for Firestore
 // import db from './FirestoreConnection';
@@ -251,6 +274,12 @@ const ContactForm = () => {
 const ContactComponent = () => {
     return (
         <>
+            <motion.div
+                variants={containerVariant} 
+                initial="hidden" 
+                animate="visible"
+                exit="exit"
+            >
             <Container>
                 <Row>
                     <h1 className="mx-auto mb-5 mt-1">Let Your Curiosity Take Flight ✈️</h1>    
@@ -399,6 +428,7 @@ const ContactComponent = () => {
                     </Col>
                 </Row>
             </Container>
+            </motion.div>
         </>
     );
 }
