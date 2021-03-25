@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
-::selection, .dropdown-item.active {
+::selection,
+.dropdown-item.active {
   color: #363537;
   background-color: #add8e6;
 }
 
 .content {
-    margin: 2%;
-    font-family: 'Nunito', sans-serif;
-    scroll-behavior: smooth;
+  margin: 2%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-    font-size: 120%;
-    font-weight: 500;
-    background-color: #add8e6;
+  font-size: 120%;
+  font-weight: 500;
+  background-color: #add8e6;
 }
 
 .dropdown-menu {
-    background-color: #add8e6;
+  background-color: #add8e6;
 }
 
 .dropdown-item:hover {
@@ -34,19 +35,20 @@ footer svg {
   font-size: 150%;
 }
 
-.contact-btn, .contact-btn:hover {
+.contact-btn,
+.contact-btn:hover {
   border-color: #363537;
   color: #363537;
   font-weight: 800;
   background-color: #add8e6;
 }
 
-.contact-text{
-    font-size: x-small;
+.contact-text {
+  font-size: x-small;
 }
 
-.contact-list{
-    list-style-type: none;
+.contact-list {
+  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -66,19 +68,27 @@ a {
 }
 
 .loaderBack {
-  background: linear-gradient(to right bottom, #add8e6, #a4ebf3, #add8e6, #a4ebf3, #add8e6) no-repeat;
+  background: linear-gradient(
+      to right bottom,
+      #add8e6,
+      #a4ebf3,
+      #add8e6,
+      #a4ebf3,
+      #add8e6
+    )
+    no-repeat;
   height: 100vh;
 }
 
 .loaderText {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   color: floralwhite;
   font-size: 300%;
   font-weight: bolder;
   -webkit-text-stroke: 0.1vw #5353f1;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .tgl-btn {
     margin-top: 2%;
   }
@@ -89,76 +99,81 @@ a {
 }
 
 /* Home Component */
+@font-face {
+  font-family: "BATIK WORLDWIDE";
+  src: local("BATIK WORLDWIDE"), url(../fonts/BATIKWORLDWIDE.otf);
+}
 
-.csi-vesit{
+.csi-vesit {
   text-align: center;
-  font-size: 600%;
-  margin-top: 15%;
+  font-family: "BATIK WORLDWIDE";
+  font-size: 800%;
+  margin-top: 13%;
   color: floralwhite;
 }
 
 .jumbotron {
-  background-image: url("./back-img.jpeg");
+  background-image: url("./back-img1.jpeg");
   background-size: cover;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
 
-.counter{
-  text-align: center;  
+.counter {
+  text-align: center;
   padding: 3rem;
   width: 100%;
 }
 
-.registrations{
+.registrations {
   margin-top: 30px;
   width: 100%;
 }
 
-.poster{
+.poster {
   margin-left: 175px;
 }
 
-.registration-buttons{
+.registration-buttons {
   margin: 90px 0 0 350px;
   width: 300px;
 }
-  
+
 @media screen and (max-width: 576px) {
-  .jumbotron{
+  .jumbotron {
     padding-top: 1px;
     padding-bottom: 1px;
     width: 94%;
     margin: 0 auto 5% auto;
   }
 
-  .council-pic-info{
+  .council-pic-info {
     width: 95%;
     margin: 2.5%;
   }
 
-  .counter{
+  .counter {
     padding-right: 0;
   }
 
-  .counter-item h3{
+  .counter-item h3 {
     font-size: 100%;
     text-align: center;
   }
 
-  .poster{
+  .poster {
     margin: 0 0 0 15px;
   }
-  
-  .registration-buttons{
+
+  .registration-buttons {
     margin: 10% 0 0 8%;
     width: 40%;
     height: 50px;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
   }
 }
 
 /*CentreButtons */
-.centerWorkBtn{
- text-align: center ;
- margin-top: 5px;
-} 
+.centerWorkBtn {
+  text-align: center;
+  margin-top: 5px;
+}
