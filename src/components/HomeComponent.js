@@ -1,18 +1,26 @@
 import { Jumbotron, Container, Card, Button, Col, Row} from 'react-bootstrap';
+import VES from "../assets/back-img.jpeg";
+import { Parallax, Background } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
 import poster from "../assets/poster.jpeg";
 
+
+    
 const HomeComponent = () => {
     return (
     <div className="home">
 
         <Container fluid className="m-0">
           <Jumbotron>
-            <Container className="jumbotron">
-              <h1 className="csi-vesit">CSI VESIT</h1>
-            </Container>
+          <Parallax bgImage= {VES} strength={200}>
+            <div style={{height: 400}}>
+             <h1 className="csi-vesit">CSI VESIT</h1>
+           </div>
+             </Parallax>
           </Jumbotron>
         </Container>
+    
+
 
         <Container fluid className="mt-5">
           <Row>
