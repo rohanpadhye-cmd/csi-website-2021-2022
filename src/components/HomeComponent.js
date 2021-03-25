@@ -1,11 +1,34 @@
 
 import { Jumbotron, Container, Card, Button, Col, Row, Modal, Form} from 'react-bootstrap';
 import { useState } from 'react';
-import VES from "../assets/back-img.jpeg";
+import VES from "../assets/back-img1.jpeg";
 import { Parallax, Background } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
 import poster from "../assets/poster.jpeg";
+import { motion } from 'framer-motion';
 import QR from "../assets/QR_code.jpg";
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: '100vw',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'tween',
+      duration: 1,
+    }
+  },
+  exit: {
+    x: '-100vw',
+    transition: {
+      type: 'tween',
+      duration: 1,
+    }
+  }
+}
 
 
     
@@ -43,13 +66,25 @@ const HomeComponent = () => {
   const CSIMemberDropdown = (e) =>  setIsCSIMember(e.target.value);
 
     return (
-    <div className="home">
+            <motion.div className="home" 
+        variants={containerVariant} 
+        initial="hidden" 
+        animate="visible"
+        exit="exit"
+      >
 
         <Container fluid className="m-0">        
           <Jumbotron>
           <Parallax bgImage= {VES} strength={200}>
-            <div style={{height: 400}}>
-             <h1 className="csi-vesit">CSI VESIT</h1>
+            <div style={{height: "300px"}}>
+            <motion.h1 
+                // initial={{scale: 1}}
+                // animate={{scale: [1.3,1],
+                //           color: ['#fff','#99ccff']}}
+                // transition={{ yoyo: Infinity}}
+                drag dragConstraints={{ left: -50, top: -50, right: 50, bottom: 50 }} dragElastic={0.7}
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+                className="csi-vesit">CSI VESIT</motion.h1>
            </div>
              </Parallax>
           </Jumbotron>
@@ -59,15 +94,21 @@ const HomeComponent = () => {
 
         <Container fluid className="mt-5">
           <Row>
+            <motion.div
+             initial={{x: '-100vw'}}
+             animate={{x: 0}}
+             transition={{delay: 3, duration: 2}}
+            >
             <Col md={6}>
-              <Card className="council-pic-info">
-                <Card.Img src={groupImg} />
+              <Card className="council-pic-info" style={{float: "left"}}>
+                <Card.Img src={groupImg}/>
               </Card>
             </Col>
-            <div className="mx-auto mt-3">
+            <div className="mx-auto mt-3 px-5" style={{float: "left"}}>
               <h3>Our Team!</h3>
               <p>Lorem Ipsum</p>
             </div>
+            </motion.div>
           </Row>
         </Container>
     
@@ -332,7 +373,7 @@ const HomeComponent = () => {
                          <Form.Label className="form-label"><h5>Use this QR code for PhonePe ,Patym or any other UPI Payment options</h5></Form.Label>
                          <Row>
                             <Col>
-                            <img className="mx-auto" src={QR} style={{display:"block"}}/>
+                            <img className="mx-auto" src={QR} style={{display:"block"}} alt="QR Code"/>
                             </Col>
                          </Row>
                       </Form.Group>  
@@ -367,7 +408,7 @@ const HomeComponent = () => {
           </Modal> 
         
         
-    </div>
+    </motion.div>
     );
 }
  

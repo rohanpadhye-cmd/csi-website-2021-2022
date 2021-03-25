@@ -5,6 +5,30 @@ import ws1 from '../assets/Ws/Ws1.jpeg';
 import ws2 from '../assets/Ws/Ws2.jpeg';
 import ws3 from '../assets/Ws/Ws3.jpeg';
 import ws4 from '../assets/Ws/Ws4.jpeg';
+import { motion } from 'framer-motion';
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: '100vw',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'tween',
+      duration: 1,
+    }
+  },
+  exit: {
+    x: '-100vw',
+    transition: {
+      type: 'tween',
+      duration: 1,
+    }
+  }
+}
+
 
 //This array has workshop info 
 const WSInfo =[
@@ -153,7 +177,11 @@ const whichCouncil = (e) =>{
 
 //This is rendered
     return(
-      
+      <motion.div
+      variants={containerVariant} 
+        initial="hidden" 
+        animate="visible"
+        exit="exit">
       <Container >
       <Buttons/>
         <Row>
@@ -162,6 +190,7 @@ const whichCouncil = (e) =>{
         {showCollabPage ?  <CollabCardMap/> : null }
         </Row>
       </Container>
+      </motion.div>
     )
 }
 export default WorkComponent;
