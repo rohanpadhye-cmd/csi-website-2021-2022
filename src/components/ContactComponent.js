@@ -255,8 +255,6 @@ const ContactComponent = () => {
                 <Row>
                     <h1 className="mx-auto mb-5 mt-1">Let Your Curiosity Take Flight ✈️</h1>    
                 </Row>
-            </Container>
-            <Container>
                 <Row className='mb-5'>
                     <Col sm={{span: 12}} md={{span: 5}}>
                             <Container>

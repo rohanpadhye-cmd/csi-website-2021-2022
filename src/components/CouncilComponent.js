@@ -41,6 +41,7 @@ const SEcardInfo =[
     {imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU" ,role:"Sr.Web Officer",name:"POM" },
     {imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU" ,role:"Sr.Web Officer",name:"POM" },
     {imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU" ,role:"Sr.Web Officer",name:"POM" },
+    {imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU" ,role:"Sr.Web Officer",name:"POM" }
   ];
 
 //This variable will hold all SE cards which will be mapped accn to data in the array and return them in new column
@@ -49,7 +50,7 @@ const SEcardInfo =[
     return (
 
     //Here function is returning responsive column
-    <Col lg={4} sm={12} md={6} xs={12}  >
+    <Col lg={4}  md={6} xs={5}  >
         <Card
         imageUrl= {info.imageUrl}
         name={info.name}
@@ -106,12 +107,11 @@ const [SeState,setSeState] =React.useState(true);
 const [TeState,setTeState] =React.useState(false);
 const [BeState,setBeState] =React.useState(false);
 
-const [btnColor,color]=React.useState("red");
 
 //This are the buttons
 function Buttons(){
     return (
-    <div className="center " >
+    <div className="centerWorkBtn " >
         <ButtonGroup aria-label="Basic example" >
             <Button variant="secondary" id="1" onClick={whichCouncil}  >SE</Button>
             <Button variant="secondary" id ="2" onClick={whichCouncil}>TE</Button>
@@ -127,7 +127,6 @@ function Buttons(){
 const whichCouncil = (e) =>{
     const id=e.target.id;
 
-    const {name,value}=e.target;
     //e.preventDefault();
     if(id === "1")
     {
@@ -158,9 +157,6 @@ const whichCouncil = (e) =>{
 
 return (
         <Container fluid   >
-        <h1 className="center">
-            Council Page!
-        </h1>
         <Buttons/>
 
         <Row>
