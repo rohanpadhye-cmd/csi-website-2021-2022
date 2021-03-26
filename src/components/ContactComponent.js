@@ -390,41 +390,43 @@ const ContactComponent = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Carousel
-                            indicators={false}
-                            fade={true}
-                            interval={4000}
-                            style={{ textAlign: 'center', height: '100px', width:'100%'}}
-                            className="mt-5 mb-4" >
-                            <Carousel.Item>
-                                <h3 className='contact-list-header'>For Queries:</h3>
-                                <ul className='contact-list'>
-                                    <li>Jatin Bhagchandani (Chairperson): +919619447077</li>
-                                    <li>Apoorva Sudheesh (Sr.Secretary): +918358802335</li>
-                                    <li>Fayzaan Qureshi (Co-Chairperson): +919819186523</li>
-                                </ul>   
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <h3 className='contact-list-header'>For Memberships:</h3>
-                                <ul className='contact-list'>
-                                    <li>Yash Diwan (Treasurer): +919834571848</li>
-                                    <li>Saloni Ingle (Jr.Treasurer): +91 9370550921</li>
-                                </ul>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <h3 className='contact-list-header'>For Technical Help:</h3>
-                                <ul className='contact-list'>
-                                    <li>Saurav Telge (Operations-Secretary): +91 9821505562</li>
-                                </ul>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <h3 className='contact-list-header'>For any other assistance:</h3>
-                                <ul className='contact-list'>
-                                    <li>Shreya Shah (Managing Secretary): +91 9359729644</li>
-                                    <li>Pooja Prasad (Public Relations Head): +91 8657206488</li>  
-                                </ul>
-                            </Carousel.Item>
-                        </Carousel>
+                        <Card>
+                                <Carousel
+                                    indicators={false}
+                                    fade={true}
+                                    interval={4000}
+                                    style={{ textAlign: 'center', height: '100px', width: '100%' }}
+                                    className="mt-5 mb-4" >
+                                    <Carousel.Item>
+                                        <h3 className='contact-list-header'>For Queries:</h3>
+                                        <ul className='contact-list'>
+                                            <li>Jatin Bhagchandani (Chairperson): +919619447077</li>
+                                            <li>Apoorva Sudheesh (Sr.Secretary): +918358802335</li>
+                                            <li>Fayzaan Qureshi (Co-Chairperson): +919819186523</li>
+                                        </ul>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <h3 className='contact-list-header'>For Memberships:</h3>
+                                        <ul className='contact-list'>
+                                            <li>Yash Diwan (Treasurer): +919834571848</li>
+                                            <li>Saloni Ingle (Jr.Treasurer): +91 9370550921</li>
+                                        </ul>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <h3 className='contact-list-header'>For Technical Help:</h3>
+                                        <ul className='contact-list'>
+                                            <li>Saurav Telge (Operations-Secretary): +91 9821505562</li>
+                                        </ul>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <h3 className='contact-list-header'>For any other assistance:</h3>
+                                        <ul className='contact-list'>
+                                            <li>Shreya Shah (Managing Secretary): +91 9359729644</li>
+                                            <li>Pooja Prasad (Public Relations Head): +91 8657206488</li>
+                                        </ul>
+                                    </Carousel.Item>
+                                </Carousel>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
