@@ -40,12 +40,17 @@ const Loader = () => {
         hidden: {
             x: '15vw',
             y: '35vh',
-            opacity: 0
+            opacity: 0,
+            pathLength: 0
         },
         visible: {
             opacity: 1,
+            scale: 1.1,
+            pathLength: 1,
             transition: {
-                delay: 4
+                delay: 4,
+                duration: 1,
+                ease: "easeInOut"
             }
         }
     }

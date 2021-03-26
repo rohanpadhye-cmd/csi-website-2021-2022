@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap");
 
+/* Universal Style Begins*/
+
 ::selection,
 .dropdown-item.active {
   color: #363537;
@@ -12,19 +14,28 @@
   scroll-behavior: smooth;
 }
 
+/* Navbar Style Begins */
+
 .navbar {
   font-size: 120%;
   font-weight: 500;
-  background-color: #add8e6;
+  background-color: rgb(41, 93, 141);
 }
 
-.dropdown-menu {
-  background-color: #add8e6;
+.navbar-light .navbar-nav .nav-link {
+  color: #add8e6;
 }
 
-.dropdown-item:hover {
-  background-color: floralwhite;
+.navbar-light .navbar-nav .nav-link:hover {
+  color: floralwhite;
 }
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: floralwhite;
+  font-weight: bolder;
+}
+
+/* Footer Style Begins */
 
 footer {
   font-size: 120%;
@@ -34,6 +45,8 @@ footer {
 footer svg {
   font-size: 150%;
 }
+
+/* Contact Page Style Begins */
 
 .contact-btn,
 .contact-btn:hover {
@@ -50,6 +63,7 @@ footer svg {
 .contact-list {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -66,6 +80,8 @@ a {
 .contact-list-header {
   font-size: 180%;
 }
+
+/* Pre-Loader Style Begins */
 
 .loaderBack {
   background: linear-gradient(
@@ -88,14 +104,22 @@ a {
   -webkit-text-stroke: 0.1vw #5353f1;
 }
 
+/* Universal Smaller Screens Style Begins */
+
 @media (max-width: 768px) {
+  
+  /* Navbar Style Begins */
+  
   .tgl-btn {
     margin-top: 2%;
   }
 
+  /* Footer Style Begins */
+
   footer {
     font-size: 110%;
   }
+  
 }
 
 /* Home Component */
