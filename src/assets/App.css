@@ -4,14 +4,18 @@
 
 ::selection,
 .dropdown-item.active {
-  color: #363537;
-  background-color: #add8e6;
+  color: #fff;
+  background-color: rgb(41, 93, 141);
 }
 
 .content {
   margin: 2%;
   font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Navbar Style Begins */
@@ -60,25 +64,33 @@ footer svg {
   font-size: x-small;
 }
 
-.contact-list {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .contact-text {
-  font-size: 70%;
+  font-size: 80%;
+  font-weight: 700;
 }
 
 .contact-list {
   list-style-type: none;
   font-size: 120%;
+  margin-left: 10%;
 }
 
 .contact-list-header {
-  font-size: 180%;
+  font-size: 160%;
+  font-weight: 600;
+}
+
+.contact-form-card .card-header h3 {
+  font-weight: 550;
+}
+
+.contact-form-card .form-label {
+  font-weight: 800;
+}
+
+.contact-carousel {
+  height: 80%;
+  width: 100%;
 }
 
 /* Pre-Loader Style Begins */
@@ -119,7 +131,30 @@ a {
   footer {
     font-size: 110%;
   }
+
+  /* Contact Style Begins */
+
+  .contact-text {
+    font-size: 81%;
+    font-weight: 700;
+  }
   
+  .contact-list-header {
+    font-size: 160%;
+    font-weight: 600;
+  }
+
+  .contact-list {
+    font-size: 120%;
+  }
+
+  .contact-form-card .card-header h3 {
+    font-weight: 550;
+  }
+  .contact-carousel {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /* Home Component */
