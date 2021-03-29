@@ -134,8 +134,12 @@ footer svg {
 
   /* Contact Style Begins */
 
+  .contact-h1 {
+    font-size: 80%;
+  }
+
   .contact-text {
-    font-size: 77%;
+    font-size: 70%;
     font-weight: 700;
   }
   

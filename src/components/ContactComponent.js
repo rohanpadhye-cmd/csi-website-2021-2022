@@ -42,8 +42,8 @@ const ContactComponent = () => {
                         <h1 className="mx-auto mb-md-5 mt-md-1">Let Your Curiosity Take Flight ✈️</h1>
                     </Row>
                     <Row className="d-md-none">
-                        <Col xs={{span: 12}}><h1 className="mx-auto mt-2">Let Your Curiosity</h1></Col>
-                        <Col xs={{span: 11, offset: 1}}><h1 className="mb-4">Take Flight ✈️</h1></Col>
+                        <Col xs={{ span: 12 }}><h1 className="mx-auto mt-2 contact-h1">Let Your Curiosity</h1></Col>
+                        <Col xs={{ span: 11, offset: 1 }}><h1 className="mb-4 contact-h1">Take Flight ✈️</h1></Col>
                     </Row>
                     <Row>
                         <Col xs={{span: 12}} md={{span: 5}}>
