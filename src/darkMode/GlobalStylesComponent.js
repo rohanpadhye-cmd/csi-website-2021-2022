@@ -26,4 +26,25 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 50%;
     background-color: ${({ theme }) => theme.text};
   }
+
+  .contact-form-card {
+    border: 2px groove ${({ theme }) => theme.text};
+  }
+  
+  .contact-form-card .card-header {
+    border: 3px solid ${({ theme }) => theme.text};
+    color:${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.text};
+  }
+
+  .contact-form-card .card-body {
+    background-color:${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+  }
+
+  .contact-btn {
+    color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.text};
+  }
+
 `
