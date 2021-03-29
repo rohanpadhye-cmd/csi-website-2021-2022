@@ -27,8 +27,8 @@ const ContactCarouselLarge = () => {
                                 <Carousel.Item>
                                     <h4 className="ml-5 contact-list-header">Memberships Info? </h4>
                                     <ul className='contact-list'>
-                                        <li className="mt-4 mb-3"><strong>Yash Diwan</strong> (<i>Treasurer </i>): +919834571848</li>
-                                        <li><strong>Saloni Ingle</strong> (<i>Jr.Treasurer </i>): +91 9370550921</li>
+                                        <li className="mt-4 mb-3"><strong>Yash Diwan</strong> (<i>Sr. Treasurer </i>): +919834571848</li>
+                                        <li><strong>Saloni Ingle</strong> (<i>Jr. Treasurer </i>): +91 9370550921</li>
                                     </ul>
                                 </Carousel.Item>
                                 <Carousel.Item>

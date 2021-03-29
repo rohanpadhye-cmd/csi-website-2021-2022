@@ -27,7 +27,7 @@ const ContactCarouselSmall = () => {
                                                 <Row>
                                                     <h4 className="contact-list-header mx-auto mb-3">Got any Queries? </h4>
                                                     <div className='contact-list ml-5'><strong>Jatin Bhagchandani</strong><br />(<i>Chairperson</i>):<br />+91 96194 47077</div>
-                                                    <div className='contact-list ml-5'><strong>Apoorva Sudheesh</strong><br />(<i>Sr.Secretary</i>):<br />+91 83588 02335</div>
+                                                    <div className='contact-list ml-5'><strong>Apoorva Sudheesh</strong><br />(<i>Secretary</i>):<br />+91 83588 02335</div>
                                                     <div className='contact-list ml-5'><strong>Fayzaan Qureshi</strong><br />(<i>Co-Chairperson</i>):<br />+91 98191 86523</div>
                                                 </Row>
                                             </Container>
@@ -35,8 +35,8 @@ const ContactCarouselSmall = () => {
                                         <Carousel.Item>
                                             <Row>
                                                 <h4 className="contact-list-header mx-auto mb-3">Memberships Info? </h4>
-                                                <div className='contact-list ml-5'><strong>Yash Diwan</strong><br />(<i>Treasurer</i>):<br />+91 98345 71848</div>
-                                                <div className='contact-list ml-5'><strong>Saloni Ingle</strong><br />(<i>Jr.Treasurer</i>):<br />+91 93705 50921</div>
+                                                <div className='contact-list ml-5'><strong>Yash Diwan</strong><br />(<i>Sr. Treasurer</i>):<br />+91 98345 71848</div>
+                                                <div className='contact-list ml-5'><strong>Saloni Ingle</strong><br />(<i>Jr. Treasurer</i>):<br />+91 93705 50921</div>
                                             </Row>
                                         </Carousel.Item>
                                         <Carousel.Item>
