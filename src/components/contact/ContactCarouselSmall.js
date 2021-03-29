@@ -48,8 +48,8 @@ const ContactCarouselSmall = () => {
                                         <Carousel.Item>
                                             <Row>
                                                 <h4 className="contact-list-header mx-auto mb-3">Anything Else? </h4>
-                                                <div className='contact-list ml-4'><strong>Shreya Shah</strong><br />(<i>Managing Secretary</i>):<br />+91 93597 29644</div>
-                                                <div className='contact-list ml-4'><strong>Pooja Prasad</strong><br />(<i>Public Relations Head</i>):<br />+91 86572 06488</div>
+                                                <div className='contact-list ml-5'><strong>Shreya Shah</strong><br />(<i>Managing Secretary</i>):<br />+91 93597 29644</div>
+                                                <div className='contact-list ml-5'><strong>Pooja Prasad</strong><br />(<i>Public Relations Head</i>):<br />+91 86572 06488</div>
                                             </Row>
                                         </Carousel.Item>
                                     </Carousel>
