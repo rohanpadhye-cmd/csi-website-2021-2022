@@ -36,7 +36,7 @@ const Loader = () => {
         }
     }
 
-    const loaderTextVariants = {
+    const loaderText1Variants = {
         hidden: {
             x: '15vw',
             y: '35vh',
@@ -46,6 +46,25 @@ const Loader = () => {
         visible: {
             opacity: 1,
             scale: 1.1,
+            pathLength: 1,
+            transition: {
+                delay: 4,
+                duration: 1,
+                ease: "easeInOut"
+            }
+        }
+    }
+
+    const loaderText2Variants = {
+        hidden: {
+            x: '15vw',
+            y: '40vh',
+            opacity: 0,
+            pathLength: 0
+        },
+        visible: {
+            opacity: 1,
+            scale: 1.3,
             pathLength: 1,
             transition: {
                 delay: 4,
@@ -69,7 +88,7 @@ const Loader = () => {
                     type="image/svg+xml"
                     data={loaderText1}
                     style={{ width: '40%' }}
-                    variants={loaderTextVariants}
+                    variants={loaderText1Variants}
                     initial="hidden"
                     animate="visible"
                 >
@@ -78,27 +97,13 @@ const Loader = () => {
                 <motion.object
                     type="image/svg+xml"
                     data={loaderText2}
-                    style={{ width: '40%' }}
-                    variants={loaderTextVariants}
+                    style={{ width: '20%'}}
+                    variants={loaderText2Variants}
                     initial="hidden"
                     animate="visible"
                 >
                     Your browser does not support SVG
                 </motion.object>
-                {/* <motion.div initial={{ x: '60vw' }} animate={{ opacity: [0, 1, 0], transition: {duration: 3} }}>
-                    <span
-                        className='loaderText'
-                    >
-                        CSI - VESIT
-                    </span>
-                    <br/>
-                    <span
-                        className='loaderText'
-                    >
-                        Presents...
-                    </span>
-                    <br/>
-                </motion.div> */}
             </div>
         </>
     );
