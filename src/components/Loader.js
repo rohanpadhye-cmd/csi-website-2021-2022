@@ -78,7 +78,7 @@ const Loader = () => {
                 <motion.object
                     type="image/svg+xml"
                     data={loaderText2}
-                    style={{ width: '20%' }}
+                    style={{ width: '40%' }}
                     variants={loaderTextVariants}
                     initial="hidden"
                     animate="visible"
