@@ -15,7 +15,7 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Navbar Style Begins */
@@ -108,12 +108,18 @@ footer svg {
   height: 100vh;
 }
 
-.loaderText {
-  font-family: "Nunito";
-  color: floralwhite;
-  font-size: 300%;
-  font-weight: bolder;
-  -webkit-text-stroke: 0.1vw #5353f1;
+/* 404 Page Style Begins */
+
+.not-found-container {
+  margin-bottom: 25%;
+}
+
+.not-found-header {
+  font-size: 400%;
+}
+
+.not-found-text {
+  font-size: 150%;
 }
 
 /* Universal Smaller Screens Style Begins */
