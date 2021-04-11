@@ -53,7 +53,7 @@ footer svg {
 /* Contact Page Style Begins */
 
 .contact-btn,
-.contact-btn:hover {
+.contact-btn:hover{
   border-color: #363537;
   color: #363537;
   font-weight: 800;
@@ -202,9 +202,18 @@ footer svg {
   margin-left: 175px;
 }
 
-.registration-buttons {
+.registration-buttons{
+  border-color: #363537;
+  background-color: #363537;
+  font-weight: 800;
+  color: #add8e6;
   margin: 90px 0 0 350px;
   width: 300px;
+}
+.registration-buttons:hover{
+  border-color: #363537;
+  background-color: #add8e6;
+  color:  #363537;
 }
 
 @media screen and (max-width: 576px) {
@@ -233,12 +242,12 @@ footer svg {
     margin: 0 0 0 15px;
   }
 
-  .registration-buttons {
+  /* .registration-buttons {
     margin: 10% 0 0 8%;
     width: 40%;
     height: 50px;
     font-size: 0.8rem;
-  }
+  } */
 }
 
 /*CentreButtons */

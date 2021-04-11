@@ -52,6 +52,7 @@ const HomeComponent = () => {
   const [showWorkshopModal, setShowWorkshopModal] = useState(false);
   const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
   const [isCSIMember,setIsCSIMember]=useState('Yes');
+   const [buttonText,setButtonText]=useState("Workshop");
 
   const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
 
@@ -74,9 +75,8 @@ const HomeComponent = () => {
       >
 
         <Container fluid className="m-0">        
-          <Jumbotron>
           <Parallax bgImage= {VES} strength={200}>
-            <div style={{height: "300px"}}>
+            <div style={{height: "425px"}}>
             <motion.h1 
                 // initial={{scale: 1}}
                 // animate={{scale: [1.3,1],
@@ -87,7 +87,6 @@ const HomeComponent = () => {
                 className="csi-vesit">CSI VESIT</motion.h1>
            </div>
              </Parallax>
-          </Jumbotron>
         </Container>
     
 
@@ -135,8 +134,8 @@ const HomeComponent = () => {
           </Col>
           <Col lg={5}>
             <Card.Body>
-              <Button className="registration-buttons " variant="info" size="lg" onClick={handleShow}>Membership Form</Button>
-              <Button className="registration-buttons " variant="info" size="lg" onClick={handleshowWorkshopModal}>Register for workshop/events </Button>
+              <Button className="registration-buttons" variant="info" size="lg" onClick={handleShow}>Membership Form</Button>
+              <Button className="registration-buttons" variant="info" size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
        
 
               <Modal
@@ -163,25 +162,17 @@ const HomeComponent = () => {
                       <Form onSubmit={handleWorkshopSubmit}> 
 
                         <Form.Row>
-                          <Form.Group as={Col} xs="6" controlId="FirstName">
-                            <Form.Label><h5>First Name</h5></Form.Label>
+                          <Form.Group as={Col} xs="6" controlId="FullName" md={{span:4}}>
+                            <Form.Label><h5>Full Name</h5></Form.Label>
                             <Form.Control
                             type="text"
-                            placeholder="Your First Name"
-                            required />
-                          </Form.Group>
-
-                          <Form.Group as={Col} xs="6" controlId="LastName">
-                            <Form.Label><h5>Last Name</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Last Name"
+                            placeholder="Your Full Name"
                             required />
                           </Form.Group>
                         </Form.Row>
 
                         <Form.Row>
-                          <Form.Group as={Col} xs="6" controlId="Class">
+                          <Form.Group as={Col} xs="6" controlId="Class" md={{span:4}}>
                             <Form.Label><h5>Class</h5></Form.Label>
                             <Form.Control
                             type="text"
@@ -189,7 +180,7 @@ const HomeComponent = () => {
                             required />
                           </Form.Group>
 
-                          <Form.Group as={Col} xs="6" controlId="ContactNo">
+                          <Form.Group as={Col} xs="6" controlId="ContactNo" md={{span:4,offset:1}}>
                             <Form.Label><h5>Contact No.</h5></Form.Label>
                             <Form.Control
                             type="text"
@@ -260,40 +251,29 @@ const HomeComponent = () => {
                     
             <Form onSubmit={handleSubmit}>
                   <Form.Row>
-                     <Form.Group as={Col} xs="6">
+                     <Form.Group as={Col} xs="6" md={{span:4}}>
                          <Form.Label><h5>Email Address</h5></Form.Label>
                          <Form.Control 
                          type="email" 
                          placeholder="Enter Email Address" 
                          required/>
                       </Form.Group>
+
+                      <Form.Group as={Col} xs="6" controlId="FirstName" md={{span:4,offset:1}}>
+                            <Form.Label><h5>Full Name</h5></Form.Label>
+                            <Form.Control
+                            type="text"
+                            placeholder="Your Full Name"
+                            required />
+                      </Form.Group>
                   </Form.Row>
 
                       <Form.Row>
-                          <Form.Group as={Col} xs="6" controlId="FirstName">
-                            <Form.Label><h5>First Name</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your First Name"
-                            required />
-                          </Form.Group>
-
-                          <Form.Group as={Col} xs="6" controlId="LastName">
-                            <Form.Label><h5>Last Name</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Last Name"
-                            required />
-                          </Form.Group>
-                      </Form.Row>
-
-
-                      <Form.Row>
-                        <Form.Group as={Col} md="4" xs="6">
+                        <Form.Group as={Col} md="4" xs="6" md={{span:3}}>
                               <Form.Label className="form-label"><h5>Date Of Birth</h5></Form.Label>
                               <Form.Control type="date" name="dob" placeholder="Date Of Birth" required></Form.Control>
                         </Form.Group>
-                       <Form.Group as={Col} md="4" xs="6">
+                       <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
                                <Form.Label className="form-label"><h5>Class</h5></Form.Label>
                                <Form.Control as="select" defaultValue="" required>
                                  <option>D6</option>
@@ -309,7 +289,7 @@ const HomeComponent = () => {
                                  <option>MCA</option>
                                </Form.Control>
                         </Form.Group>
-                        <Form.Group as={Col} md="4" xs="6">
+                        <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
                           <Form.Label className="form-label"><h5>Gender</h5></Form.Label>
                           <Form.Control as="select" defaultValue="" required>
                             <option>Male</option>
@@ -319,7 +299,7 @@ const HomeComponent = () => {
                         </Form.Group>
 
                      
-                        <Form.Group as={Col} md="4" xs="6">  
+                        <Form.Group as={Col} md="4" xs="6" md={{span:3}}>  
                            <Form.Label className="form-label"><h5>Contact No</h5></Form.Label>
                             <Form.Control 
                             type="text" 
@@ -327,7 +307,7 @@ const HomeComponent = () => {
                             required/>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="4" xs="6">
+                        <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
                            <Form.Label className="form-label"><h5>Degree</h5></Form.Label>
                            <Form.Control as="select" 
                            defaultValue="" 
@@ -337,7 +317,7 @@ const HomeComponent = () => {
                            </Form.Control>
                         </Form.Group>
 
-                       <Form.Group as={Col} md="4" xs="6">
+                       <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
                          <Form.Label className="form-label"><h5>Year</h5></Form.Label>
                          <Form.Control 
                          as="select" 
