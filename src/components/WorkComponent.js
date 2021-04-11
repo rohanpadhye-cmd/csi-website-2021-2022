@@ -6,6 +6,7 @@ import ws2 from '../assets/Ws/Ws2.jpeg';
 import ws3 from '../assets/Ws/Ws3.jpeg';
 import ws4 from '../assets/Ws/Ws4.jpeg';
 import { motion } from 'framer-motion';
+import { FaUsers} from 'react-icons/fa';
 
 const containerVariant = {
   hidden: {
@@ -32,10 +33,10 @@ const containerVariant = {
 
 //This array has workshop info 
 const WSInfo =[
-  {img:ws1,img1:ws2,name:"WS1",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2,name:"WS2",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2 ,name:"WS3",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2 ,name:"WS4",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
+  {img:ws3,img1:ws2,name:"WS1",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws3,img1:ws2,name:"WS2",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws3,img1:ws2 ,name:"WS3",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws3,img1:ws2 ,name:"WS4",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
   
 ];
 
@@ -49,10 +50,10 @@ const eventInfo =[
 
 
 const collabInfo =[
-  {img:ws1,img1:ws2,name:"WS1",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2,name:"WS2",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2 ,name:"WS3",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  {img:ws1,img1:ws2 ,name:"WS4",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
+  {img:ws2,img1:ws2,name:"WS1",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws2,img1:ws2,name:"WS2",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws2,img1:ws2 ,name:"WS3",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  {img:ws2,img1:ws2 ,name:"WS4",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
   
 ];
 
@@ -123,21 +124,29 @@ const WorkComponent=()=>{
   const [showEventPage,setShowEventPage]=useState(false);
   const [showCollabPage,setShowCollabPage]=useState(false);
 
+  const [isClicked1,setIsClicked1]=useState(true);
+  const [isClicked2,setIsClicked2]=useState(false);
+  const [isClicked3,setIsClicked3]=useState(false);
+  
+  
   //This are the buttons
-function Buttons(){
-  return (
-  <div className="centerWorkBtn " >
-      <ButtonGroup aria-label="Basic example" >
-          <Button variant="secondary" id="1"  onClick={whichCouncil}>Workshops</Button>
-          <Button variant="secondary" id ="2" onClick={whichCouncil}>Events</Button>
-          <Button variant="secondary" id="3"  onClick={whichCouncil}>Collabs</Button>
-      </ButtonGroup>
-  </div>
-  )
-
-}
-
-
+  function Buttons(){
+    return ( 
+    <div className="centerWorkBtn "   >
+          <Button  id="1"  className={`ml-2 w-25 ${isClicked1 ? null : " contact-btn"}`}  variant={ isClicked1 ? "primary" : "outline-primary" }   onClick={whichCouncil}>
+          Events 
+          </Button>
+          <Button  id="2"   className={`ml-2 w-25 ${isClicked2 ? null : " contact-btn"}`}  variant={ isClicked2 ? "primary" : "outline-primary"}   onClick={whichCouncil}>
+          Workshops 
+          </Button>
+          <Button  id="3"   className={`ml-2 w-25 ${isClicked3 ? null : " contact-btn"}`}  variant={ isClicked3 ? "primary" : "outline-primary" } onClick={whichCouncil}>
+          Collabs 
+          
+          </Button>
+    </div>
+    )
+  
+  }
 //This function returns images of respective memberCards
 
 const whichCouncil = (e) =>{
@@ -151,6 +160,12 @@ const whichCouncil = (e) =>{
       //other two 
       setShowEventPage(false);
       setShowCollabPage(false);
+      //For buttons 
+      setIsClicked1(true);
+      //other two 
+      //color buttons
+      setIsClicked2(false);
+      setIsClicked3(false);
   }
   else if (id === "2")
   {
@@ -158,6 +173,14 @@ const whichCouncil = (e) =>{
       //other two
       setShowWsPage(false);
       setShowCollabPage(false);
+      //For buttons
+      setIsClicked2(true);
+        //other two
+      //color buttons
+      setIsClicked1(false);
+      setIsClicked3(false);
+      
+
   }
   else if(id === "3")
   {
@@ -165,6 +188,13 @@ const whichCouncil = (e) =>{
       //other two
       setShowWsPage(false);
       setShowEventPage(false);
+      //for buttons
+      setIsClicked3(true);
+      //other two
+      //color buttons
+      setIsClicked1(false);
+      setIsClicked2(false);
+
 
   }
 
@@ -182,8 +212,8 @@ const whichCouncil = (e) =>{
         initial="hidden" 
         animate="visible"
         exit="exit">
+        <Buttons/>
       <Container >
-      <Buttons/>
         <Row>
         {showWsPage ?  <WsCardMap/> : null }
         {showEventPage ?  <EventCardMap/> : null }
