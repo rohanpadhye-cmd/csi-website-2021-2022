@@ -93,6 +93,15 @@ footer svg {
   width: 100%;
 }
 
+.work-card-row{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.work-card-col{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 /* Pre-Loader Style Begins */
 
 .loaderBack {
@@ -240,7 +249,7 @@ footer svg {
   text-align: center ;
   margin-top: 5px;
 }
-
+}
 /* Council Card / Page
 /* Cards styling */
 /*
@@ -350,7 +359,5 @@ footer svg {
   
     }
   }
-<<<<<<< HEAD
->>>>>>> upstream/main
-=======
+}
 */
