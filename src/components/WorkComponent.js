@@ -97,21 +97,13 @@ const WorkCards=({name,img,img1,desc})=>{
       handleClose={handleClose}
       />
       <Col md={4} xs={12} sm={6}>
-      <Card className='mt-3 mb-2' onClick={handleShow} style={{backgroundColor: "#add8e6"}}>
+      <Card className='mt-4 mb-1' onClick={handleShow} style={{backgroundColor: "#add8e6"}}>
       <Card.Img src={img} />
       </Card>
       </Col>
     </>
   )
 }
-
-
-
-
-
-
-
-
 
 const WorkComponent=()=>{
 
@@ -120,21 +112,29 @@ const WorkComponent=()=>{
   const [showEventPage,setShowEventPage]=useState(false);
   const [showCollabPage,setShowCollabPage]=useState(false);
 
-  //This are the buttons
-function Buttons(){
-  return (
-  <div className="centerWorkBtn " >
-      <ButtonGroup aria-label="Basic example" >
-          <Button variant="secondary" id="1"  onClick={whichCouncil}>Workshops</Button>
-          <Button variant="secondary" id ="2" onClick={whichCouncil}>Events</Button>
-          <Button variant="secondary" id="3"  onClick={whichCouncil}>Collabs</Button>
-      </ButtonGroup>
-  </div>
-  )
-
-}
-
-
+  const [isClicked1,setIsClicked1]=useState(true);
+  const [isClicked2,setIsClicked2]=useState(false);
+  const [isClicked3,setIsClicked3]=useState(false);
+  
+  
+  //These are the buttons
+  function Buttons(){
+    return ( 
+    <div className="centerWorkBtn mx-auto">
+          <Button  id="1"  className={`ml-2 w-25 ${isClicked1 ? null : " contact-btn"}`}  variant={ isClicked1 ? "primary" : "outline-primary" }   onClick={whichCouncil}>
+          Events 
+          </Button>
+          <Button  id="2"   className={`ml-2 w-25 ${isClicked2 ? null : " contact-btn"}`}  variant={ isClicked2 ? "primary" : "outline-primary"}   onClick={whichCouncil}>
+          Workshops 
+          </Button>
+          <Button  id="3"   className={`ml-2 w-25 ${isClicked3 ? null : " contact-btn"}`}  variant={ isClicked3 ? "primary" : "outline-primary" } onClick={whichCouncil}>
+          Collabs 
+          
+          </Button>
+    </div>
+    )
+  
+  }
 //This function returns images of respective memberCards
 
 const whichCouncil = (e) =>{
@@ -148,6 +148,12 @@ const whichCouncil = (e) =>{
       //other two 
       setShowEventPage(false);
       setShowCollabPage(false);
+      //For buttons 
+      setIsClicked1(true);
+      //other two 
+      //color buttons
+      setIsClicked2(false);
+      setIsClicked3(false);
   }
   else if (id === "2")
   {
@@ -155,6 +161,14 @@ const whichCouncil = (e) =>{
       //other two
       setShowWsPage(false);
       setShowCollabPage(false);
+      //For buttons
+      setIsClicked2(true);
+        //other two
+      //color buttons
+      setIsClicked1(false);
+      setIsClicked3(false);
+      
+
   }
   else if(id === "3")
   {
@@ -162,6 +176,13 @@ const whichCouncil = (e) =>{
       //other two
       setShowWsPage(false);
       setShowEventPage(false);
+      //for buttons
+      setIsClicked3(true);
+      //other two
+      //color buttons
+      setIsClicked1(false);
+      setIsClicked2(false);
+
 
   }
 
@@ -169,9 +190,6 @@ const whichCouncil = (e) =>{
 }
 
   
-
-
-
 //This is rendered
     return(
       <motion.div
@@ -179,8 +197,8 @@ const whichCouncil = (e) =>{
         initial="hidden" 
         animate="visible"
         exit="exit">
+        <Buttons/>
       <Container >
-      <Buttons/>
         <Row>
         {showWsPage ?  <WsCardMap/> : null }
         {showEventPage ?  <EventCardMap/> : null }
