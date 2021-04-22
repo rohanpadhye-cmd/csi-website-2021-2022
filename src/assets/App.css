@@ -93,20 +93,11 @@ footer svg {
   width: 100%;
 }
 
-.work-card-row{
-  margin-right: 0px;
-  margin-left: 0px;
-}
-.work-card-col{
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
 /*CentreButtons */
 .centerWorkBtn{
   text-align: center ;
   margin-top: 5px;
-  font-size: 90%;
+  text-overflow: ellipsis;
 } 
 /* Pre-Loader Style Begins */
 
@@ -247,6 +238,10 @@ footer svg {
     width: 40%;
     height: 50px;
     font-size: 0.8rem;
+  }
+
+  .centerWorkBtn{
+    font-size: 0.7rem
   }
 
 }

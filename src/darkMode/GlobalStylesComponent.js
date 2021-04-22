@@ -45,6 +45,11 @@ export const GlobalStyles = createGlobalStyle`
   .contact-btn {
     color: ${({ theme }) => theme.body};
     background-color: ${({ theme }) => theme.text};
+    &:hover {
+      background-color: ${({ theme }) => theme.body};
+      border-color: ${({ theme }) => theme.text};
+      color: ${({ theme }) => theme.text};
+  }
   }
 
   .list-group-item {

@@ -4,8 +4,8 @@ const WorkShopModal=(props)=>{
     
     return(
         <Modal className='mx-0' size='xl' aria-labelledby="contained-modal-title-vcenter" centered show={props.show} onHide={props.handleClose}>
-        <Row size="lg" className='work-card-row'>
-          <Col lg={8} md={12}  className='work-card-col'>
+        <Row size="lg" className='mx-0'>
+          <Col md={12} xl={8} className='px-0'>
           <Carousel fade indicators={false}>
                 <Carousel.Item interval={3000}>
                   <img src={props.img} alt="event-img" width='100%'/>
@@ -20,7 +20,7 @@ const WorkShopModal=(props)=>{
             
           </Col>
 
-          <Col className='work-card-col' >
+          <Col className='px-0' >
             <ListGroup variant="flush">
               <ListGroup.Item><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

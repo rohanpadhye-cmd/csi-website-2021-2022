@@ -113,13 +113,13 @@ const [isClicked3,setIsClicked3]=React.useState(false);
 function Buttons(){
   return (
   <div className="centerWorkBtn" >
-        <Button  id="1"  className={`ml-2 w-25 ${isClicked1 ? null : "contact-btn"}`}  variant={ isClicked1 ? "primary" : "outline-primary" }   onClick={whichCouncil}>
+        <Button  id="1"  className={`ml-2 w-25 ${isClicked1 ? null : "contact-btn"}`}   onClick={whichCouncil}>
         SE < FaUsers/>
         </Button>
-        <Button  id="2"   className={`ml-2 w-25 ${isClicked2 ? null : "contact-btn"}`}  variant={ isClicked2 ? "primary" : "outline-primary"}   onClick={whichCouncil}>
+        <Button  id="2"   className={`ml-2 w-25 ${isClicked2 ? null : "contact-btn"}`}   onClick={whichCouncil}>
         TE <FaUsers/>
         </Button>
-        <Button  id="3"   className={`ml-2 w-25 ${isClicked3 ? null : "contact-btn"}`}  variant={ isClicked3 ? "primary" : "outline-primary" } onClick={whichCouncil}>
+        <Button  id="3"   className={`ml-2 w-25 ${isClicked3 ? null : "contact-btn"}`}  onClick={whichCouncil}>
         BE <FaUsers/>
         
         </Button>

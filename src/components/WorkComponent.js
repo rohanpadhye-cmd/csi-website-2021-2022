@@ -120,18 +120,17 @@ const WorkComponent=()=>{
   //These are the buttons
   function Buttons(){
     return ( 
-    <div className="centerWorkBtn mx-auto">
-          <Button  id="1"  className={`ml-2 w-25 ${isClicked1 ? null : " contact-btn"}`}  variant={ isClicked1 ? "primary" : "outline-primary" }   onClick={whichCouncil}>
+    <Row className='justify-content-center'>
+          <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked1 ? null : " contact-btn"}`}     onClick={whichCouncil}>
           Events 
           </Button>
-          <Button  id="2"   className={`ml-2 w-25 ${isClicked2 ? null : " contact-btn"}`}  variant={ isClicked2 ? "primary" : "outline-primary"}   onClick={whichCouncil}>
+          <Button  id="2"   className={`ml-2 w-25 centerWorkBtn ${isClicked2 ? null : " contact-btn"}`}     onClick={whichCouncil}>
           Workshops 
           </Button>
-          <Button  id="3"   className={`ml-2 w-25 ${isClicked3 ? null : " contact-btn"}`}  variant={ isClicked3 ? "primary" : "outline-primary" } onClick={whichCouncil}>
+          <Button  id="3"   className={`ml-2 w-25 centerWorkBtn ${isClicked3 ? null : " contact-btn"}`}   onClick={whichCouncil}>
           Collabs 
-          
           </Button>
-    </div>
+    </Row>
     )
   
   }
@@ -197,8 +196,8 @@ const whichCouncil = (e) =>{
         initial="hidden" 
         animate="visible"
         exit="exit">
+      <Container fluid>
         <Buttons/>
-      <Container >
         <Row>
         {showWsPage ?  <WsCardMap/> : null }
         {showEventPage ?  <EventCardMap/> : null }
