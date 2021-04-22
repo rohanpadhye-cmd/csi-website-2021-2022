@@ -7,6 +7,7 @@ import WorkComponent from './components/WorkComponent';
 import ContactComponent from './components/ContactComponent';
 import FooterComponent from './components/FooterComponent';
 import Loader from './components/Loader';
+import NotFound from './components/NotFound';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import './assets/App.css';
@@ -49,6 +50,9 @@ function App() {
                 </Route>
                 <Route path="/contact">
                   <ContactComponent />
+                </Route>
+                <Route path="*">
+                  <NotFound />
                 </Route>
               </Switch>
               </AnimatePresence>

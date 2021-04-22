@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container, Row, Modal, Button, Form} from 'react-bootstrap';
 
 // Handle for Firestore
-// import db from './FirestoreConnection';
+// import db from './../FirestoreConnection';
 
 const ContactForm = () => {
 
