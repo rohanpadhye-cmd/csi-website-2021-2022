@@ -7,6 +7,7 @@ import groupImg from "../assets/group-img.jpg";
 import poster from "../assets/poster.jpeg";
 import { motion } from 'framer-motion';
 import QR from "../assets/QR_code.jpg";
+import Counter from './Counter'
 
 const containerVariant = {
   hidden: {
@@ -111,21 +112,9 @@ const HomeComponent = () => {
           </Row>
         </Container>
     
-        <Row className="counter">
-          <Col lg={4} sm={4} className="counter-item">
-            <div>45+</div>
-            <h3>Workshops</h3>
-          </Col>
-          <Col lg={4} sm={4} className="counter-item">
-            <div>40+</div>
-            <h3>Council</h3>
-          </Col>
-          <Col lg={4} sm={4} className="counter-item">
-            <div>30+</div>
-            <h3>Years</h3>
-          </Col>
-        </Row>
+
         
+        <Counter/>
 
         
         <Row className="registrations">
