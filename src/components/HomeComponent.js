@@ -7,6 +7,7 @@ import groupImg from "../assets/group-img.jpg";
 import poster from "../assets/poster.jpeg";
 import { motion } from 'framer-motion';
 import QR from "../assets/QR_code.jpg";
+import Counter from './Counter'
 
 const containerVariant = {
   hidden: {
@@ -111,33 +112,30 @@ const HomeComponent = () => {
           </Row>
         </Container>
     
-        <Row className="counter">
-          <Col lg={4} sm={4} className="counter-item">
-            <div>45+</div>
-            <h3>Workshops</h3>
-          </Col>
-          <Col lg={4} sm={4} className="counter-item">
-            <div>40+</div>
-            <h3>Council</h3>
-          </Col>
-          <Col lg={4} sm={4} className="counter-item">
-            <div>30+</div>
-            <h3>Years</h3>
-          </Col>
-        </Row>
+
         
+        <Counter/>
 
         
         <Row className="registrations">
-          <Col lg={5}>
+          <Col md={6} className="p-0">
             <Card.Img className="poster" src={poster}/>
           </Col>
-          <Col lg={5}>
-            <Card.Body>
-              <Button className="registration-buttons" variant="info" size="lg" onClick={handleShow}>Membership Form</Button>
-              <Button className="registration-buttons" variant="info" size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
-       
+          <Col md={6} style={{padding: "11% 0"}}>
+            {/* <Card.Body> */}
 
+              <div className="registration-buttons">
+                <Col>
+                  <Button className="registration-button" size="lg" onClick={handleShow}>Membership Form</Button>
+                </Col>
+
+                <Col>
+                  <Button className="registration-button register-for-button"  size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
+                </Col>
+                
+                
+              </div>
+       
               <Modal
                 size="lg"
                 show={showWorkshopModal}
@@ -226,7 +224,7 @@ const HomeComponent = () => {
                   </>
                 }
               </Modal>
-            </Card.Body>
+            {/* </Card.Body> */}
           </Col>
         </Row>
 
