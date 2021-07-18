@@ -1,9 +1,9 @@
 import { Row , Col , Card , Container,ButtonGroup,Button } from 'react-bootstrap';
 import WorkShopModal from './WorkShopModal'
 import {useState} from 'react';
-import ws1 from '../assets/Ws/ws1.jpeg';
+import ws1 from '../assets/Ws/Ws1.jpeg';
 import ws1a from '../assets/Ws/ws1a.jpeg';
-import ws2 from '../assets/Ws/ws2.jpeg';
+import ws2 from '../assets/Ws/Ws2.jpeg';
 import ws3 from '../assets/Ws/Ws3.jpeg';
 import ws4 from '../assets/Ws/Ws4.jpeg';
 import e1 from '../assets/Ws/e1.jpeg';
