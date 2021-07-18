@@ -25,14 +25,14 @@ const FooterComponent = () => {
             <hr className="mx-4 mt-5" />
             <footer>
                 <Container fluid className="d-none d-md-block">
-                    <Row className="mt-md-4 mb-md-4">
-                        <Col md={{ span: 3, offset: 0 }} className="ml-md-5">
-                            &copy;CSI - VESIT 2021
+                    <Row className="my-4">
+                        <Col md={3}>
+                            &copy; CSI - VESIT 2021
                         </Col>
-                        <Col md={{ span: 5, offset: 1 }}>
-                            madeWith = (<GiHeartBattery /> , <GiCoffeeMug />) =&gt; &#123;<span style={{"fontStyle": "italic"}}>The CSI Team</span>&#125;
+                        <Col md={5} className="ml-5 pl-5">
+                            madeWith = (<GiHeartBattery /> , <GiCoffeeMug />) =&gt; &#123;<span style={{"fontStyle": "italic"}}>Our CSI Team</span>&#125;
                         </Col>
-                        <Col md={{ offset: 0 }}>
+                        <Col>
                             <a href="https://www.facebook.com/groups/csivesitchapter/"><svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="icon icon-tabler icon-tabler-brand-facebook"
