@@ -200,29 +200,52 @@ footer svg {
 }
 
 .registrations {
-  margin-top: 30px;
-  width: 100%;
+  padding: 0 10%;
+  height: 100%;
 }
 
 .poster {
-  margin-left: 175px;
+  display: block;
+  height: 100%;
+  margin: auto;
 }
 
-.registration-buttons{
+/* .registration-buttons{
   border-color: #363537;
   background-color: #363537;
   font-weight: 800;
   color: #add8e6;
   margin: 90px 0 0 350px;
   width: 300px;
+ 
 }
+
 .registration-buttons:hover{
   border-color: #363537;
   background-color: #add8e6;
   color:  #363537;
+} */
+
+.registration-buttons{
+  margin: auto;
+  width: fit-content;
 }
 
-@media screen and (max-width: 576px) {
+.registration-button,
+.registration-button:hover{
+  border-color: #363537;
+  color: #363537;
+  font-weight: 800;
+  background-color: #add8e6;
+  width: 300px;
+}
+
+.register-for-button{
+  margin-top: 21%;
+}
+
+
+@media screen and (max-width: 768px) {
   .jumbotron {
     padding-top: 1px;
     padding-bottom: 1px;
@@ -244,16 +267,11 @@ footer svg {
     text-align: center;
   }
 
-  .poster {
-    margin: 0 0 0 15px;
-  }
-
-  /* .registration-buttons {
-    margin: 10% 0 0 8%;
-    width: 40%;
+  .registration-button {
+    width: 150px;
     height: 50px;
     font-size: 0.8rem;
-  } */
+  }
 
 
   .centerWorkBtn{
