@@ -12,7 +12,7 @@ const iconStyle = (hover) => ({
     marginLeft: "6px",
 });
 
-const FooterComponent=()=>{
+const FooterComponent = () => {
 
     const [fbHover, setFbHover] = useState(false);
     const [instaHover, setInstaHover] = useState(false);
