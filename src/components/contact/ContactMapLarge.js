@@ -37,7 +37,7 @@ const ContactMapLarge = () => {
                             <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5"></path>
                             <line x1="18" y1="6" x2="18" y2="6.01"></line>
                         </svg>
-                        <div className='contact-text mt-md-2'>
+                        <div className='contact-text mt-md-2' style={{ fontSize: '13px' }}>
                             Vivekanand Education Society's Institute of Technology,
                             Collector's Colony, Chembur, Mumbai-74
                         </div>
@@ -61,7 +61,7 @@ const ContactMapLarge = () => {
                                         <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                                         <polyline points="3 7 12 13 21 7"></polyline>
                                     </svg>
-                                    <span className='contact-text mt-md-2 ml-md-2'>
+                                    <span className='contact-text mt-md-2 ml-md-2' style={{fontSize: '16px'}}>
                                         csi.vesit@ves.ac.in
                                     </span> 
                                 </Col>
@@ -86,13 +86,13 @@ const ContactMapLarge = () => {
                                             </svg>
                                         </Col>
                                         <Col>
-                                            <div className='contact-text'>
+                                            <div className='contact-text' style={{ fontSize: '15px' }}>
                                                 Jatin Bhagchandani:
                                             </div>
-                                            <div className='contact-text'>
+                                            <div className='contact-text' style={{ fontSize: '13px' }}>
                                                 +91 96194 47077
                                             </div>
-                                            <div className='contact-text'>
+                                            <div className='contact-text' style={{ fontSize: '13px' }}>
                                                 (Chairperson)
                                             </div>
                                         </Col>
