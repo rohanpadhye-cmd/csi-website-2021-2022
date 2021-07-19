@@ -21,8 +21,8 @@ a {
 /* Navbar Style Begins */
 
 .navbar {
-  font-size: 120%;
-  font-weight: 500;
+  font-size: 100%;
+  font-weight: 400;
   background-color: rgb(41, 93, 141);
 }
 
@@ -36,7 +36,12 @@ a {
 
 .navbar-light .navbar-nav .nav-link.active {
   color: floralwhite;
-  font-weight: bolder;
+  font-weight: 500;
+}
+
+.tgl-btn {
+  margin-top: 8px;
+  font-size: 110%;
 }
 
 /* Footer Style Begins */
@@ -61,18 +66,13 @@ footer svg {
 }
 
 .contact-text {
-  font-size: x-small;
-}
-
-.contact-text {
-  font-size: 80%;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .contact-list {
   list-style-type: none;
   font-size: 120%;
-  margin-left: 10%;
 }
 
 .contact-list-header {
@@ -91,6 +91,19 @@ footer svg {
 .contact-carousel {
   height: 80%;
   width: 100%;
+}
+
+.carousel-inner {
+  position: relative;
+  right: 10px;
+}
+
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 10px;
+  border-radius: 50%;
 }
 
 /*CentreButtons */
@@ -135,7 +148,9 @@ footer svg {
   /* Navbar Style Begins */
   
   .tgl-btn {
-    margin-top: 2%;
+    margin-top: 5px;
+    font-size: 100%;
+    margin-inline: auto;
   }
 
   /* Footer Style Begins */
@@ -161,12 +176,23 @@ footer svg {
   }
 
   .contact-list {
-    font-size: 120%;
+    font-size: 100%;
+  }
+
+  .carousel-inner {
+    position: relative;
+    left: 5px;
+  }
+
+  .carousel-indicators {
+    position: relative;
+    bottom: 8px;
   }
 
   .contact-form-card .card-header h3 {
     font-weight: 550;
   }
+
   .contact-carousel {
     height: 100%;
     width: 100%;

@@ -18,7 +18,7 @@ const NavbarComponent = () => {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-            <Navbar expand="lg">
+            <Navbar expand="lg" className="px-md-5">
                 <LinkContainer to="/home">
                     <Navbar.Brand>
                         <motion.img
@@ -27,8 +27,9 @@ const NavbarComponent = () => {
                             height="50"
                             className="d-inline-block align-top"
                             alt="CSI-VESIT Logo"
-                            animate={{ scale: [0, 0.5, 0.8, 1.3], rotate: [0, 360] }}
+                            animate={{ scale: [0, 0.5, 0.8, 1.15], rotate: [0, 360] }}
                         />
+                        <span style={{ color: "floralwhite", position: "relative", top: "10px", left: "15px", fontWeight: "500" }}>CSI - VESIT</span>
                     </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,7 +42,7 @@ const NavbarComponent = () => {
                             <Nav.Link className="ml-3 mr-3">About Us</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/council">
-                            <Nav.Link className="ml-3 mr-3">Council</Nav.Link>
+                            <Nav.Link className="ml-3 mr-3">Our Team</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to='/work'>
                             <Nav.Link className="ml-3 mr-3">Our Work</Nav.Link>
@@ -50,7 +51,7 @@ const NavbarComponent = () => {
                             <Nav.Link className="ml-3 mr-3">Get In Touch</Nav.Link>
                         </LinkContainer>
                     </Nav>
-                    <Toggle theme={theme} toggleTheme={themeToggler} />
+                    <Toggle theme={theme} toggleTheme={themeToggler} className="dark-mode-toggler" />
                 </Navbar.Collapse>
             </Navbar>
         </ThemeProvider>
