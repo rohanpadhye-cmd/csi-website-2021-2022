@@ -1,4 +1,4 @@
-import { Row , Col , Card , Container,ButtonGroup,Button } from 'react-bootstrap';
+import { Row , Col , Card , Container,Button } from 'react-bootstrap';
 import WorkShopModal from './WorkShopModal'
 import {useState} from 'react';
 import ws1 from '../assets/Ws/Ws1.jpeg';
