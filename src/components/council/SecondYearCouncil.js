@@ -15,7 +15,7 @@ const seMemberCards = seMemberDetails.map((info, index) => {
 });
 
 const SecondYearCouncil = () => {
-  console.log(seMemberDetails);
+  // console.log(seMemberDetails);
   return(
       <>
       {seMemberCards}
