@@ -3,7 +3,10 @@ import {Modal,Row , Col,Carousel,ListGroup} from 'react-bootstrap';
 const WorkShopModal=(props)=>{
     
     return(
-        <Modal className='mx-0' size='xl' aria-labelledby="contained-modal-title-vcenter" centered show={props.show} onHide={props.handleClose}>
+        <Modal className='mx-0' size='xl' aria-labelledby="contained-modal-title-vcenter" centered show={props.show} onHide={props.handleClose} >
+          <Modal.Header closeButton>
+          <Modal.Title>{props.name}</Modal.Title>
+        </Modal.Header>
         <Row size="lg" className='mx-0'>
           <Col md={12} xl={8} className='px-0'>
           <Carousel fade indicators={false}>
