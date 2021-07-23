@@ -86,7 +86,7 @@ const AboutComponent = () => {
               fontWeight: "bold",
             }}
           >
-            Our Mission
+            OUR MISSION
           </h2>
           <p className="aboutCSI">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -177,9 +177,10 @@ const AboutComponent = () => {
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ duration: 2, delay: 5 }}
-          className="about-testimonials text-center"
+          className="about-mission text-center"
           style={{ paddingBottom: "35px" }}
         >
+
           <h2
             style={{
               paddingTop: "70px",
@@ -187,10 +188,11 @@ const AboutComponent = () => {
               textDecoration: "underline",
               fontWeight: "bold",
             }}
+
           >
-            Testimonials
+            TESTIMONIALS
           </h2>
-          <Testimonials />
+          <Testimonials className="testimonials"/>
           
         </motion.div>
       </Container>
