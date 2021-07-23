@@ -143,8 +143,175 @@ footer svg {
 
 /* Universal Smaller Screens Style Begins */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   
+  /* Navbar Style Begins */
+  
+  /* .tgl-btn {
+    margin-top: 5px;
+    font-size: 100%;
+    margin-inline: auto;
+  } */
+
+  /* Footer Style Begins */
+
+  /* footer {
+    font-size: 110%;
+  } */
+
+  /* Contact Style Begins */
+
+ /* .contact-h1 {
+    font-size: 220%;
+  }
+
+  .contact-text {
+    font-size: 70%;
+    font-weight: 700;
+  }
+  
+  .contact-list-header {
+    font-size: 160%;
+    font-weight: 600;
+  }
+
+  .cont  act-list {
+    font-size: 100%;
+  }
+
+  .carousel-inner {
+    position: relative;
+    left: 5px;
+  }
+
+  .carousel-indicators {
+    position: relative;
+    bottom: 8px;
+  }
+
+  .contact-form-card .card-header h3 {
+    font-weight: 550;
+  }
+
+  .contact-carousel {
+    height: 100%;
+    width: 100%;
+  }
+
+   */
+
+/* }  */
+
+/* Home Component */
+@font-face {
+  font-family: "BATIK WORLDWIDE";
+  src: local("BATIK WORLDWIDE"), url(../fonts/BATIKWORLDWIDE.otf);
+}
+
+.csi-vesit {
+  text-align: center;
+  font-family: "BATIK WORLDWIDE";
+  font-size: 800%;
+  margin-top: 13%;
+  color: floralwhite;
+}
+
+.jumbotron {
+  background-image: url("./back-img1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.counter {
+  /* text-align: center;
+  padding: 3rem;
+  width: 100%; */
+  background-color: #add8e6;
+  margin: 40px 0;
+  padding: 20px 0;
+  width: 100%;
+}
+.counter-item{
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.counter .counter-item p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-size: 18px;
+}
+.registrations {
+  padding: 0 10%;
+  height: 100%;
+}
+
+.poster {
+  display: block;
+  height: 100%;
+  margin: auto;
+}
+
+/* .registration-buttons{
+  border-color: #363537;
+  background-color: #363537;
+  font-weight: 800;
+  color: #add8e6;
+  margin: 90px 0 0 350px;
+  width: 300px;
+ 
+}
+
+.registration-buttons:hover{
+  border-color: #363537;
+  background-color: #add8e6;
+  color:  #363537;
+} */
+
+.registration-buttons{
+  margin: auto;
+  width: fit-content;
+}
+
+.registration-button,
+.registration-button:hover{
+  border-color: #363537;
+  color: #363537;
+  font-weight: 800;
+  background-color: #add8e6;
+  width: 300px;
+  margin-right: 70px;
+  margin-top: 13%;
+}
+
+/* .register-for-button{
+  margin-top: 21%;
+} */
+
+.upcoming-event p{
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:1024px)
+{
+  .upcoming-event p{
+    font-size: 1rem;
+  }
+  .upcoming-event h5{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+   .csi-vesit {
+    font-size : 300%;
+  }
   /* Navbar Style Begins */
   
   .tgl-btn {
@@ -197,81 +364,8 @@ footer svg {
     height: 100%;
     width: 100%;
   }
-}
 
-/* Home Component */
-@font-face {
-  font-family: "BATIK WORLDWIDE";
-  src: local("BATIK WORLDWIDE"), url(../fonts/BATIKWORLDWIDE.otf);
-}
-
-.csi-vesit {
-  text-align: center;
-  font-family: "BATIK WORLDWIDE";
-  font-size: 800%;
-  margin-top: 13%;
-  color: floralwhite;
-}
-
-.jumbotron {
-  background-image: url("./back-img1.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.counter {
-  text-align: center;
-  padding: 3rem;
-  width: 100%;
-}
-
-.registrations {
-  padding: 0 10%;
-  height: 100%;
-}
-
-.poster {
-  display: block;
-  height: 100%;
-  margin: auto;
-}
-
-/* .registration-buttons{
-  border-color: #363537;
-  background-color: #363537;
-  font-weight: 800;
-  color: #add8e6;
-  margin: 90px 0 0 350px;
-  width: 300px;
- 
-}
-
-.registration-buttons:hover{
-  border-color: #363537;
-  background-color: #add8e6;
-  color:  #363537;
-} */
-
-.registration-buttons{
-  margin: auto;
-  width: fit-content;
-}
-
-.registration-button,
-.registration-button:hover{
-  border-color: #363537;
-  color: #363537;
-  font-weight: 800;
-  background-color: #add8e6;
-  width: 300px;
-}
-
-.register-for-button{
-  margin-top: 21%;
-}
-
-
-@media screen and (max-width: 768px) {
+  /* Home page changes */
   .jumbotron {
     padding-top: 1px;
     padding-bottom: 1px;
@@ -288,9 +382,10 @@ footer svg {
     padding-right: 0;
   }
 
-  .counter-item h3 {
+  .counter-item{
     font-size: 100%;
     text-align: center;
+   
   }
 
   .registration-button {
@@ -303,7 +398,31 @@ footer svg {
   .centerWorkBtn{
     font-size: 0.7rem
   }
+  .upcoming-event p{
+    font-size: 0.6rem;
+  }
+  .upcoming-event h5{
+    font-size: 0.6rem;
+  }
+}
 
+@media screen and (max-width:426px)
+{
+  .upcoming-event p{
+    font-size: 0.8rem;
+  }
+  .upcoming-event h5{
+    font-size: 0.8rem;
+  }
+
+  .registration-button,
+.registration-button:hover{
+  margin-right: 0px;
+  width:200px;
+ }
+ .counter-item{
+   margin-top: 15px;
+ }
 }
 
 
