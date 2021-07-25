@@ -115,27 +115,53 @@ const HomeComponent = () => {
 
         
         <Counter/>
+        <hr/>
 
-        
-        <Row className="registrations">
+        <Container fluid className="mt-5">
+          <h1 style={{textDecoration:"underline"}}>Upcoming Event</h1>
+          <Row className="mt-5">
+            <Col md={6}>
+              <Card className="council-pic-info">
+                <Card.Img src={poster}/>
+              </Card>
+            </Col>
+            <Col md={6}>
+            <div className="mx-auto mt-3 px-5 upcoming-event">
+               <h3 style={{textDecoration:"underline"}}>About Event</h3>
+               <p style={{textAlign:"left"}}>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               <h5 style={{textAlign:"left"}}><strong>Date:22/07/2021<br/><br/>Time:11 am to 1 pm</strong></h5>
+            </div>
+            </Col>
+          </Row>
+          <div className="registration-buttons">
+                <Row style={{textAlign:"center"}}>
+                <Col md={6} xs={12}>
+                <Button className="registration-button" size="lg" onClick={handleShow}>Membership Form</Button>
+                </Col>
+                <Col md={6} xs={12}>
+                 <Button className="registration-button"  size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
+                 </Col>
+                </Row>
+                 
+          
+                
+                
+              </div>
+        </Container>
+        {/* <Row className="registrations">
           <Col md={6} className="p-0">
             <Card.Img className="poster" src={poster}/>
           </Col>
           <Col md={6} style={{padding: "11% 0"}}>
             {/* <Card.Body> */}
 
-              <div className="registration-buttons">
-                <Col>
-                  <Button className="registration-button" size="lg" onClick={handleShow}>Membership Form</Button>
-                </Col>
-
-                <Col>
-                  <Button className="registration-button register-for-button"  size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
-                </Col>
-                
-                
-              </div>
-       
+              {/* 
               <Modal
                 size="lg"
                 show={showWorkshopModal}
@@ -223,10 +249,10 @@ const HomeComponent = () => {
                     </Modal.Body> 
                   </>
                 }
-              </Modal>
-            {/* </Card.Body> */}
+              </Modal> */}
+            {/* </Card.Body>
           </Col>
-        </Row>
+        </Row>  */}
 
         {/* Modal for Membership Form */}
         <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">

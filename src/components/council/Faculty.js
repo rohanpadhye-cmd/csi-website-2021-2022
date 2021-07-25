@@ -1,11 +1,11 @@
 import CouncilCard from "./CouncilCard";
 
 // Fetching Details of Council Members
-const facultyDetails = [{ imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU", role: "Sr.Web Officer", name: "POM" }, { imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU", role: "Sr.Web Officer", name: "POM" }];
+const facultyDetails = [{ imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU", role: "Sr.Web Officer", name: "1POM" }, { imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU", role: "Sr.Web Officer", name: "2POM" }];
 
 const facultyCards = facultyDetails.map((info, index) => {
     return (
-        <CouncilCard
+        <CouncilCard 
             imageUrl={info.imageUrl}
             name={info.name}
             role={info.role}
@@ -18,7 +18,7 @@ const Faculty = () => {
     console.log(facultyDetails);
     return (
         <>
-            {facultyCards}
+        {facultyCards}
         </>
     );
 }

@@ -19,4 +19,4 @@ const CouncilCard = ({ name }) => {
   )
 }
 
-export default CouncilCard;
+export default CouncilCard; 

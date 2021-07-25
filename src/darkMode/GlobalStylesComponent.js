@@ -26,11 +26,6 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 50%;
     background-color: ${({ theme }) => theme.text};
   }
-  
-  .carousel-indicators li {
-    background-color: ${({ theme }) => theme.text};
-    color:${({ theme }) => theme.body};
-  }
 
   .contact-form-card {
     border: 2px groove ${({ theme }) => theme.text};
@@ -61,5 +56,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
-
+  .testimonialsBody {
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+  }
 `

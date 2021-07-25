@@ -27,9 +27,12 @@ const teMemberCards = teMemberDetails.map((info, index) => {
 const ThirdYearCouncil = () => {
     console.log(teMemberDetails);
     return (
-        <>
+        <div>  
+            <h1 className="mb-4" style={{alignText:"center"}}>TE Council</h1>
+            <div className="map-team-cards">
             {teMemberCards}
-        </>
+            </div>
+        </div>
     );
 }
  

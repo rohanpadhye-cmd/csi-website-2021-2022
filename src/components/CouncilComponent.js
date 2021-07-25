@@ -1,47 +1,74 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import Faculty from "./council/Faculty";
 import FinalYearCouncil from "./council/FinalYearCouncil";
 import ThirdYearCouncil from "./council/ThirdYearCouncil";
 import SecondYearCouncil from "./council/SecondYearCouncil";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
+// import "../components/council/councilCard.css";
+import { motion } from "framer-motion";
 
+
+// Side-by-side se te be owlcarousel
 const CouncilComponent = () => {
-  const options = {
-    loop: true,
-    items: 3,
-    autoplay: true,
-    autoplayHoverPause: true,
-  };
-  return (
-    <Container>
 
-      <h1 className="mb-4">Faculty Members</h1>
-      <Row>
-        <Col />
-        <Faculty />
-        <Col />
-      </Row>
+  //States for buttons
+const [currentCouncil, setCurrentCouncil] = React.useState("BE");;
+const [isClicked,setIsClicked] = React.useState("BE");
 
-      <h1 className="mt-4 mb-5">BE Council Members</h1>
-      <OwlCarousel {...options}>
-        <FinalYearCouncil />
-      </OwlCarousel>
-
-      <h1 className="mt-4 mb-5">TE Council Members</h1>
-      <OwlCarousel {...options}>
-        <ThirdYearCouncil />
-      </OwlCarousel>
-
-      <h1 className="mt-4 mb-5">SE Council Members</h1>
-      <OwlCarousel {...options}>
-        <SecondYearCouncil />
-      </OwlCarousel>
-      
-    </Container>
+ //This are the buttons
+function Buttons(){
+  return ( 
+  <Row className='justify-content-center' style={{marginBottom:"50px"}}>
+    <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked ==="BE" ? null : " contact-btn"}`}     onClick={whichCouncil}>
+    BE Council
+    </Button>
+    <Button  id="2"   className={`ml-2 w-25 centerWorkBtn ${isClicked ==="TE" ? null : " contact-btn"}`}     onClick={whichCouncil}>
+    TE Council
+    </Button>
+    <Button  id="3"   className={`ml-2 w-25 centerWorkBtn ${isClicked ==="SE" ? null : " contact-btn"}`}   onClick={whichCouncil}>
+    SE Council 
+    </Button>
+  </Row>
   )
 }
+
+//This function sets the stste of buttons to show respective Year cards
+
+const whichCouncil = (e) => {
+  const id = e.target.id;
+  e.target.setvariant = "primary";
+  if (id === "1") {
+  setCurrentCouncil("BE");
+  setIsClicked("BE");
+  }
+  else if (id === "2") {
+  setCurrentCouncil("TE");
+  setIsClicked("TE");
+  }
+  else if (id === "3") {
+  setCurrentCouncil("SE");
+  setIsClicked("SE");
+  }
+}
  
+
+ return (
+   <Container>
+    <h1 className="mb-4">Faculty Members</h1>
+      <Row style={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
+        <Faculty />
+      </Row>
+
+     <Buttons />
+     <Row>
+        {currentCouncil === "BE" && (<FinalYearCouncil />)}
+        {currentCouncil === "TE" && (<ThirdYearCouncil />)}
+        {currentCouncil === "SE" && (<SecondYearCouncil />)}
+     </Row>
+   </Container>
+ );
+}
+
 export default CouncilComponent;

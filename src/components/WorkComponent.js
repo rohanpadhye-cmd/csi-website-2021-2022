@@ -1,6 +1,6 @@
 import { Row , Col , Card , Container,Button } from 'react-bootstrap';
 import WorkShopModal from './WorkShopModal'
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import ws1 from '../assets/Ws/Ws1.jpeg';
 import ws1a from '../assets/Ws/ws1a.jpeg';
 import ws2 from '../assets/Ws/Ws2.jpeg';
@@ -10,7 +10,12 @@ import e1 from '../assets/Ws/e1.jpeg';
 import e2 from '../assets/Ws/e2.jpeg';
 import cl1 from '../assets/Ws/cl1.jpeg';
 import { motion } from 'framer-motion';
+import firebase from 'firebase/app'
+import db from '../firebase/firebase';
 
+  
+  
+ 
 const containerVariant = {
   hidden: {
     opacity: 0,
@@ -36,10 +41,10 @@ const containerVariant = {
 
 //This array has workshop info 
 const WSInfo =[
-  {img:ws1,img1:ws1a,name:"WS1",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' },
-  {img:ws2,img1:ws2,name:"WS2",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'},
-  {img:ws3,img1:ws2 ,name:"WS3",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' },
-  {img:ws4,img1:ws2 ,name:"WS4",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' } 
+  {img:ws1,img1:ws1a,name:"Github Workshop",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' },
+  {img:ws2,img1:ws2,name:"Node.js Workshop",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'},
+  {img:ws3,img1:ws2 ,name:"PHP & Laravel Workshop",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' },
+  {img:ws4,img1:ws2 ,name:"Bootstrap Workshop",desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' } 
 ];
 
 //This array has event info
@@ -56,36 +61,18 @@ const collabInfo =[
 
 
 //This function maps the workshop cards and renders them
-const WsCardMap=()=>WSInfo.map((info,idx)=>{
+const CardMap=(props)=>props.data.map((info,idx)=>{
   return(
-    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
+    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} conductedBy={info.conductedBy} conductedOn={info.conductedOn} key={idx} />
   )
 }
 )
 
-//This function maps event card and renders them
-const EventCardMap=()=>eventInfo.map((info,idx)=>{
-  return(
-    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
-  )
-}
-)
-
-//This function maps event card and renders them
-const CollabCardMap=()=>collabInfo.map((info,idx)=>{
-  return(
-    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
-  )
-}
-)
-
-
-
-
-const WorkCards=({name,img,img1,desc})=>{
+const WorkCards=({name,img,img1,desc,conductedBy,conductedOn})=>{
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return(
     <>
     <WorkShopModal 
@@ -94,6 +81,8 @@ const WorkCards=({name,img,img1,desc})=>{
       img1={img1}
       desc={desc}
       show={show}
+      conductedBy={conductedBy} 
+      conductedOn={conductedOn}
       handleClose={handleClose}
       />
       <Col md={4} xs={12} sm={6}>
@@ -103,7 +92,7 @@ const WorkCards=({name,img,img1,desc})=>{
       </Col>
     </>
   )
-}
+  }
 
 const WorkComponent=()=>{
 
@@ -115,17 +104,31 @@ const WorkComponent=()=>{
   const [isClicked1,setIsClicked1]=useState(true);
   const [isClicked2,setIsClicked2]=useState(false);
   const [isClicked3,setIsClicked3]=useState(false);
-  
-  
+  const [Info , setInfo] = useState([]);
+
+  useEffect(()=>{
+    db.collection("WSInfo").get().then((querySnapshot) => {
+           
+      // Loop through the data and store
+      // it in array to display
+      querySnapshot.forEach(element => {
+          var data = element.data();
+          setInfo(arr => [...arr , data]);
+            
+      });
+  })
+},[])
+  console.log(Info)
+
   //These are the buttons
   function Buttons(){
     return ( 
     <Row className='justify-content-center'>
           <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked1 ? null : " contact-btn"}`}     onClick={whichCouncil}>
-          Events 
+          Workshops
           </Button>
           <Button  id="2"   className={`ml-2 w-25 centerWorkBtn ${isClicked2 ? null : " contact-btn"}`}     onClick={whichCouncil}>
-          Workshops 
+          Events 
           </Button>
           <Button  id="3"   className={`ml-2 w-25 centerWorkBtn ${isClicked3 ? null : " contact-btn"}`}   onClick={whichCouncil}>
           Collabs 
@@ -199,9 +202,9 @@ const whichCouncil = (e) =>{
       <Container fluid>
         <Buttons/>
         <Row>
-        {showWsPage ?  <WsCardMap/> : null }
-        {showEventPage ?  <EventCardMap/> : null }
-        {showCollabPage ?  <CollabCardMap/> : null }
+        {showWsPage ?  <CardMap data={Info}/> : null }
+        {showEventPage ?  <CardMap data={eventInfo}/> : null }
+        {showCollabPage ?  <CardMap data={collabInfo}/> : null }
         </Row>
       </Container>
       </motion.div>

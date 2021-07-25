@@ -17,9 +17,12 @@ const beMemberCards = beMemberDetails.map((info, index) => {
 const FinalYearCouncil = () => {
     console.log(beMemberDetails);
     return (
-        <>
+        <div>  
+            <h1 className="mb-4" style={{alignText:"center"}}>BE Council</h1>
+            <div className="map-team-cards">
             {beMemberCards}
-        </>
+            </div>
+        </div>
     );
 }
 
