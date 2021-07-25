@@ -18,9 +18,12 @@ const seMemberCards = seMemberDetails.map((info, index) => {
 const SecondYearCouncil = () => {
   // console.log(seMemberDetails);
   return(
-      <>
-      {seMemberCards}
-      </>
+    <div>  
+    <h1 className="mb-4" style={{alignText:"center"}}>SE Council</h1>
+    <div className="map-team-cards">
+    {seMemberCards}
+    </div>
+</div>
   );
 };
  
