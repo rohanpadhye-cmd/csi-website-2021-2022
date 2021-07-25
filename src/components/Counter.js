@@ -8,6 +8,7 @@ import {IoMdCheckboxOutline} from "react-icons/io"
 
 const Counter = () => {
     return (
+      <div data-aos="zoom-in" data-aos-duration='3000'>
         <Row className="counter">
         <Col lg={4} sm={4}>
           <div className="counter-item">
@@ -55,6 +56,7 @@ const Counter = () => {
         </Col>
 
       </Row>
+      </div>
     )
 }
 

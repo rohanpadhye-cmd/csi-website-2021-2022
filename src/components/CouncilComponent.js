@@ -7,7 +7,7 @@ import SecondYearCouncil from "./council/SecondYearCouncil";
 // import "owl.carousel/dist/assets/owl.carousel.css";
 // import "owl.carousel/dist/assets/owl.theme.default.css";
 // import "../components/council/councilCard.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 
 // Side-by-side se te be owlcarousel
@@ -20,7 +20,7 @@ const [isClicked,setIsClicked] = React.useState("BE");
  //This are the buttons
 function Buttons(){
   return ( 
-  <Row className='justify-content-center' style={{marginBottom:"50px"}}>
+  <Row className='justify-content-center' style={{marginBottom:"50px"}} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
     <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked ==="BE" ? null : " contact-btn"}`}     onClick={whichCouncil}>
     BE Council
     </Button>
@@ -56,13 +56,13 @@ const whichCouncil = (e) => {
 
  return (
    <Container>
-    <h1 className="mb-4">Faculty Members</h1>
-      <Row style={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
+    <h1 className="mb-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
+      <Row style={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
         <Faculty />
       </Row>
 
      <Buttons />
-     <Row>
+     <Row data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
         {currentCouncil === "BE" && (<FinalYearCouncil />)}
         {currentCouncil === "TE" && (<ThirdYearCouncil />)}
         {currentCouncil === "SE" && (<SecondYearCouncil />)}

@@ -1,48 +1,49 @@
-import { CardDeck, Card, Container, Carousel } from "react-bootstrap";
+import { CardDeck, Card, Container } from "react-bootstrap";
 import knowledge from "../assets/Knowledge.jpg";
 import skill from "../assets/Skill.jpg";
 import workshop from "../assets/Workshop.jpg";
-import dummy from "../assets/dummy.png";
-import { motion } from "framer-motion";
+// import dummy from "../assets/dummy.png";
+// import { motion } from "framer-motion";
 import Testimonials from "./Testimonials";
 
 
-const containerVariant = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "tween",
-      duration: 1,
-    },
-  },
-  exit: {
-    x: "-100vw",
-    transition: {
-      type: "tween",
-      duration: 1,
-      when: "beforeChildren",
-    },
-  },
-};
+// const containerVariant = {
+//   hidden: {
+//     opacity: 0,
+//     x: "100vw",
+//   },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: "tween",
+//       duration: 1,
+//     },
+//   },
+//   exit: {
+//     x: "-100vw",
+//     transition: {
+//       type: "tween",
+//       duration: 1,
+//       when: "beforeChildren",
+//     },
+//   },
+// };
 
 const AboutComponent = () => {
   return (
-    <motion.div
-      variants={containerVariant}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+    // <motion.div
+    //   variants={containerVariant}
+    //   initial="hidden"
+    //   animate="visible"
+    //   exit="exit"
       
-    >
+    // >
+    <div>
       <Container className="">
-        <div className="about-mission text-center">
+        <div className="about-mission text-center" data-aos="fade-left" data-aos-duration="1000">
             
-          <motion.h2
+          {/* <motion.h2
             initial={{ y: "100vw" }}
             animate={{ y: 0 }}
             transition={{ duration: 2 }}
@@ -52,17 +53,25 @@ const AboutComponent = () => {
               textDecoration: "underline",
               fontWeight: "bold",
             }}
-          >
+          > */}
+            <h2 style={{
+              paddingTop: "10px",
+              paddingBottom: "25px",
+              textDecoration: "underline",
+              fontWeight: "bold",
+            }}>
             ABOUT CSI
-          </motion.h2>
+          </h2>
+          {/* </motion.h2> */}
 
-          <motion.p
+          {/* <motion.p
             initial={{ y: "100vw" }}
             animate={{ y: 0 }}
             transition={{ duration: 2 }}
             style={{ textAlign: "center" }}
-            className="aboutCSI"
-          >
+            
+          > */}
+          <p className="aboutCSI">
             Computer Society of India was established in the year 1965 is today
             the largest IT professionals society in India. Keeping in mind the
             interest of IT professionals & computer users, CSI works towards,
@@ -70,14 +79,15 @@ const AboutComponent = () => {
             society. The basic purpose of CSI is to promote IT as a profession.
             To fulfil this objective, CSI regularly organizes conferences,
             conventions, lectures and gives various awards.
-          </motion.p>
+            </p>
         </div>
-        <motion.div
+        {/* <motion.div
           initial={{ y: "100vw" }}
           animate={{ y: 0 }}
           transition={{ duration: 2, delay: 0.5 }}
           className="about-mission text-center"
-        >
+        > */}
+        <div className="about-mission" data-aos="fade-right" data-aos-duration="1000">
           <h2
             style={{
               paddingBottom: "25px",
@@ -97,14 +107,16 @@ const AboutComponent = () => {
             Sed placerat pellentesque ex ut dictum. Pellentesque posuere
             accumsan felis et dapibus.
           </p>
-        </motion.div>
-
-        <CardDeck>
-          <motion.div
+        </div>
+        {/* </motion.div> */}
+            
+        <CardDeck data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          {/* <motion.div
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, delay: 1.5 }}
-          >
+          > */}
+          <div>
             <Card
               style={{
                 backgroundColor: "darkslategrey",
@@ -123,12 +135,14 @@ const AboutComponent = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </motion.div>
+          </div>
+          {/* </motion.div>
           <motion.div
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, delay: 1.7 }}
-          >
+          > */}
+          <div>
             <Card
               style={{
                 backgroundColor: "darkslategrey",
@@ -147,12 +161,14 @@ const AboutComponent = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </motion.div>
+            </div>
+          {/* </motion.div>
           <motion.div
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, delay: 2 }}
-          >
+          > */}
+          <div>
             <Card
               style={{
                 backgroundColor: "darkslategrey",
@@ -171,16 +187,17 @@ const AboutComponent = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </motion.div>
+          </div> 
+          {/* </motion.div> */}
         </CardDeck>
-        <motion.div
+        {/* <motion.div
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ duration: 2, delay: 5 }}
           className="about-mission text-center"
           style={{ paddingBottom: "35px" }}
-        >
-
+        > */}
+        <div className="about-mission text-center" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-duration="1500">
           <h2
             style={{
               paddingTop: "70px",
@@ -192,11 +209,12 @@ const AboutComponent = () => {
           >
             TESTIMONIALS
           </h2>
-          <Testimonials className="testimonials"/>
-          
-        </motion.div>
+          <Testimonials className="testimonials"/>          
+        </div>
+        {/* </motion.div> */}
       </Container>
-    </motion.div>
+    {/* </motion.div> */}
+      </div>
   );
 };
 

@@ -2,7 +2,7 @@ import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 
 const ContactCarouselSmall = () => {
     return (
-        <Container className="d-block d-md-none">
+        <Container className="d-block d-md-none" data-aos="fade-up" data-aos-duration="1000">
             <Row>
                 <Col xs={{ span: 12 }} md={{ span: 8, offset: 2 }}>
                     <Card className="contact-carousel contact-form-card">
