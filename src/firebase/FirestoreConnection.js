@@ -4,9 +4,9 @@ import 'firebase/firestore';
 // Initialize Firebase App only once
 if (!firebase.apps.length) {
     firebase.initializeApp({
-        apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-        authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID
+        apiKey: process.env.REACT_APP_PUBLIC_API_KEY,
+        authDomain: process.env.REACT_APP_PUBLIC_AUTH_DOMAIN,
+        projectId: process.env.REACT_APP_PUBLIC_PROJECT_ID
     });
 } else {
     firebase.app();

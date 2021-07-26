@@ -55,12 +55,11 @@ const whichCouncil = (e) => {
  
 
  return (
-   <Container>
-    <h1 className="mb-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
+   <Container className="mt-4">
+    <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
       <Row style={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
         <Faculty />
       </Row>
-
      <Buttons />
      <Row data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
         {currentCouncil === "BE" && (<FinalYearCouncil />)}

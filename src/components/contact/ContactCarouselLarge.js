@@ -3,9 +3,9 @@ import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 const ContactCarouselLarge = () => {
     return (
         <Container className="d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
-            <Row>
+            <Row className="my-5 py-5">
                 <Col xs={{ span: 12 }} md={{ span: 8, offset: 2 }}>
-                    <Card className="mt-5 mb-3 contact-carousel contact-form-card">
+                    <Card className="my-5 contact-carousel contact-form-card">
                         <Card.Header>
                             <Row><h3 className="mx-auto">Hit Us Up! 🤙</h3></Row>
                         </Card.Header>

@@ -42,6 +42,32 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
   }
 
+  .btn-primary {
+    background-color: ${({ theme }) => theme.body};
+    border-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text};
+    &:hover {
+      background-color: ${({ theme }) => theme.body};
+      border-color: ${({ theme }) => theme.text};
+      color: ${({ theme }) => theme.text};
+      font-weight: 600;
+    };
+    font-weight: 600;
+  }
+
+  .btn-success {
+    background-color: ${({ theme }) => theme.body};
+    border-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text};
+    &:hover {
+      background-color: ${({ theme }) => theme.body};
+      border-color: ${({ theme }) => theme.text};
+      color: ${({ theme }) => theme.text};
+      font-weight: 600;
+    };
+    font-weight: 600;
+  }
+
   .contact-btn {
     color: ${({ theme }) => theme.body};
     background-color: ${({ theme }) => theme.text};
@@ -49,13 +75,14 @@ export const GlobalStyles = createGlobalStyle`
       background-color: ${({ theme }) => theme.body};
       border-color: ${({ theme }) => theme.text};
       color: ${({ theme }) => theme.text};
-  }
+    }
   }
 
   .list-group-item {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
+
   .testimonialsBody {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};

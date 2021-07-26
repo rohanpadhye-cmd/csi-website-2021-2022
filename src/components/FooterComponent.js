@@ -1,25 +1,8 @@
-import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiHeartBattery, GiCoffeeMug } from 'react-icons/gi';
-
-const iconStyle = (hover) => ({
-    backgroundColor: hover ? "#363537" : "#add8e6",
-    color: hover ? "#add8e6" : "#363537",
-    padding: "1%",
-    borderRadius: "50%",
-    opacity: hover ? "1" : "0.9",
-    transition: "500ms",
-    marginLeft: "6px",
-});
+import IconBar from './icons/IconBar';
 
 const FooterComponent = () => {
-
-    const [fbHover, setFbHover] = useState(false);
-    const [instaHover, setInstaHover] = useState(false);
-    const [twitHover, setTwitHover] = useState(false);
-    const [youtubeHover, setYoutubeHover] = useState(false);
-    const [mailHover, setMailHover] = useState(false);
-
     return(
         <>
             <hr className="mx-4 mt-5" />
@@ -33,97 +16,7 @@ const FooterComponent = () => {
                             madeWith = (<GiHeartBattery /> , <GiCoffeeMug />) =&gt; &#123;<span style={{"fontStyle": "italic"}}>Our CSI Team</span>&#125;
                         </Col>
                         <Col>
-                            <a href="https://www.facebook.com/groups/csivesitchapter/"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-facebook"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={iconStyle(fbHover)}
-                            onPointerOver={() => setFbHover(true)}
-                            onPointerOut={() => setFbHover(false)}>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                            </svg></a>
-                            <a href="https://www.instagram.com/csi_vesit/?hl=en"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-instagram"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={iconStyle(instaHover)}
-                            onPointerOver={() => setInstaHover(true)}
-                            onPointerOut={() => setInstaHover(false)}>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <rect x="4" y="4" width="16" height="16" rx="4" />
-                                <circle cx="12" cy="12" r="3" />
-                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-                            </svg></a>
-                            <a href="https://twitter.com/csi_vesit?lang=en"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-twitter"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={iconStyle(twitHover)}
-                            onPointerOver={() => setTwitHover(true)}
-                            onPointerOut={() => setTwitHover(false)}>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-                            </svg></a>
-                            <a href="https://www.youtube.com/channel/UCyRTcK0pQjDL5yn3JGitWew"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-youtube"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537" 
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={iconStyle(youtubeHover)}
-                            onPointerOver={() => setYoutubeHover(true)}
-                            onPointerOut={() => setYoutubeHover(false)}>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <rect x="3" y="5" width="18" height="14" rx="4" />
-                                <path d="M10 9l5 3l-5 3z" />
-                            </svg></a>
-                            <a href="mailto:csi.vesit@ves.ac.in"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-mail-forward"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={iconStyle(mailHover)}
-                            onPointerOver={() => setMailHover(true)}
-                            onPointerOut={() => setMailHover(false)}>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-                                <path d="M3 6l9 6l9 -6" />
-                                <path d="M15 18h6" />
-                                <path d="M18 15l3 3l-3 3" />
-                            </svg></a>
+                            <IconBar />
                         </Col>
                     </Row>
                 </Container>
@@ -140,82 +33,7 @@ const FooterComponent = () => {
                     </Row>
                     <Row>
                         <div className="mx-auto">
-                            <a href="https://www.facebook.com/groups/csivesitchapter/" className="mr-1"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-facebook"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                            </svg></a>
-                            <a href="https://www.instagram.com/csi_vesit/?hl=en"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-instagram"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <rect x="4" y="4" width="16" height="16" rx="4" />
-                                <circle cx="12" cy="12" r="3" />
-                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-                            </svg></a>
-                            <a href="https://twitter.com/csi_vesit?lang=en" className="mx-2"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-twitter"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-                            </svg></a>
-                            <a href="https://www.youtube.com/channel/UCyRTcK0pQjDL5yn3JGitWew"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-youtube"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537" 
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <rect x="3" y="5" width="18" height="14" rx="4" />
-                                <path d="M10 9l5 3l-5 3z" />
-                            </svg></a>
-                            <a href="mailto:csi.vesit@ves.ac.in" className="mx-2"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-mail-forward"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-                                <path d="M3 6l9 6l9 -6" />
-                                <path d="M15 18h6" />
-                                <path d="M18 15l3 3l-3 3" />
-                            </svg></a>
+                            <IconBar />
                         </div>
                     </Row>
                 </Container>

@@ -50,7 +50,7 @@
 		backface-visibility: hidden;
 		transition: all 1s ease;
 		font-family: sans-serif;
-		background: #333;
+		background: rgb(37, 36, 36);
 		&:after,
     &:before {
 			transform: skew(10deg);
@@ -84,7 +84,7 @@
 	}
   
 	&:checked + .tgl-btn {
-    background: #333;
+    background: rgb(37, 36, 36);
     &:before {
       left: -100%;
     }
