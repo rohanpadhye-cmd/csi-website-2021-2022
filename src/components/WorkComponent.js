@@ -1,6 +1,6 @@
 import { Row , Col , Card , Container,Button } from 'react-bootstrap';
 import WorkShopModal from './WorkShopModal'
-import {useState,useEffect} from 'react';
+import {useState} from 'react';
 import ws1 from '../assets/Ws/Ws1.jpeg';
 import ws1a from '../assets/Ws/ws1a.jpeg';
 import ws2 from '../assets/Ws/Ws2.jpeg';
@@ -9,34 +9,29 @@ import ws4 from '../assets/Ws/Ws4.jpeg';
 import e1 from '../assets/Ws/e1.jpeg';
 import e2 from '../assets/Ws/e2.jpeg';
 import cl1 from '../assets/Ws/cl1.jpeg';
-import { motion } from 'framer-motion';
-import firebase from 'firebase/app'
-import db from '../firebase/firebase';
+// import { motion } from 'framer-motion';
 
-  
-  
- 
-const containerVariant = {
-  hidden: {
-    opacity: 0,
-    x: '100vw',
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'tween',
-      duration: 1,
-    }
-  },
-  exit: {
-    x: '-100vw',
-    transition: {
-      type: 'tween',
-      duration: 1,
-    }
-  }
-}
+// const containerVariant = {
+//   hidden: {
+//     opacity: 0,
+//     x: '100vw',
+//   },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'tween',
+//       duration: 1,
+//     }
+//   },
+//   exit: {
+//     x: '-100vw',
+//     transition: {
+//       type: 'tween',
+//       duration: 1,
+//     }
+//   }
+// }
 
 
 //This array has workshop info 
@@ -61,18 +56,36 @@ const collabInfo =[
 
 
 //This function maps the workshop cards and renders them
-const CardMap=(props)=>props.data.map((info,idx)=>{
+const WsCardMap=()=>WSInfo.map((info,idx)=>{
   return(
-    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} conductedBy={info.conductedBy} conductedOn={info.conductedOn} key={idx} />
+    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
   )
 }
 )
 
-const WorkCards=({name,img,img1,desc,conductedBy,conductedOn})=>{
+//This function maps event card and renders them
+const EventCardMap=()=>eventInfo.map((info,idx)=>{
+  return(
+    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
+  )
+}
+)
+
+//This function maps event card and renders them
+const CollabCardMap=()=>collabInfo.map((info,idx)=>{
+  return(
+    <WorkCards name={info.name} img={info.img} img1={info.img1} desc={info.desc} key={idx} />
+  )
+}
+)
+
+
+
+
+const WorkCards=({name,img,img1,desc})=>{
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   return(
     <>
     <WorkShopModal 
@@ -81,8 +94,6 @@ const WorkCards=({name,img,img1,desc,conductedBy,conductedOn})=>{
       img1={img1}
       desc={desc}
       show={show}
-      conductedBy={conductedBy} 
-      conductedOn={conductedOn}
       handleClose={handleClose}
       />
       <Col md={4} xs={12} sm={6}>
@@ -92,7 +103,7 @@ const WorkCards=({name,img,img1,desc,conductedBy,conductedOn})=>{
       </Col>
     </>
   )
-  }
+}
 
 const WorkComponent=()=>{
 
@@ -104,31 +115,17 @@ const WorkComponent=()=>{
   const [isClicked1,setIsClicked1]=useState(true);
   const [isClicked2,setIsClicked2]=useState(false);
   const [isClicked3,setIsClicked3]=useState(false);
-  const [Info , setInfo] = useState([]);
-
-  useEffect(()=>{
-    db.collection("WSInfo").get().then((querySnapshot) => {
-           
-      // Loop through the data and store
-      // it in array to display
-      querySnapshot.forEach(element => {
-          var data = element.data();
-          setInfo(arr => [...arr , data]);
-            
-      });
-  })
-},[])
-  console.log(Info)
-
+  
+  
   //These are the buttons
   function Buttons(){
     return ( 
-    <Row className='justify-content-center'>
+    <Row className='justify-content-center' data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
           <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked1 ? null : " contact-btn"}`}     onClick={whichCouncil}>
-          Workshops
+          Events 
           </Button>
           <Button  id="2"   className={`ml-2 w-25 centerWorkBtn ${isClicked2 ? null : " contact-btn"}`}     onClick={whichCouncil}>
-          Events 
+          Workshops 
           </Button>
           <Button  id="3"   className={`ml-2 w-25 centerWorkBtn ${isClicked3 ? null : " contact-btn"}`}   onClick={whichCouncil}>
           Collabs 
@@ -194,20 +191,22 @@ const whichCouncil = (e) =>{
   
 //This is rendered
     return(
-      <motion.div
-      variants={containerVariant} 
-        initial="hidden" 
-        animate="visible"
-        exit="exit">
+      // <motion.div
+      // variants={containerVariant} 
+      //   initial="hidden" 
+      //   animate="visible"
+      //   exit="exit">
+      <div>
       <Container fluid>
         <Buttons/>
         <Row>
-        {showWsPage ?  <CardMap data={Info}/> : null }
-        {showEventPage ?  <CardMap data={eventInfo}/> : null }
-        {showCollabPage ?  <CardMap data={collabInfo}/> : null }
+        {showWsPage ?  <WsCardMap/> : null }
+        {showEventPage ?  <EventCardMap/> : null }
+        {showCollabPage ?  <CollabCardMap/> : null }
         </Row>
       </Container>
-      </motion.div>
+      {/* </motion.div> */}
+      </div>
     )
 }
 export default WorkComponent;

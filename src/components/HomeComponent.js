@@ -5,31 +5,31 @@ import VES from "../assets/back-img1.jpeg";
 import { Parallax, Background } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
 import poster from "../assets/poster.jpeg";
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import QR from "../assets/QR_code.jpg";
 import Counter from './Counter'
 
-const containerVariant = {
-  hidden: {
-    opacity: 0,
-    x: '100vw',
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'tween',
-      duration: 1,
-    }
-  },
-  exit: {
-    x: '-100vw',
-    transition: {
-      type: 'tween',
-      duration: 1,
-    }
-  }
-}
+// const containerVariant = {
+//   hidden: {
+//     opacity: 0,
+//     x: '100vw',
+//   },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'tween',
+//       duration: 1,
+//     }
+//   },
+//   exit: {
+//     x: '-100vw',
+//     transition: {
+//       type: 'tween',
+//       duration: 1,
+//     }
+//   }
+// }
 
 
     
@@ -68,24 +68,25 @@ const HomeComponent = () => {
   const CSIMemberDropdown = (e) =>  setIsCSIMember(e.target.value);
 
     return (
-            <motion.div className="home" 
-        variants={containerVariant} 
-        initial="hidden" 
-        animate="visible"
-        exit="exit"
-      >
-
-        <Container fluid className="m-0">        
+      //       <motion.div className="home" 
+      //   variants={containerVariant} 
+      //   initial="hidden" 
+      //   animate="visible"
+      //   exit="exit"
+      // >
+      <div>
+        <Container fluid className="m-0" data-aos="fade-up" data-aos-duration="2000">        
           <Parallax bgImage= {VES} strength={200}>
             <div style={{height: "425px"}}>
-            <motion.h1 
-                // initial={{scale: 1}}
-                // animate={{scale: [1.3,1],
-                //           color: ['#fff','#99ccff']}}
-                // transition={{ yoyo: Infinity}}
+            {/* <motion.h1 
+                initial={{scale: 1}}
+                animate={{scale: [1.3,1],
+                          color: ['#fff','#99ccff']}}
+                transition={{ yoyo: Infinity}}
                 drag dragConstraints={{ left: -50, top: -50, right: 50, bottom: 50 }} dragElastic={0.7}
                 dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-                className="csi-vesit">CSI VESIT</motion.h1>
+                className="csi-vesit">CSI VESIT</motion.h1> */}
+                <h1 className="csi-vesit">CSI VESIT</h1>
            </div>
              </Parallax>
         </Container>
@@ -94,21 +95,23 @@ const HomeComponent = () => {
 
         <Container fluid className="mt-5">
           <Row>
-            <motion.div
+            {/* <motion.div
              initial={{x: '-100vw'}}
              animate={{x: 0}}
              transition={{delay: 3, duration: 2}}
-            >
+            > */}
+            <div>
             <Col md={6}>
-              <Card className="council-pic-info" style={{float: "left"}}>
+              <Card className="council-pic-info" style={{float: "left"}} data-aos="fade-right" data-aos-duration="1500">
                 <Card.Img src={groupImg}/>
               </Card>
             </Col>
-            <div className="mx-auto mt-3 px-5" style={{float: "left"}}>
+            <div className="mx-auto mt-3 px-5" style={{float: "left"}} data-aos="fade-left" data-aos-duration="1500">
               <h3>Our Team!</h3>
               <p>Lorem Ipsum</p>
             </div>
-            </motion.div>
+            </div>
+            {/* </motion.div> */}
           </Row>
         </Container>
     
@@ -118,14 +121,14 @@ const HomeComponent = () => {
         <hr/>
 
         <Container fluid className="mt-5">
-          <h1 style={{textDecoration:"underline"}}>Upcoming Event</h1>
+          <h1 style={{textDecoration:"underline"}} data-aos="zoom-in" data-aos-duration="6000">Upcoming Event</h1>
           <Row className="mt-5">
-            <Col md={6}>
+            <Col md={6} data-aos="flip-left" data-aos-easing="linear" data-aos-duration="6000">
               <Card className="council-pic-info">
                 <Card.Img src={poster}/>
               </Card>
             </Col>
-            <Col md={6}>
+            <Col md={6}  data-aos="flip-right" data-aos-easing="linear" data-aos-duration="6000">
             <div className="mx-auto mt-3 px-5 upcoming-event">
                <h3 style={{textDecoration:"underline"}}>About Event</h3>
                <p style={{textAlign:"left"}}>
@@ -139,7 +142,7 @@ const HomeComponent = () => {
             </div>
             </Col>
           </Row>
-          <div className="registration-buttons">
+          <div className="registration-buttons" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="6000">
                 <Row style={{textAlign:"center"}}>
                 <Col md={6} xs={12}>
                 <Button className="registration-button" size="lg" onClick={handleShow}>Membership Form</Button>
@@ -410,9 +413,8 @@ const HomeComponent = () => {
                     
                 </> }
           </Modal> 
-        
-        
-    </motion.div>
+        {/* </motion.div> */}
+      </div>
     );
 }
  

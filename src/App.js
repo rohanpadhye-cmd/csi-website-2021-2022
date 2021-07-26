@@ -11,7 +11,9 @@ import NotFound from './components/NotFound';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import './assets/App.css';
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   
@@ -24,6 +26,8 @@ function App() {
     }, 6000)
   }, [])
 
+  AOS.init();
+  
   return (
     <>
       {
@@ -31,7 +35,7 @@ function App() {
           <div className = "App">
             <NavbarComponent />
             <div className="content">
-            <AnimatePresence exitBeforeEnter>
+            {/* <AnimatePresence exitBeforeEnter> */}
             <Switch  location = {location} key={location.key}>
                 <Route exact path="/">
                   <HomeComponent />
@@ -55,7 +59,7 @@ function App() {
                   <NotFound />
                 </Route>
               </Switch>
-              </AnimatePresence>
+              {/* </AnimatePresence> */}
             </div>
             <FooterComponent />
           </div >
