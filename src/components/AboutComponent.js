@@ -40,7 +40,7 @@ const AboutComponent = () => {
       
     // >
     <div>
-      <Container className="">
+      <Container className="mt-4">
         <div className="about-mission text-center" data-aos="fade-left" data-aos-duration="1000">
             
           {/* <motion.h2

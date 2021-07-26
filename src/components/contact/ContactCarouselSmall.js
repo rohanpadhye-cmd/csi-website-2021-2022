@@ -17,7 +17,6 @@ const ContactCarouselSmall = () => {
                             <Container fluid>
                                 <Row>
                                     <Carousel
-                                        fade={true}
                                         controls={false}
                                         interval={4000}
                                         className="contact-carousel"
@@ -27,7 +26,6 @@ const ContactCarouselSmall = () => {
                                                 <Row>
                                                     <h4 className="contact-list-header mx-auto mb-3">Got any Queries? </h4>
                                                     <div className="mx-auto">
-                                                        <div className='contact-list'><strong>Jatin Bhagchandani</strong> (<i>Chairperson</i>):<br />+91 96194 47077</div>
                                                         <div className='contact-list'><strong>Apoorva Sudheesh</strong> (<i>Secretary</i>):<br />+91 83588 02335</div>
                                                         <div className='contact-list'><strong>Fayzaan Qureshi</strong> (<i>Co-Chairperson</i>):<br />+91 98191 86523</div>
                                                     </div>

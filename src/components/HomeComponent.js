@@ -75,7 +75,7 @@ const HomeComponent = () => {
       //   exit="exit"
       // >
       <div>
-        <Container fluid className="m-0" data-aos="fade-up" data-aos-duration="2000">        
+        <Container fluid className="m-0" data-aos="fade-up" data-aos-duration="3000">        
           <Parallax bgImage= {VES} strength={200}>
             <div style={{height: "425px"}}>
             {/* <motion.h1 

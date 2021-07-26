@@ -1,9 +1,10 @@
-import { Container, Row, Col, Card} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import ContactForm from './contact/ContactForm';
 import ContactMapLarge from './contact/ContactMapLarge';
 import ContactMapSmall from './contact/ContactMapSmall';
 import ContactCarouselLarge from './contact/ContactCarouselLarge';
 import ContactCarouselSmall from './contact/ContactCarouselSmall';
+import test from '../assets/test.png';
 // import { motion } from 'framer-motion';
 
 // const containerVariant = {
@@ -38,7 +39,7 @@ const ContactComponent = () => {
                 exit="exit"
             > */}
             <div>
-                <Container className='mb-5'>
+                <Container className='mb-5 mt-4'>
                     <div data-aos="zoom-out" data-aos-duration="1000">
                     <Row className="d-none d-md-flex">
                         <h1 className="mx-auto mb-md-5 mt-md-1">Let Your Curiosity Take Flight ✈️</h1>
@@ -70,6 +71,34 @@ const ContactComponent = () => {
                             <hr className="mb-4 mt-2" />
                             <ContactMapLarge />
                             <ContactMapSmall />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container fluid>
+                    <Row className="accent-row">
+                        <Col className="insta-embed-content">
+                            <h2 className="mt-4 mb-5 insta-embed-title">Have an Instagram Account?! 🤳</h2>
+                            <p className="insta-embed-subtitle d-none d-md-block">
+                                <span className="insta-embed-code-1">if &#40; answer == True &#41; {"{"}</span> <br />
+                                <span className="insta-embed-code-2">followCsiVesit&#40; &#41;;</span>
+                                <br />
+                                <span className="insta-embed-code-3">{"}"}</span>
+                                <br />
+                                <span className="insta-embed-code-4">else {"{"}</span>
+                                <br />
+                                <span className="insta-embed-code-5">createInstaAccount&#40; &#41;;</span>
+                                <br />
+                                <span className="insta-embed-code-6">followCsiVesit&#40; &#41;;</span>
+                                <br />
+                                <span className="insta-embed-code-7">{"}"}</span>
+                            </p>
+                            <p className="insta-embed-lead d-block d-md-none">Make sure you follow us there too!</p>
+                            <Button className="insta-embed-button contact-btn" variant="success" href="https://www.instagram.com/csi_vesit/?hl=en">
+                                Visit Our Handle 📸
+                            </Button>
+                        </Col>
+                        <Col>
+                            <img src={test} alt="CSI Instagram Embed" href="https://www.instagram.com/csi_vesit/?hl=en" className="insta-embed-image" />
                         </Col>
                     </Row>
                 </Container>

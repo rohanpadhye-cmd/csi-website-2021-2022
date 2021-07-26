@@ -197,7 +197,7 @@ const whichCouncil = (e) =>{
       //   animate="visible"
       //   exit="exit">
       <div>
-      <Container fluid>
+        <Container fluid className="mt-4">
         <Buttons/>
         <Row>
         {showWsPage ?  <WsCardMap/> : null }
