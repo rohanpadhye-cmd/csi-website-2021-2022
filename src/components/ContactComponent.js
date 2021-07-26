@@ -78,7 +78,7 @@ const ContactComponent = () => {
                     <Row className="accent-row">
                         <Col className="insta-embed-content">
                             <h2 className="mt-4 mb-5 insta-embed-title">Have an Instagram Account?! 🤳</h2>
-                            <p className="insta-embed-subtitle">
+                            <p className="insta-embed-subtitle d-none d-md-block">
                                 <span className="insta-embed-code-1">if &#40; answer == True &#41; {"{"}</span> <br />
                                 <span className="insta-embed-code-2">followCsiVesit&#40; &#41;;</span>
                                 <br />
@@ -92,12 +92,13 @@ const ContactComponent = () => {
                                 <br />
                                 <span className="insta-embed-code-7">{"}"}</span>
                             </p>
+                            <p className="insta-embed-lead d-block d-md-none">Make sure you follow us there too!</p>
                             <Button className="insta-embed-button contact-btn" variant="success" href="https://www.instagram.com/csi_vesit/?hl=en">
                                 Visit Our Handle 📸
                             </Button>
                         </Col>
                         <Col>
-                            <img src={test} alt="CSI Instagram Embed" className="insta-embed-image" />
+                            <img src={test} alt="CSI Instagram Embed" href="https://www.instagram.com/csi_vesit/?hl=en" className="insta-embed-image" />
                         </Col>
                     </Row>
                 </Container>

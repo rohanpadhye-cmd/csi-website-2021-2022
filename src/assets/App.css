@@ -173,7 +173,7 @@ footer svg {
 }
 
 .insta-embed-image {
-  width: 25rem;
+  width: 24rem;
   border-radius: 2%;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -439,6 +439,35 @@ footer svg {
   .contact-carousel {
     height: 100%;
     width: 100%;
+  }
+
+  .accent-row {
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+  }
+
+  .insta-embed-title {
+    font-size: 180%;
+  }
+
+  .insta-embed-lead {
+    position: relative;
+    top: -20px;
+    color: floralwhite;
+    /* font-size: large; */
+  }
+
+  .insta-embed-image {
+    width: 15rem;
+    margin: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  .insta-embed-button {
+    position: relative;
+    top: 350px;
+    left: -5px;
   }
 
   /* Home page changes */
