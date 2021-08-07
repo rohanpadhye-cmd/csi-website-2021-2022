@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Col, Card } from 'react-bootstrap';
 import WorkInfoModal from './WorkInfoModal';
-
+import styles from './work.module.css';
 const WorkCard = ({ name, images, date, time, trend, venue, upcoming, desc }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -24,6 +24,7 @@ const WorkCard = ({ name, images, date, time, trend, venue, upcoming, desc }) =>
             <Col md={4} xs={12} sm={6}>
                 <Card className='mt-4 mb-1' onClick={handleShow} style={{ backgroundColor: "#add8e6" }}>
                     <Card.Img src={images[0]} />
+                    {upcoming&&<div className={styles.ribbon}><span>Upcoming!</span></div>}
                 </Card>
             </Col>
         </>

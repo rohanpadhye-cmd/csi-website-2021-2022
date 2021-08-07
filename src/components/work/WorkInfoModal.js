@@ -1,22 +1,21 @@
-import { Modal, Row , Col, Carousel, ListGroup } from 'react-bootstrap';
+import { Modal, Row , Col, Carousel, ListGroup, Button } from 'react-bootstrap';
 
-const WorkInfoModal = (props) => (
-  <Modal className='mx-0' size='xl' aria-labelledby="contained-modal-title-vcenter" centered show={props.show} onHide={props.handleClose} >
+const WorkInfoModal = ({ name, images, date, time, trend, venue, upcoming, desc, show, handleClose }) => (
+  <Modal className='mx-0' size='xl' aria-labelledby="contained-modal-title-vcenter" centered show={show} onHide={handleClose} >
     <Modal.Header closeButton>
-    <Modal.Title>{props.name}</Modal.Title>
+    <Modal.Title>{name}</Modal.Title>
     </Modal.Header>
     <Row size="lg" className='mx-0'>
       <Col md={12} xl={8} className='px-0'>
         <Carousel fade indicators={false}>
-          <Carousel.Item interval={3000}>
-            <img src={props.img} alt="event-img" width='100%'/>
-          </Carousel.Item>
-          <Carousel.Item interval={3000}>
-            <img src={props.img1} alt="event-img" width='100%'/>
-          </Carousel.Item>
-          <Carousel.Item interval={3000}>
-          <img src={props.img} alt="event-img" width='100%'/>
-          </Carousel.Item>
+          {
+          images.map(img => {
+            return(
+              <Carousel.Item interval={3000}>
+                <img src={img} alt="event-img" width='100%'/>
+              </Carousel.Item>
+            )  
+          })}
         </Carousel>
       </Col>
       <Col className='px-0' >
@@ -29,16 +28,14 @@ const WorkInfoModal = (props) => (
             <line x1="8" y1="3" x2="8" y2="7"></line>
             <line x1="4" y1="11" x2="20" y2="11"></line>
             <rect x="8" y="15" width="2" height="2"></rect>
-            </svg><strong> Conducted on:</strong>{props.conductedOn}
+            </svg><strong> Date:</strong> {date}
           </ListGroup.Item>
           <ListGroup.Item>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
-            </svg><strong> Conducted by:</strong>{props.conductedBy}
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="12" r="9" />
+            <polyline points="12 7 12 12 15 15" />
+          </svg><strong> Time:</strong> {time}
           </ListGroup.Item>
           <ListGroup.Item>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -47,7 +44,24 @@ const WorkInfoModal = (props) => (
             <line x1="8" y1="8" x2="12" y2="8"></line>
             <line x1="8" y1="12" x2="12" y2="12"></line>
             <line x1="8" y1="16" x2="12" y2="16"></line>
-            </svg><strong> Description:</strong> {props.desc}
+            </svg><strong> Description:</strong> {desc}
+          </ListGroup.Item>
+          <ListGroup.Item>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trending-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="3 17 9 11 13 15 21 7" />
+            <polyline points="14 7 21 7 21 14" />
+          </svg><strong> {trend}</strong>
+          </ListGroup.Item>
+          <ListGroup.Item>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="11" r="3" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+          </svg><strong> Venue:</strong> {venue}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            {upcoming&&<Button>Register</Button>}
           </ListGroup.Item>
         </ListGroup>
       </Col>

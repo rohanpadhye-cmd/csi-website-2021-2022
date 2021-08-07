@@ -40,6 +40,7 @@ const WorkComponent = () => {
       querySnapshot.forEach(workshop => {
         let data = workshop.data();
         setCurrentWorkshops(currentWorkshops => [...currentWorkshops, data]);
+        console.log(currentWorkshops);
       });
     });
     

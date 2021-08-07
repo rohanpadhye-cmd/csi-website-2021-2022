@@ -5,7 +5,7 @@ const WorkCardMap = ({ infoArray }) => infoArray.map((info, idx) => (
         name={info.Title}
         images={info.Gallery}
         date={info.Date}
-        time={info.time}
+        time={info.Time}
         trend={info.Trend}
         venue={info.Venue}
         upcoming={info.Upcoming}
