@@ -530,7 +530,7 @@ footer svg {
 /* testimonials */
 
 .testimonialsBody {
-  background-color: #add8e6;
+  background-color: azure !important;
 }
 
 .studentName {
@@ -676,7 +676,12 @@ footer svg {
   margin-right: 10%;
   font-family: "Noto Sans SC", sans-serif;
 }
-
+.ourMissionCard{
+  background-color: #1f6d92;
+}
+.aboutPage{
+  /* background-color: #ddd; */
+}
 @keyframes background {
   0% {
     background-position: 0 0;

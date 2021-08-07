@@ -2,10 +2,8 @@ import { CardDeck, Card, Container } from "react-bootstrap";
 import knowledge from "../assets/Knowledge.jpg";
 import skill from "../assets/Skill.jpg";
 import workshop from "../assets/Workshop.jpg";
-// import dummy from "../assets/dummy.png";
-// import { motion } from "framer-motion";
 import Testimonials from "./Testimonials";
-
+import '../assets/App.css'
 
 // const containerVariant = {
 //   hidden: {
@@ -39,7 +37,7 @@ const AboutComponent = () => {
     //   exit="exit"
       
     // >
-    <div>
+    <div className=''>
       <Container className="mt-4">
         <div className="about-mission text-center" data-aos="fade-left" data-aos-duration="1000">
             
@@ -119,13 +117,14 @@ const AboutComponent = () => {
           <div>
             <Card
               style={{
-                backgroundColor: "darkslategrey",
+                // backgroundColor: "darkslategrey",
                 margin: "40px",
                 textAlign: "center",
                 width: "290px",
                 height: "310px",
                 float: "left",
               }}
+              className="ourMissionCard"
             >
               <Card.Img variant="top" src={knowledge} />
               <Card.Body style={{ color: "white" }}>
@@ -145,13 +144,14 @@ const AboutComponent = () => {
           <div>
             <Card
               style={{
-                backgroundColor: "darkslategrey",
+                // backgroundColor: "darkslategrey",
                 margin: "40px",
                 textAlign: "center",
                 width: "290px",
                 height: "310px",
                 float: "left",
               }}
+              className="ourMissionCard"
             >
               <Card.Img variant="top" src={skill} />
               <Card.Body style={{ color: "white" }}>
@@ -171,13 +171,14 @@ const AboutComponent = () => {
           <div>
             <Card
               style={{
-                backgroundColor: "darkslategrey",
+                // backgroundColor: "darkslategrey",
                 margin: "40px",
                 textAlign: "center",
                 width: "290px",
                 height: "310px",
                 float: "left",
               }}
+              className="ourMissionCard"
             >
               <Card.Img variant="top" src={workshop} />
               <Card.Body style={{ color: "white" }}>

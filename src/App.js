@@ -6,6 +6,7 @@ import CouncilComponent from './components/CouncilComponent';
 import WorkComponent from './components/WorkComponent';
 import ContactComponent from './components/ContactComponent';
 import FooterComponent from './components/FooterComponent';
+import AboutPage from './components/AboutPage';
 import Loader from './components/Loader';
 import NotFound from './components/NotFound';
 import { Route, Switch, useLocation } from 'react-router-dom';
@@ -44,10 +45,10 @@ function App() {
                   <HomeComponent />
                 </Route>
                 <Route path="/about">
-                  <AboutComponent />
+                  <AboutPage />
                 </Route>
                 <Route path="/council">
-                  <CouncilComponent />
+                  <CouncilComponent/>
                 </Route>
                 <Route path="/work">
                   <WorkComponent />

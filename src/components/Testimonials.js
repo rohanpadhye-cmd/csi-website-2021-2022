@@ -17,9 +17,9 @@ export default class Testimonials extends Component {
         <div className="testimonialsBody">
           <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
           <div className="myCarousel">
-            <h3 className="studentName">Student One</h3>
-            <h4>-D10B</h4>
-            <p>
+            <h3 className="studentName darkFont">Student One</h3>
+            <h4 className="darkFont">-D10B</h4>
+            <p className="testimonials-p darkFont">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
             </p>
           </div>
@@ -28,9 +28,9 @@ export default class Testimonials extends Component {
         <div className="testimonialsBody" >
           <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
           <div className="myCarousel">
-            <h3 className="studentName">Student Two</h3>
-            <h4>-D15B</h4>
-            <p>
+            <h3 className="studentName darkFont">Student Two</h3>
+            <h4 className="darkFont">-D15B</h4>
+            <p className="testimonials-p darkFont">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
@@ -39,9 +39,9 @@ export default class Testimonials extends Component {
         <div className="testimonialsBody">
           <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
           <div className="myCarousel">
-            <h3 className="studentName">Student Three</h3>
-            <h4>-D20B</h4>
-            <p>
+            <h3 className="studentName darkFont">Student Three</h3>
+            <h4 className='darkFont'>-D20B</h4>
+            <p className="testimonials-p darkFont">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>

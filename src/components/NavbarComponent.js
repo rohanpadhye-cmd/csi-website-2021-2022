@@ -18,7 +18,7 @@ const NavbarComponent = () => {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-            <Navbar expand="lg" className="px-md-5">
+            <Navbar  expand="lg" className="px-md-5">
                 <LinkContainer to="/home">
                     <Navbar.Brand>
                         <motion.img

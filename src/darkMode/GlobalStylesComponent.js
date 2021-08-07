@@ -84,7 +84,22 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .testimonialsBody {
-    background-color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.lightDark3} !important;
     color: ${({ theme }) => theme.text};
   }
+  .myCarousel{
+    background-color: ${({ theme }) => theme.lightDark2} !important;
+    color: ${({ theme }) => theme.text} !important;
+  }
+  .darkFont{
+    color: ${({ theme }) => theme.text} !important;
+  }
+  .white-container{
+    background-color: ${({ theme }) => theme.lightDark1};
+  }
+
+  .dark-container{
+    background-color: ${({ theme }) => theme.lightDark3};
+  }
+
 `

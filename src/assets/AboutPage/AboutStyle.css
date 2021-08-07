@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Secular+One&display=swap');
+.aboutpage{
+    
+    height: fit-content;
+    padding-top: 5%;
+}
+
+
+.white-container{
+    border-radius: 10px;
+    background: azure;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .about-section{
+    /* margin-top: 5%; */
+    height: 30%;
+    /* background: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .about-content{
+  
+    height: 70%;
+    width: 90%;
+    margin : auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    /* background: blanchedalmond; */
+    display: flex;
+    border-radius: 10px;
+  
+  }
+  
+  .about-text{
+    text-align: justify;
+    padding: 4% ;
+    
+  }
+  .about-img{
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+    width: 50vh;
+  }
+  
+  .heading{
+    font-size: 80px;
+    font-family: 'Secular One', sans-serif;
+  }
+  .content-p{
+    font-size: 20px;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 900;
+  }
+  
+
+  .card-deck{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  
+  
+  @media only screen and (max-width: 1300px){
+    .content-p{
+      font-size: 16px;
+      /* color: brown; */
+    }
+  }
+  
+  @media only screen and (max-width: 1100px){
+    
+    .aboutpage{
+      height: fit-content;
+      
+    }
+    .heading{
+      font-size: 60px;
+    }
+    .white-container{ 
+      width: 80%;
+  
+    }
+    .about-section{
+      height:17%;
+      
+    }
+  
+    .about-content{
+      flex-direction: column;
+      width: 90%;
+      height: 70%;
+      margin-top: 5%;
+      justify-content: center;
+      align-items: center;
+      padding: 5%;
+     
+    }
+    .about-img{
+      border-top-right-radius:0px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      width: 50vw;
+      
+    }
+    .card-deck{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5%;
+  }
+ 
+  
+  }
+  
+  
+  @media only screen and (max-width: 850px){
+  
+    .about-section{
+      height:16%;
+      
+    }
+    .testimonials-h{
+      /* font-size: 100%; */
+    }
+  }
+  
+/* 
+.about-heading{
+    
+font-family: 'Secular One', sans-serif;
+    font-weight: 700;
+    padding-top: 4%;
+    padding-bottom: 2%
+}
+.about-content-p{
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: 'Abhaya Libre', serif;
+}
+.about-content-background{
+    width: 50%;
+    background-color: bisque;
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    border-radius: 15px;
+}
+.about-img{
+    height: 409px;
+    float: right;
+    position: absolute;
+    top: 7%;
+    right: 8%;
+    border-radius: 5px;
+} */
+
+
+
+.ourMission-section{
+  height: auto;
+  /* background: rgb(230, 207, 173); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* .ourMission-bg{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+} */
+.ourMission-content{
+  height: 70%;
+  width: 90%;
+  margin : auto;
+  /* background: blanchedalmond; */
+  /* display: flex; */
+  border-radius: 10px;
+  margin-bottom: 10%;
+  padding-top:5%;
+}
+
+.ourMission-content-p{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.ourMissionCard{
+    width: 250px !important;
+    margin: 30px;
+    text-align: center;
+    /* height: 310px; */
+}
+
+@media only screen and (max-width: 850px){
+  .testimonials-h{
+    font-size: 40px;
+  }
+}
+
+
+
+@media only screen and (max-width: 500px)
+{
+  .heading{
+    font-size: 35px;
+  }
+  .ourMissionCard{width: auto !important;
+  height: fit-content;
+  }
+ 
+  .ourMission-content{
+
+    margin-bottom: 10%;
+  }
+  .ourMission-content-p{
+    font-size: 10px;
+  }
+  .about-p{
+    font-size: 10px;
+    }
+  .card-text{
+    font-size: 10px;
+  }
+
+  .testimonials-p{
+    font-size: 10px !important
+  }
+  .testimonials-h{
+    font-size: 20px;
+  }
+  .studentName{
+    font-size: 14px !important;
+  }
+}
+
+
+.testimonials-C{
+    height: auto;
+    /* background: lightblue; */
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    padding:5%;
+}
+
+.testimonials-section{
+    padding-bottom: 10%;
+}
+
+.testimonials-h{
+    font-family: 'Secular One', sans-serif;
+  font-weight: 700;
+  
+  
+}
+
+
