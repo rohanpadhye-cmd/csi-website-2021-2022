@@ -4,9 +4,10 @@ import { useState } from 'react';
 import VES from "../assets/back-img1.jpeg";
 import { Parallax, Background } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
+import magazine_poster from "../assets/magazine_poster.JPG"
 import poster from "../assets/poster.jpeg";
 // import { motion } from 'framer-motion';
-import QR from "../assets/QR_code.jpg";
+// import QR from "../assets/QR_code.jpg";
 import Counter from './Counter'
 
 // const containerVariant = {
@@ -36,36 +37,36 @@ import Counter from './Counter'
 const HomeComponent = () => {
 
 
-  const [showMembershipModal, setModal] = useState(false);
-  const [membershipTaken,setMembership]=useState(false);  //Handle the case when user will press the submit button in Membership form
-  const handleSubmit = () => {
-    setMembership(true);
-  }
-  const handleClose = () => 
-  {
-    setModal(false);
-    setMembership(false);
-  }
-  const handleShow = () => setModal(true);
+  // const [showMembershipModal, setModal] = useState(false);
+  // const [membershipTaken,setMembership]=useState(false);  //Handle the case when user will press the submit button in Membership form
+  // const handleSubmit = () => {
+  //   setMembership(true);
+  // }
+  // const handleClose = () => 
+  // {
+  //   setModal(false);
+  //   setMembership(false);
+  // }
+  // const handleShow = () => setModal(true);
 
 
 
-  const [showWorkshopModal, setShowWorkshopModal] = useState(false);
-  const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
-  const [isCSIMember,setIsCSIMember]=useState('Yes');
+  // const [showWorkshopModal, setShowWorkshopModal] = useState(false);
+  // const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
+  // const [isCSIMember,setIsCSIMember]=useState('Yes');
    const [buttonText,setButtonText]=useState("Workshop");
 
-  const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
+  // const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
 
-  const handleWorkshopClose = () => {
-    setShowWorkshopModal(false);
-    setIsWorkshopSubmitted(false);
-    setIsCSIMember('Yes');
-  };
+  // const handleWorkshopClose = () => {
+  //   setShowWorkshopModal(false);
+  //   setIsWorkshopSubmitted(false);
+  //   setIsCSIMember('Yes');
+  // };
 
-  const handleshowWorkshopModal = () => setShowWorkshopModal(true);
+  // const handleshowWorkshopModal = () => setShowWorkshopModal(true);
 
-  const CSIMemberDropdown = (e) =>  setIsCSIMember(e.target.value);
+  // const CSIMemberDropdown = (e) =>  setIsCSIMember(e.target.value);
 
     return (
       //       <motion.div className="home" 
@@ -118,7 +119,6 @@ const HomeComponent = () => {
 
         
         <Counter/>
-        <hr/>
 
         <Container fluid className="mt-5">
           <h1 style={{textDecoration:"underline"}} data-aos="zoom-in" data-aos-duration="6000">Upcoming Event</h1>
@@ -145,10 +145,14 @@ const HomeComponent = () => {
           <div className="registration-buttons" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="6000">
                 <Row style={{textAlign:"center"}}>
                 <Col md={6} xs={12}>
-                <Button className="registration-button" size="lg" onClick={handleShow}>Membership Form</Button>
+                  <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7">
+                    <Button className="registration-button" size="lg" >Membership Form</Button>
+                  </a>
                 </Col>
                 <Col md={6} xs={12}>
-                 <Button className="registration-button"  size="lg" onClick={handleshowWorkshopModal}>Register for {buttonText}</Button>
+                  <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9">
+                    <Button className="registration-button"  size="lg" >Register for {buttonText}</Button>
+                  </a>
                  </Col>
                 </Row>
                  
@@ -156,6 +160,27 @@ const HomeComponent = () => {
                 
                 
               </div>
+
+              <hr/>
+
+              <h1 style={{textDecoration:"underline"}} data-aos="zoom-in" data-aos-duration="6000">Poster</h1>
+
+              <Row className="m-0">
+                  <div className="magazine">
+                    <div className="card">
+                      <div className="face face1">
+                        <div className="content">
+                          <h2>Redux</h2>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illum ad dolor laudantium enim ipsa libero adipisci culpa </p>
+                          <a href="https://csi-redux.vercel.app/" target="_blank">View our magazine</a>
+                        </div>
+                      </div>
+                      <div className="face face2">
+                        <img alt="magazine's poster" src={magazine_poster}/>
+                      </div>
+                    </div>
+                  </div>
+              </Row>
         </Container>
         {/* <Row className="registrations">
           <Col md={6} className="p-0">
@@ -258,7 +283,7 @@ const HomeComponent = () => {
         </Row>  */}
 
         {/* Modal for Membership Form */}
-        <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">
+        {/* <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">
       { !membershipTaken? 
        <>
         <Modal.Header closeButton>
@@ -412,7 +437,7 @@ const HomeComponent = () => {
                        
                     
                 </> }
-          </Modal> 
+          </Modal>  */}
         {/* </motion.div> */}
       </div>
     );
