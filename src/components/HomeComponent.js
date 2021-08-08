@@ -1,12 +1,11 @@
-
-import { Jumbotron, Container, Card, Button, Col, Row, Modal, Form} from 'react-bootstrap';
+import { Container, Card, Button, Col, Row, Modal, Form} from 'react-bootstrap';
 import { useState } from 'react';
 import VES from "../assets/back-img1.jpeg";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
 import magazine_poster from "../assets/magazine_poster.JPG"
 import poster from "../assets/poster.jpeg";
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 // import QR from "../assets/QR_code.jpg";
 import Counter from './Counter'
 
@@ -76,20 +75,15 @@ const HomeComponent = () => {
       //   exit="exit"
       // >
       <div>
-        <Container fluid className="m-0" data-aos="fade-up" data-aos-duration="3000">        
-          <Parallax bgImage= {VES} strength={200}>
+        <Container fluid className="m-0" data-aos="fade-in" data-aos-duration="2000">        
+          <Parallax bgImage= {VES} strength={500}>
             <div style={{height: "425px"}}>
-            {/* <motion.h1 
-                initial={{scale: 1}}
-                animate={{scale: [1.3,1],
-                          color: ['#fff','#99ccff']}}
-                transition={{ yoyo: Infinity}}
-                drag dragConstraints={{ left: -50, top: -50, right: 50, bottom: 50 }} dragElastic={0.7}
+            <motion.h1
+                drag dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }} dragElastic={0.7}
                 dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-                className="csi-vesit">CSI VESIT</motion.h1> */}
-                <h1 className="csi-vesit">CSI VESIT</h1>
-           </div>
-             </Parallax>
+                className="csi-vesit">CSI-VESIT</motion.h1>
+            </div>
+          </Parallax>
         </Container>
     
 
@@ -108,7 +102,7 @@ const HomeComponent = () => {
               </Card>
             </Col>
             <div className="mx-auto mt-3 px-5" style={{float: "left"}} data-aos="fade-left" data-aos-duration="1500">
-              <h3>Our Team!</h3>
+              <h3 className="heading">Our Team</h3>
               <p>Lorem Ipsum</p>
             </div>
             </div>
@@ -121,7 +115,7 @@ const HomeComponent = () => {
         <Counter/>
 
         <Container fluid className="mt-5">
-          <h1 style={{textDecoration:"underline"}} data-aos="zoom-in" data-aos-duration="6000">Upcoming Event</h1>
+          <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading">Upcoming Event</h1>
           <Row className="mt-5">
             <Col md={6} data-aos="flip-left" data-aos-easing="linear" data-aos-duration="6000">
               <Card className="council-pic-info">
@@ -130,7 +124,7 @@ const HomeComponent = () => {
             </Col>
             <Col md={6}  data-aos="flip-right" data-aos-easing="linear" data-aos-duration="6000">
             <div className="mx-auto mt-3 px-5 upcoming-event">
-               <h3 style={{textDecoration:"underline"}}>About Event</h3>
+               <h3>About Event</h3>
                <p style={{textAlign:"left"}}>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -163,7 +157,7 @@ const HomeComponent = () => {
 
               <hr/>
 
-              <h1 style={{textDecoration:"underline"}} data-aos="zoom-in" data-aos-duration="6000">Poster</h1>
+              <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading mt-5">Our Magazine</h1>
 
               <Row className="m-0">
                   <div className="magazine">
