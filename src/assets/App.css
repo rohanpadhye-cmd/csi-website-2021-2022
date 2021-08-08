@@ -1,5 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Secular+One&display=swap');
 
 /* Universal Style Begins*/
 
@@ -17,6 +18,25 @@
 
 a {
   text-decoration: none !important;
+}
+
+.heading{
+  font-size: 50px;
+  font-family: 'Secular One', sans-serif;
+}
+
+@media only screen and (max-width: 1100px){
+  .heading {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heading {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 /* Navbar Style Begins */
@@ -112,59 +132,57 @@ footer svg {
   padding: 2%;
 }
 
-.insta-embed-title {
-  color: floralwhite;
-}
-
-.insta-embed-subtitle {
-  color: floralwhite;
-  font-size: 130%;
-}
-
 .insta-embed-code-1 {
   position: relative;
-  right: 50px;
+  top: 20px;
+  line-height: 210%;
 }
 
 .insta-embed-code-2 {
   position: relative;
-  right: 20px;
   top: 20px;
+  left: 40px;
+  line-height: 210%;
 }
 
 .insta-embed-code-3 {
   position: relative;
-  right: 140px;
-  top: 30px;
+  top: 20px;
+  line-height: 210%;
 }
 
 .insta-embed-code-4 {
   position: relative;
-  right: 120px;
-  top: 40px;
+  top: 20px;
+  line-height: 210%;
 }
 
 .insta-embed-code-5 {
   position: relative;
-  top: 50px;
+  top: 20px;
+  left: 40px;
+  line-height: 210%;
 }
 
 .insta-embed-code-6 {
   position: relative;
-  right: 25px;
-  top: 70px;
+  top: 20px;
+  left: 40px;
+  line-height: 210%;
 }
 
 .insta-embed-code-7 {
   position: relative;
-  right: 140px;
-  top: 90px;
+  top: 20px;
+  line-height: 210%;
 }
 
 .insta-embed-button {
+  padding: 1%;
+  margin-top: 2%;
   position: relative;
-  top: 130px;
-  right: 50px;
+  top: 10px;
+  left: 250px;
 }
 
 .insta-embed-content {
@@ -172,11 +190,17 @@ footer svg {
   padding-left: 7%;
 }
 
-.insta-embed-image {
-  width: 24rem;
-  border-radius: 2%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+.insta-embed-codes {
+  margin-left: 30%;
+}
+
+.insta-embed {
+  position: relative;
+  left: 6.5%;
+}
+
+.insta-embed-sub {
+  text-align: center;
 }
 
 /*CentreButtons */
@@ -540,17 +564,17 @@ footer svg {
     /* font-size: large; */
   }
 
-  .insta-embed-image {
-    width: 15rem;
-    margin: 0;
+  .insta-embed {
     position: relative;
-    top: -50px;
+    left: 0%;
+    top: -60px;
   }
 
   .insta-embed-button {
+    margin-top: 5%;
     position: relative;
-    top: 350px;
-    left: -5px;
+    top: 300px;
+    left: 75px;
   }
 
   /* Home page changes */
@@ -637,7 +661,6 @@ footer svg {
 }
 
 .myCarousel {
-  background: #fafafa;
   margin-top: -6%;
   width: 80%;
   margin-left: auto;
@@ -730,7 +753,7 @@ footer svg {
     display: none !important;
   }
   .myCarousel {
-    background: #fafafa;
+    /* background: #d4f5f5; */
     margin-top: -9%;
     width: 88%;
     margin-left: auto;
@@ -760,11 +783,9 @@ footer svg {
   font-family: "Noto Sans SC", sans-serif;
 }
 .ourMissionCard{
-  background-color: #1f6d92;
+  background-color: rgb(41, 93, 141);
 }
-.aboutPage{
-  /* background-color: #ddd; */
-}
+
 @keyframes background {
   0% {
     background-position: 0 0;

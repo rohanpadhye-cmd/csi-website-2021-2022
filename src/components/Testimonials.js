@@ -12,7 +12,7 @@ export default class Testimonials extends Component {
         showStatus={false}
         autoPlay={true}
         interval={6100}
-        
+        data-aos="fade-left"
       >
         <div className="testimonialsBody">
           <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />

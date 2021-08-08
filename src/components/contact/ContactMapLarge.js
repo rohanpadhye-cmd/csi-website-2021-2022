@@ -46,51 +46,55 @@ const ContactMapLarge = () => {
             </Container>
             <Container className='ml-4 mt-3 d-none d-md-flex'>
                 <Row>
-                    <Col style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-phone-call"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                            <path d="M15 7a2 2 0 0 1 2 2"></path>
-                            <path d="M15 3a6 6 0 0 1 6 6"></path>
-                        </svg>
-                        <div className='contact-text mt-2 ml-2 pl-3'>
-                            Jatin Bhagchandani (Chairperson): +91 96194 47077
-                        </div>
-                    </Col>
+                    <a className="contact-links" href="tel:+919619447077">
+                        <Col style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon icon-tabler icon-tabler-phone-call"
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="#363537"
+                                fill="#add8e6"
+                                strokeLinecap="round"
+                                strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                                <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                <path d="M15 3a6 6 0 0 1 6 6"></path>
+                            </svg>
+                            <div className='contact-text mt-2 ml-2 pl-3'>
+                                Jatin Bhagchandani (Chairperson): +91 96194 47077
+                            </div>
+                        </Col>
+                    </a>
                 </Row>
             </Container>
             <Container className='ml-4 mt-3 d-none d-md-flex'>
                 <Row>
-                    <Col style={{display: "flex", justifyContent: "flex-end", alignItems: "center"}}>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-mail"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="#363537"
-                            fill="#add8e6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                            <polyline points="3 7 12 13 21 7"></polyline>
-                        </svg>
-                        <div className='contact-text mt-2 ml-2 pl-3' style={{fontSize: "17px", position: "relative", left: "110px"}}>
-                            csi.vesit@ves.ac.in
-                        </div>
-                    </Col>
+                    <a className="contact-links" href="mailto:csi.vesit@ves.ac.in">
+                        <Col style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon icon-tabler icon-tabler-mail"
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="#363537"
+                                fill="#add8e6"
+                                strokeLinecap="round"
+                                strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <polyline points="3 7 12 13 21 7"></polyline>
+                            </svg>
+                            <div className='contact-text mt-2 ml-2 pl-3' style={{ fontSize: "17px", position: "relative", left: "110px" }}>
+                                csi.vesit@ves.ac.in
+                            </div>
+                        </Col>
+                    </a>
                 </Row>
             </Container>
         </>

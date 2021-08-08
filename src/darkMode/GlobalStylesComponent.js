@@ -42,6 +42,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
   }
 
+  .contact-links, .contact-links:hover {
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+  }
+
   .btn-primary {
     background-color: ${({ theme }) => theme.body};
     border-color: ${({ theme }) => theme.text};
@@ -84,22 +89,26 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .testimonialsBody {
-    background-color: ${({ theme }) => theme.lightDark3} !important;
+    background-color: ${({ theme }) => theme.styledCard} !important;
     color: ${({ theme }) => theme.text};
   }
+
   .myCarousel{
-    background-color: ${({ theme }) => theme.lightDark2} !important;
-    color: ${({ theme }) => theme.text} !important;
+    background-color: ${({ theme }) => theme.carouselCardBody} !important;
   }
+
+  .myCarousel p, .myCarousel h4, .myCarousel h3 {
+    background-color: ${({ theme }) => theme.carouselCardBody} !important;
+    color: ${({ theme }) => theme.carouselCardText} !important;
+  }
+
   .darkFont{
     color: ${({ theme }) => theme.text} !important;
   }
-  .white-container{
-    background-color: ${({ theme }) => theme.lightDark1};
-  }
 
-  .dark-container{
-    background-color: ${({ theme }) => theme.lightDark3};
+  .about-content, .ourMission-content, .testimonials-content {
+    background-color: ${({ theme }) => theme.styledCard} !important;
+    color: ${({ theme }) => theme.text} !important;
   }
 
 `
