@@ -16,6 +16,7 @@ const CouncilCard = ({ name,imageUrl }) => {
           <li><a href="https://twitter.com/atuljustano"><FaEnvelope /></a></li>
         </ul>
       </div>
+      
     </Col>
   )
 }

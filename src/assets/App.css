@@ -114,10 +114,10 @@ footer svg {
   width: 100%;
 }
 
-/* .carousel-inner {
+.carousel-inner {
   position: relative;
   right: 10px;
-} */
+}
 
 .carousel-indicators li {
   width: 20px;
@@ -793,4 +793,9 @@ footer svg {
   100% {
     background-position: 400px 0;
   }
+
 }
+
+
+
+

@@ -7,7 +7,7 @@ const beMemberCards = beMemberDetails.map((info, index) => {
     return (
         <CouncilCard
             imageUrl={info.imageUrl}
-            name={info.name}
+            name="BE"
             role={info.role}
             key={index}
         />
@@ -18,7 +18,7 @@ const FinalYearCouncil = () => {
     console.log(beMemberDetails);
     return (
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>BE Council</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>BE Council</h1> */}
             <div className="map-team-cards">
             {beMemberCards}
             </div>

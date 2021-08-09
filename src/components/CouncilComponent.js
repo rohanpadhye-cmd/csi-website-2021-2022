@@ -1,73 +1,93 @@
-import React from "react";
-import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
+import React,{useState,useRef} from "react";
+import { Container, Row, Col,Carousel ,Button} from "react-bootstrap";
 import Faculty from "./council/Faculty";
 import FinalYearCouncil from "./council/FinalYearCouncil";
 import ThirdYearCouncil from "./council/ThirdYearCouncil";
 import SecondYearCouncil from "./council/SecondYearCouncil";
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel/dist/assets/owl.theme.default.css";
-// import "../components/council/councilCard.css";
-// import { motion } from "framer-motion";
 
 
-// Side-by-side se te be owlcarousel
+
 const CouncilComponent = () => {
+  const [index, setIndex] = useState(0);
 
-  //States for buttons
-const [currentCouncil, setCurrentCouncil] = React.useState("BE");;
-const [isClicked,setIsClicked] = React.useState("BE");
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
- //This are the buttons
-function Buttons(){
-  return ( 
-  <Row className='justify-content-center' style={{marginBottom:"50px"}} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-    <Button  id="1"  className={`ml-2 w-25 centerWorkBtn ${isClicked ==="BE" ? null : " contact-btn"}`}     onClick={whichCouncil}>
-    BE Council
+
+
+
+  
+  return (
+    <Container >
+
+      <h1 className="mb-4">Faculty Members</h1>
+      <Row>
+        <Col />
+        <Faculty />
+        <Col />
+      </Row>
+      
+
+    <Row className='justify-content-center'>
+    <Button 
+    className={`ml-2 w-25  ${index===0?  "contact-btn " : null} `} 
+    onClick={() => setIndex(0)}>
+        BE
     </Button>
-    <Button  id="2"   className={`ml-2 w-25 centerWorkBtn ${isClicked ==="TE" ? null : " contact-btn"}`}     onClick={whichCouncil}>
-    TE Council
+    <Button 
+    className={`ml-2 w-25  ${index===1?  "contact-btn " : null} `} 
+    onClick={() => setIndex(1)}>
+      TE
     </Button>
-    <Button  id="3"   className={`ml-2 w-25 centerWorkBtn ${isClicked ==="SE" ? null : " contact-btn"}`}   onClick={whichCouncil}>
-    SE Council 
+    <Button 
+    className={`ml-2 w-25  ${index===2?  "contact-btn " : null} `}
+    onClick={() => setIndex(2)}>
+      SE
     </Button>
-  </Row>
+    </Row>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={2000} indicators={false} controls={false}>
+    <Carousel.Item>
+        <h1 className="mt-3 mb-4">BE Council Members</h1>
+          <Row>
+          <FinalYearCouncil/>
+          </Row>
+        </Carousel.Item>
+        <Carousel.Item>
+        <h1 className="mt-3 mb-4">TE Council Members</h1>
+          <Row>
+          <ThirdYearCouncil/>
+          </Row>
+        </Carousel.Item>
+        <Carousel.Item>
+        <h1 className="mt-3 mb-4">SE Council Members</h1>
+          <Row>
+          <SecondYearCouncil/>
+          </Row>
+        </Carousel.Item>
+    </Carousel>
+    
+
+
+
+    
+      {/* <OwlCarousel {...options}>
+        
+      </OwlCarousel>
+
+      
+      <OwlCarousel {...options}>
+      
+      </OwlCarousel>
+
+      
+      <OwlCarousel {...options}>
+       
+      </OwlCarousel> */}
+
+      
+    </Container>
   )
 }
-
-//This function sets the stste of buttons to show respective Year cards
-
-const whichCouncil = (e) => {
-  const id = e.target.id;
-  e.target.setvariant = "primary";
-  if (id === "1") {
-  setCurrentCouncil("BE");
-  setIsClicked("BE");
-  }
-  else if (id === "2") {
-  setCurrentCouncil("TE");
-  setIsClicked("TE");
-  }
-  else if (id === "3") {
-  setCurrentCouncil("SE");
-  setIsClicked("SE");
-  }
-}
  
-
- return (
-   <Container className="mt-4">
-    <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
-      <Row style={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-        <Faculty />
-      </Row>
-     <Buttons />
-     <Row data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-        {currentCouncil === "BE" && (<FinalYearCouncil />)}
-        {currentCouncil === "TE" && (<ThirdYearCouncil />)}
-        {currentCouncil === "SE" && (<SecondYearCouncil />)}
-     </Row>
-   </Container>
- );
-}
-
 export default CouncilComponent;
