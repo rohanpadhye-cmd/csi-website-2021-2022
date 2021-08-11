@@ -365,7 +365,7 @@ const CouncilComponent = () => {
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
-        interval={2000}
+        interval={10000}
         indicators={false}
         controls={false}
       >
