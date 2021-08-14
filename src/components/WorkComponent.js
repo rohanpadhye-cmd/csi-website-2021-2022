@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Row , Container,Button } from 'react-bootstrap';
+import { Row , Col, Container, Button } from 'react-bootstrap';
 import WorkCardMap from './work/WorkCardMap';
 import db from '../firebase/FirestoreConnection';
+import magazine_poster_2021 from "../assets/magazine_poster.JPG"
+import magazine_poster_2020 from "../assets/csi2020magz.jpg"
+import magazine_poster_2019 from "../assets/csi2019magz.jpg"
 
 // import { motion } from 'framer-motion';
 
@@ -26,7 +29,26 @@ import db from '../firebase/FirestoreConnection';
 //     }
 //   }
 // }
-
+const Magazine = ({link,img}) => {
+  return(
+    
+          <div className="magazine" style={{width:'unset'}}>
+                    <div className="card">
+                      <div className="face face1">
+                        <div className="content">
+                          <h2>Redux</h2>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illum ad dolor laudantium enim ipsa libero adipisci culpa </p>
+                          <a href={link} target="_blank">View our magazine</a>
+                        </div>
+                      </div>
+                      <div className="face face2">
+                        <img alt="magazine's poster" src={img}/>
+                      </div>
+                    </div>
+                  </div>
+    
+  )
+}
 const WorkComponent = () => {
 
   const [currentWorkshops, setCurrentWorkshops] = useState([]);
@@ -73,20 +95,28 @@ const WorkComponent = () => {
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <Button className={`ml-2 w-25 centerWorkBtn ${currentTab === "Workshops" ? null : " contact-btn"}`} onClick={() => setCurrentTab("Workshops")}>
+          <Button className={`ml-2 centerWorkBtn ${currentTab === "Workshops" ? null : " contact-btn"}`} style={{width:'20%'}} onClick={() => setCurrentTab("Workshops")}>
             Workshops
           </Button>
-          <Button className={`ml-2 w-25 centerWorkBtn ${currentTab === "Events" ? null : " contact-btn"}`} onClick={() => setCurrentTab("Events")}>
+          <Button className={`ml-2 centerWorkBtn ${currentTab === "Events" ? null : " contact-btn"}`} style={{width:'20%'}} onClick={() => setCurrentTab("Events")}>
             Events
           </Button>
-          <Button className={`ml-2 w-25 centerWorkBtn ${currentTab === "Collabs" ? null : " contact-btn"}`} onClick={() => setCurrentTab("Collabs")}>
+          <Button className={`ml-2 centerWorkBtn ${currentTab === "Collabs" ? null : " contact-btn"}`} style={{width:'20%'}} onClick={() => setCurrentTab("Collabs")}>
             Collabs
+          </Button>
+          <Button className={`ml-2 centerWorkBtn ${currentTab === "Magazines" ? null : " contact-btn"}`} style={{width:'20%'}} onClick={() => setCurrentTab("Magazines")}>
+            Magazines
           </Button>
         </Row>
         <Row>
           {currentTab === "Workshops" && <WorkCardMap infoArray={currentWorkshops} />}
           {currentTab === "Events" && <WorkCardMap infoArray={currentEvents} />}
           {currentTab === "Collabs" && <WorkCardMap infoArray={currentCollabs} />}
+          {currentTab === "Magazines" && <>
+          <Magazine link="https://redux-magazines.vercel.app/" img={magazine_poster_2021}/>
+          <Magazine link="https://redux-magazines.vercel.app/redux2020.html" img={magazine_poster_2020}/>
+          <Magazine link="https://redux-magazines.vercel.app/redux2019.html" img={magazine_poster_2019}/>
+          </>}
         </Row>
       </Container>
       {/* </motion.div> */}
