@@ -14,17 +14,7 @@ const AboutPage = () => (
         <div className="about-text">
         <h1 className="heading ml-3 ml-md-0">ABOUT CSI-VESIT</h1>
         <p className="about-p content-p">
-          Computer Society of India was established in the year 1965 is
-          today the largest IT professionals society in India. Keeping in
-          mind the interest of IT professionals & computer users, CSI
-          works towards, making the profession an area of choice among all
-          sections of the society. The basic purpose of CSI is to promote
-          IT as a profession. To fulfil this objective, CSI regularly
-          organizes conferences, conventions, lectures and gives various
-          awards.vehicula in lacus. Donec ac placerat sem, ac blandit
-          tortor. Nam et sem non lorem consectetur elementum. Sed placerat
-          pellentesque ex ut dictum. Pellentesque posuere accumsan felis
-          et dapibus.
+          We believe there is a better way for competence development. A more valuable, less monotonous way,  exciting as well as beneficial to the students of our college. Our Council is an amalgamation of various people who collectively work to create, host events and competitions to test the mettle of the participants in various fields. From boosting technical knowledge through Hackathons, to checking management skills and general knowledge of our participants through events like Business Quiz and Cricomania! We conduct a galore of technical workshops for technologies including but not limited to - Git &amp; GitHub, Python, Android App Development, Machine Learning, PHP &amp; Laravel, etc - for the betterment of the students.
         </p>
         </div>
         <img src={img1} alt="" className='about-img'/>
@@ -35,12 +25,7 @@ const AboutPage = () => (
       <div className="ourMission-content shadow">
         <h1 className="heading">OUR MISSION</h1>
         <p className="ourMission-content-p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        libero mauris, iaculis quis ultrices quis,
-        vehicula in lacus. Donec ac placerat sem, ac blandit tortor. Nam et
-        sem non lorem consectetur elementum.
-        Sed placerat pellentesque ex ut dictum. Pellentesque posuere
-        accumsan felis et dapibus.
+          Diversifying knowledge in technical and non-technical domains.<br />Building a brigther future with competent, innovative minds, isn't a distant goal anymore. <br />It's just the beginning at CSI - VESIT....
         </p>
         <div className="card-Deck d-none d-md-block">
           <CardDeck>
@@ -48,9 +33,9 @@ const AboutPage = () => (
               <Card className="ourMissionCard" >
                 <Card.Img variant="top" src={knowledge} />
                 <Card.Body style={{ color: "white" }}>
-                  <Card.Title>Knowledge</Card.Title>
+                  <Card.Title>Enthralling Events</Card.Title>
                   <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Engage in exciting events, form connections, and even win prizes while your at it!
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -59,9 +44,9 @@ const AboutPage = () => (
               <Card className="ourMissionCard" >
                 <Card.Img variant="top" src={skill} />
                 <Card.Body style={{ color: "white" }}>
-                  <Card.Title>Technical Skills</Card.Title>
+                  <Card.Title>Technical &amp; Soft Skills</Card.Title>
                   <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Enhancing essential skills for employability, as well as growth as an individual.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -72,7 +57,7 @@ const AboutPage = () => (
                 <Card.Body style={{ color: "white" }}>
                   <Card.Title>Certified Workshops</Card.Title>
                   <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Skilled facilitators. Modern workshops. Certificates. We've got them all!
                   </Card.Text>
                 </Card.Body>
               </Card>
