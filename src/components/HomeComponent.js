@@ -53,7 +53,7 @@ const HomeComponent = () => {
   // const [showWorkshopModal, setShowWorkshopModal] = useState(false);
   // const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
   // const [isCSIMember,setIsCSIMember]=useState('Yes');
-   const [buttonText,setButtonText]=useState("Workshop");
+   const [buttonText, setButtonText]=useState("Workshop");
 
   // const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
 
@@ -86,96 +86,98 @@ const HomeComponent = () => {
           </Parallax>
         </Container>
     
-
-
         <Container fluid className="mt-5">
           <Row>
-            {/* <motion.div
-             initial={{x: '-100vw'}}
-             animate={{x: 0}}
-             transition={{delay: 3, duration: 2}}
-            > */}
+
+          {/* Styled Card 1 Begins */}
+
             <div>
-            <Col md={6}>
-              <Card className="council-pic-info" style={{float: "left"}} data-aos="fade-right" data-aos-duration="1500">
-                <Card.Img src={groupImg}/>
-              </Card>
-            </Col>
-            <div className="mx-auto mt-3 px-5" style={{float: "left"}} data-aos="fade-left" data-aos-duration="1500">
+              <Col md={6}>
+                <Card className="council-pic-info" data-aos="fade-right" data-aos-duration="1500">
+                  <Card.Img src={groupImg}/>
+                </Card>
+              </Col>
+            <div className="mx-auto mt-3 px-5" data-aos="fade-left" data-aos-duration="1500">
               <h3 className="heading">Our Team</h3>
-              <p>Lorem Ipsum</p>
+              <p>
+                  Whether it comes to conducting events and workshops or guiding our fellow peers to attain the best of our given knowledge, we at CSI-VESIT have always been dedicated to work for the better good of the society and always will continue to do so as a family. Our council is handpicked from a group of intellectual minds and has always been contributing significantly in various technical and non technical fields for the betterment of our society.
+              </p>
             </div>
             </div>
-            {/* </motion.div> */}
+
+          {/* Styled Card 1 Ends */}
+  
           </Row>
         </Container>
-    
 
-        
-        <Counter/>
+        <Counter />
 
         <Container fluid className="mt-5">
-          <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading">Upcoming Event</h1>
+
+          {/* Styled Card 2 Begins */}
+
+          <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading">Upcoming Event</h1>
           <Row className="mt-5">
-            <Col md={6} data-aos="flip-left" data-aos-easing="linear" data-aos-duration="6000">
+            <Col md={6} data-aos="slide-left" data-aos-duration="9000">
               <Card className="council-pic-info">
                 <Card.Img src={poster}/>
               </Card>
             </Col>
-            <Col md={6}  data-aos="flip-right" data-aos-easing="linear" data-aos-duration="6000">
-            <div className="mx-auto mt-3 px-5 upcoming-event">
-               <h3>About Event</h3>
-               <p style={{textAlign:"left"}}>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               </p>
-               <h5 style={{textAlign:"left"}}><strong>Date:22/07/2021<br/><br/>Time:11 am to 1 pm</strong></h5>
-            </div>
+            <Col md={6}  data-aos="slide-right" data-aos-duration="9000">
+              <div className="mx-auto mt-3 px-5 upcoming-event">
+                <h3>About Event</h3>
+                <p style={{textAlign:"left"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h5 style={{textAlign:"left"}}><strong>Date:22/07/2021<br/><br/>Time:11 am to 1 pm</strong></h5>
+              </div>
             </Col>
           </Row>
-          <div className="registration-buttons" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="6000">
-                <Row style={{textAlign:"center"}}>
-                <Col md={6} xs={12}>
-                  <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7">
-                    <Button className="registration-button" size="lg" >Membership Form</Button>
-                  </a>
-                </Col>
-                <Col md={6} xs={12}>
-                  <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9">
-                    <Button className="registration-button"  size="lg" >Register for {buttonText}</Button>
-                  </a>
-                 </Col>
-                </Row>
-                 
+          <div className="registration-buttons" data-aos="fade-down" data-aos-duration="6000">
+            <Row style={{textAlign:"center"}}>
+            <Col md={6} xs={12}>
+              <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7">
+                <Button className="registration-button" size="lg" >Membership Form</Button>
+              </a>
+            </Col>
+            <Col md={6} xs={12}>
+              <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9">
+                <Button className="registration-button"  size="lg" >Register for {buttonText}</Button>
+              </a>
+              </Col>
+            </Row>
+          </div>
+
+          {/* Styled Card 2 Ends */}
           
-                
-                
-              </div>
+          {/* Styled Card 3 Begins */}
 
-              <hr/>
-
-              <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading mt-5">Our Magazine</h1>
-
-              <Row className="m-0">
-                  <div className="magazine">
-                    <div className="card">
-                      <div className="face face1">
-                        <div className="content">
-                          <h2>Redux</h2>
-                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illum ad dolor laudantium enim ipsa libero adipisci culpa </p>
-                          <a href="https://csi-redux.vercel.app/" target="_blank">View our magazine</a>
-                        </div>
-                      </div>
-                      <div className="face face2">
-                        <img alt="magazine's poster" src={magazine_poster}/>
-                      </div>
+          <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading mt-5">Our Magazine</h1>
+          <Row className="m-0">
+              <div className="magazine">
+                <div className="card">
+                  <div className="face face1">
+                    <div className="content">
+                      <h2>Redux</h2>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illum ad dolor laudantium enim ipsa libero adipisci culpa </p>
+                      <a href="https://csi-redux.vercel.app/" target="_blank">View our magazine</a>
                     </div>
                   </div>
-              </Row>
+                  <div className="face face2">
+                    <img alt="magazine's poster" src={magazine_poster}/>
+                  </div>
+                </div>
+              </div>
+          </Row>
+
+          {/* Styled Card 3 Ends */}
+
         </Container>
+
         {/* <Row className="registrations">
           <Col md={6} className="p-0">
             <Card.Img className="poster" src={poster}/>
@@ -432,7 +434,6 @@ const HomeComponent = () => {
                     
                 </> }
           </Modal>  */}
-        {/* </motion.div> */}
       </div>
     );
 }
