@@ -112,10 +112,28 @@ const WorkComponent = () => {
           {currentTab === "Workshops" && <WorkCardMap infoArray={currentWorkshops} />}
           {currentTab === "Events" && <WorkCardMap infoArray={currentEvents} />}
           {currentTab === "Collabs" && <WorkCardMap infoArray={currentCollabs} />}
-          {currentTab === "Magazines" && <>
+          {currentTab === "Magazines" && <> 
+          {/* <div>
+          <Col lg={4}> */}
+          {/* <Col lg={12}> */}
+          <Row style={{margin:"auto"}}>
           <Magazine link="https://redux-magazines.vercel.app/" img={magazine_poster_2021}/>
+          {/* </Col>
+          <Col lg={4}> */}
           <Magazine link="https://redux-magazines.vercel.app/redux2020.html" img={magazine_poster_2020}/>
+      
+          {/* </Col>
+          <Col lg={4}> */}
           <Magazine link="https://redux-magazines.vercel.app/redux2019.html" img={magazine_poster_2019}/>
+          </Row>
+          {/* </Col> */}
+          {/* </Col> */}
+         
+         
+         
+          
+          {/* </div> */}
+          
           </>}
         </Row>
       </Container>

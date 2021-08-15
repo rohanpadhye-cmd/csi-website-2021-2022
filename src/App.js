@@ -35,7 +35,7 @@ function App() {
         isLoading === true? ( <Loader /> ) : (
           <div className = "App">
             <NavbarComponent />
-            <div className="content">
+            <div className="content" style={{minHeight:"calc(100vh - 240px)"}}>
             {/* <AnimatePresence exitBeforeEnter> */}
             <Switch  location = {location} key={location.key}>
                 <Route exact path="/">
