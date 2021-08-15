@@ -6,8 +6,8 @@ import IconBar from './icons/IconBar';
 const FooterComponent = () => {
     return(
         <>
-            <hr className="mx-4 mt-5" />
             <footer>
+                <hr className="mx-4 mt-5" />
                 <Container fluid className="d-none d-md-block">
                     <Row className="my-4">
                         <Col md={3}>
