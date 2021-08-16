@@ -271,12 +271,12 @@ const seMemberDetails = [
 
   const Faculty = () => {
       return (
-        <p>
-          <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
+        <div>
+          <h1 className="mb-5 heading" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
           <div class="map-team-cards faculty-card">
           {facultyCards}
           </div>
-        </p>
+        </div>
       );
   }
 
@@ -336,8 +336,10 @@ const CouncilComponent = () => {
   return (
     <Container>
       <Carousel
-        style={{ marginTop:"50px" }}
-        data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+        className="mt-4"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
         indicators={false}
         controls={false}
       >
@@ -346,17 +348,17 @@ const CouncilComponent = () => {
 
       <Row className="justify-content-center" style={{marginBottom:"50px"}} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
         <Button
-          className={`ml-2 w-25  ${index === 0 ? "contact-btn " : null} `}
+          className={`ml-2 mt-5 w-25 p-2  ${index === 0 ? "contact-btn " : null} `}
           onClick={() => setIndex(0)}
         >BE Council
         </Button>
         <Button
-          className={`ml-2 w-25  ${index === 1 ? "contact-btn " : null} `}
+          className={`ml-2 mt-5 w-25 p-2  ${index === 1 ? "contact-btn " : null} `}
           onClick={() => setIndex(1)}
         >TE Council
         </Button>
         <Button
-          className={`ml-2 w-25  ${index === 2 ? "contact-btn " : null} `}
+          className={`ml-2 mt-5 w-25 p-2  ${index === 2 ? "contact-btn " : null} `}
           onClick={() => setIndex(2)}
         >SE Council
         </Button>

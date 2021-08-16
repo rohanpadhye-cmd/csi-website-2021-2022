@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import NavbarComponent from './components/NavbarComponent';
 import HomeComponent from './components/HomeComponent';
 import AboutComponent from './components/AboutComponent';
@@ -10,7 +10,6 @@ import AboutPage from './components/AboutPage';
 import Loader from './components/Loader';
 import NotFound from './components/NotFound';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import { useState } from 'react';
 import './assets/App.css';
 // import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
@@ -18,13 +17,14 @@ import 'aos/dist/aos.css';
 
 function App() {
   
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
 
-  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 6000)
+    }, 6000);
+    window.localStorage.clear();
   }, [])
 
   AOS.init();
