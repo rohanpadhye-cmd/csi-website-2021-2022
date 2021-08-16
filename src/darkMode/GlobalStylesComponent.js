@@ -116,4 +116,9 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text} !important;
   }
 
+  .card .details {
+    background-color: ${({ theme }) => theme.styledCouncilCard} !important;
+    color: ${({ theme }) => theme.text} !important;
+  }
+
 `

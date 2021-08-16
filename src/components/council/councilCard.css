@@ -112,32 +112,19 @@ body {
     height: fit-content;
     z-index: 2;
     opacity: 1;
-    padding: 0; }
-    /* .details h2 {
-      font-size: 100%;
-      margin: 10px 0;
-      padding: 0;
-      color: #333;
-      text-align: center; }
-      .details h2 .job-title {
-        color: #333;
-        font-weight: 400; } */
-  .card .details {
     padding: 25px 15px;
   }
   
   .card .details h4 {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 20px;
-    color: #111111;
+    font-size: 140%;
   }
   
   .card .details span {
     display: block;
-    font-size: 20px;
+    font-size: 110%;
     font-weight: 400;
-    color: #aaaaaa;
   }
         
   

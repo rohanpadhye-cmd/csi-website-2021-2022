@@ -5,7 +5,12 @@ const Toggle = ({theme,  toggleTheme }) => {
     return (
         <>
             <input className="tgl tgl-skewed" id="cb3" type="checkbox" onClick={toggleTheme} />
-            <label className="tgl-btn" data-tg-off="Prefer Dark?!" data-tg-on="Switch Back!" htmlFor="cb3"></label>
+            <label
+                className="tgl-btn"
+                data-tg-off="Dark Mode!"
+                data-tg-on="Switch Back!"
+                htmlFor="cb3"
+            ></label>
         </>
     );
 };

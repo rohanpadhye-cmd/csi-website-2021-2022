@@ -24,8 +24,8 @@ const CouncilCard = (props) => {
             </div>
           </div>
           <div class="details">
-              <h4>{props.name}</h4>
-              <span class="job-title">{props.role}</span>
+            <h4>{props.name}</h4>
+            <span class="job-title">{props.role}</span>
           </div>
         </div>
     </Col>
