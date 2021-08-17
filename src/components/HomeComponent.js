@@ -8,6 +8,7 @@ import poster from "../assets/poster.jpeg";
 import { motion } from 'framer-motion';
 // import QR from "../assets/QR_code.jpg";
 import Counter from './Counter'
+import '../assets/HomePage/HomeStyle.css'
 
 // const containerVariant = {
 //   hidden: {
@@ -91,7 +92,7 @@ const HomeComponent = () => {
 
           {/* Styled Card 1 Begins */}
 
-            <div>
+            {/* <div>
               <Col md={6}>
                 <Card className="council-pic-info" data-aos="fade-right" data-aos-duration="1500">
                   <Card.Img src={groupImg}/>
@@ -103,10 +104,31 @@ const HomeComponent = () => {
                   Whether it comes to conducting events and workshops or guiding our fellow peers to attain the best of our given knowledge, we at CSI-VESIT have always been dedicated to work for the better good of the society and always will continue to do so as a family. Our council is handpicked from a group of intellectual minds and has always been contributing significantly in various technical and non technical fields for the betterment of our society.
               </p>
             </div>
+            </div> */}
+          <div className='council-pic-info-sec'>
+
+          
+            <div className='council-pic-info shadow'>
+            <img src={groupImg} alt="" className='council-img' />
+              <div className="council-pic-info-txt">
+                <h1>
+                  Our Team
+                </h1>
+                <p>
+                  Whether it comes to conducting events and workshops or guiding our fellow peers to attain the best of our given knowledge, we at CSI-VESIT have always been dedicated to work for the better good of the society and always will continue to do so as a family. Our council is handpicked from a group of intellectual minds and has always been contributing significantly in various technical and non technical fields for the betterment of our society.
+              </p>
+              </div>
             </div>
+            
+          </div>
+
+
+          
+
+
+
 
           {/* Styled Card 1 Ends */}
-  
           </Row>
         </Container>
 
@@ -126,7 +148,7 @@ const HomeComponent = () => {
             <Col md={6}  data-aos="slide-right" data-aos-duration="9000">
               <div className="mx-auto mt-3 px-5 upcoming-event">
                 <h3>About Event</h3>
-                <p style={{textAlign:"left"}}>
+                <p style={{textAlign:"justify"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 

@@ -1,0 +1,65 @@
+.council-pic-info-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.council-pic-info {
+    border-radius: 15px;
+    display: flex;
+    margin: 5%;
+   
+}
+
+.council-pic-info-txt {
+    width: 50%;
+    padding: 5%;
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.council-pic-info-txt h1{
+    font-size: 4vw;
+    padding-bottom: 2%;
+    font-family: 'Secular One', sans-serif;
+}
+
+.council-img {
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+@media screen and (max-width: 750px){
+
+    .council-pic-info{
+        flex-direction: column;
+        width: 75%;
+        
+    }
+
+    .council-pic-info-txt{
+        width: 100%;
+        text-align: center;
+    }
+    .council-img{
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    
+    .council-pic-info-txt{
+        font-size: 10px;
+    }
+
+    .council-pic-info-txt h1{
+        font-size: 30px;
+    }
+}

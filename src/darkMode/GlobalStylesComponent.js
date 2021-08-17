@@ -121,4 +121,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text} !important;
   }
 
+  .counter-item{
+    color: ${'black'} !important;
+  }
+
 `
