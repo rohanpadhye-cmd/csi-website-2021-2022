@@ -2,208 +2,8 @@ import React from "react";
 import CouncilCard from "../components/council/CouncilCard"
 import FacultyCard from "../components/council/FacultyCard"
 import { Container, Row, Carousel, Button } from "react-bootstrap";
-import "../components/council/councilCard.css"
-
-const facultyDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "Pratik Vartak",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "Sarah Jhonson",
-    },
-  ];
- 
-const top3MemberDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    }, 
-  ]; 
-const beMemberDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "POM",
-    },
-  ];
-  
-const top5MemberDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "top5",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "top5",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "top5",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "top5",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "top5",
-    },
-  ];
-const teMemberDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: " Officer",
-      name: "XOM",
-    },
-  ];
-
-const seMemberDetails = [
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-    {
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKi6B7dQxVyrN_qgvVWCX96omLGEtmUXK0A&usqp=CAU",
-      role: "Sr.Web Officer",
-      name: "KOM",
-    },
-  ];
+import "../components/council/councilCard.css";
+import { facultyDetails, top3MemberDetails, beMemberDetails, top5MemberDetails, teMemberDetails, seMemberDetails } from "./council/CouncilDetails";
 
   let facultyCards = facultyDetails.map((info, index) => {
       return (
@@ -272,7 +72,7 @@ const seMemberDetails = [
   const Faculty = () => {
       return (
         <div>
-          <h1 className="mb-5 heading" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Members</h1>
+          <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Incharges</h1>
           <div class="map-team-cards faculty-card">
           {facultyCards}
           </div>
@@ -284,13 +84,13 @@ const seMemberDetails = [
     return (
       <>
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>TOP 3</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>BE Council Members</h1> */}
             <div className="map-team-cards">
             {top3MemberCards}
             </div>
         </div>
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>BE Council Members</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>BE Council Members</h1> */}
             <div className="map-team-cards">
             {beMemberCards}
             </div>
@@ -303,13 +103,13 @@ const seMemberDetails = [
     return (
         <>
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>TOP 5</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>TE Council Members</h1> */}
             <div className="map-team-cards">
             {top5MemberCards}
             </div>
         </div>
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>TE Council Members</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>TE Council Members</h1> */}
             <div className="map-team-cards">
             {teMemberCards}
             </div>
@@ -321,7 +121,7 @@ const seMemberDetails = [
   const SEYearCouncil = () => {
     return (
         <div>  
-            <h1 className="mb-4" style={{alignText:"center"}}>SE Council Members</h1>
+            {/* <h1 className="mb-4" style={{alignText:"center"}}>SE Council Members</h1> */}
             <div className="map-team-cards">
             {seMemberCards}
             </div>
