@@ -23,7 +23,7 @@ const WorkCard = ({ name, images, date, time, trend, venue, upcoming, desc }) =>
             />
             <Col md={4} xs={12} sm={6}>
                 <Card className='mt-4 mb-1' onClick={handleShow} style={{ backgroundColor: "#add8e6",cursor:'pointer' }}>
-                    <Card.Img src={images[0]} />
+                    <Card.Img src={images[0]} className="ws-card" />
                     {upcoming&&<div className={styles.ribbon}><span>Upcoming!</span></div>}
                 </Card>
             </Col>
