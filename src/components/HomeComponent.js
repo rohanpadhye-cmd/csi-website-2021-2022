@@ -1,15 +1,27 @@
-import { Container, Card, Button, Col, Row, Modal, Form} from 'react-bootstrap';
-import { useState } from 'react';
+import {
+  Container,
+  Card,
+  Button,
+  Col,
+  Row,
+  Modal,
+  Form,
+} from "react-bootstrap";
+import { useState } from "react";
 import VES from "../assets/back-img1.jpeg";
 import { Parallax } from "react-parallax";
 import groupImg from "../assets/group-img.jpg";
-import magazine_poster from "../assets/magazine_poster.JPG"
+import magazine_poster from "../assets/magazine_poster.JPG";
 import poster from "../assets/poster.jpeg";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // import QR from "../assets/QR_code.jpg";
-import Counter from './Counter'
-import '../assets/HomePage/HomeStyle.css'
-
+import { Carousel } from "react-responsive-carousel";
+import Counter from "./Counter";
+import "../assets/HomePage/HomeStyle.css";
+import BE from "../assets/HomePage/BE.jpg";
+import SE from "../assets/HomePage/SE.jpg";
+import TE from "../assets/HomePage/TE.jpg";
+import OurTeam from "./OurTeam"
 // const containerVariant = {
 //   hidden: {
 //     opacity: 0,
@@ -32,29 +44,23 @@ import '../assets/HomePage/HomeStyle.css'
 //   }
 // }
 
-
-    
 const HomeComponent = () => {
-
-
   // const [showMembershipModal, setModal] = useState(false);
   // const [membershipTaken,setMembership]=useState(false);  //Handle the case when user will press the submit button in Membership form
   // const handleSubmit = () => {
   //   setMembership(true);
   // }
-  // const handleClose = () => 
+  // const handleClose = () =>
   // {
   //   setModal(false);
   //   setMembership(false);
   // }
   // const handleShow = () => setModal(true);
 
-
-
   // const [showWorkshopModal, setShowWorkshopModal] = useState(false);
   // const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
   // const [isCSIMember,setIsCSIMember]=useState('Yes');
-   const [buttonText, setButtonText]=useState("Workshop");
+  const [buttonText, setButtonText] = useState("Workshop");
 
   // const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
 
@@ -68,31 +74,40 @@ const HomeComponent = () => {
 
   // const CSIMemberDropdown = (e) =>  setIsCSIMember(e.target.value);
 
-    return (
-      //       <motion.div className="home" 
-      //   variants={containerVariant} 
-      //   initial="hidden" 
-      //   animate="visible"
-      //   exit="exit"
-      // >
-      <div>
-        <Container fluid className="m-0" data-aos="fade-in" data-aos-duration="2000">        
-          <Parallax bgImage= {VES} strength={500}>
-            <div style={{height: "425px"}}>
+  return (
+    //       <motion.div className="home"
+    //   variants={containerVariant}
+    //   initial="hidden"
+    //   animate="visible"
+    //   exit="exit"
+    // >
+    <div>
+      <Container
+        fluid
+        className="m-0"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
+        <Parallax bgImage={VES} strength={500}>
+          <div style={{ height: "425px" }}>
             <motion.h1
-                drag dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }} dragElastic={0.7}
-                dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-                className="csi-vesit">CSI-VESIT</motion.h1>
-            </div>
-          </Parallax>
-        </Container>
-    
-        <Container fluid className="mt-5">
-          <Row>
+              drag
+              dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+              dragElastic={0.7}
+              dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+              className="csi-vesit"
+            >
+              CSI-VESIT
+            </motion.h1>
+          </div>
+        </Parallax>
+      </Container>
 
+      <Container fluid className="mt-5">
+        <Row>
           {/* Styled Card 1 Begins */}
 
-            {/* <div>
+          {/* <div>
               <Col md={6}>
                 <Card className="council-pic-info" data-aos="fade-right" data-aos-duration="1500">
                   <Card.Img src={groupImg}/>
@@ -105,109 +120,117 @@ const HomeComponent = () => {
               </p>
             </div>
             </div> */}
-          <div className='council-pic-info-sec'>
-
-          
-            <div className='council-pic-info shadow'>
-            <img src={groupImg} alt="" className='council-img' />
-              <div className="council-pic-info-txt">
-                <h1>
-                  Our Team
-                </h1>
-                <p>
-                  Whether it comes to conducting events and workshops or guiding our fellow peers to attain the best of our given knowledge, we at CSI-VESIT have always been dedicated to work for the better good of the society and always will continue to do so as a family. Our council is handpicked from a group of intellectual minds and has always been contributing significantly in various technical and non technical fields for the betterment of our society.
-              </p>
-              </div>
-            </div>
-            
-          </div>
-
-
-          
-
-
-
+        <OurTeam/>
 
           {/* Styled Card 1 Ends */}
-          </Row>
-        </Container>
+        </Row>
+      </Container>
 
-        <Counter />
+      <Counter />
 
-        <Container fluid className="mt-5">
+      <Container fluid className="mt-5">
+        {/* Styled Card 2 Begins */}
 
-          {/* Styled Card 2 Begins */}
-
-          <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading">Upcoming Event</h1>
-          <Row className="mt-5">
-            <Col md={6} data-aos="slide-left" data-aos-duration="9000">
-              <Card className="council-pic-info">
-                <Card.Img src={poster}/>
-              </Card>
-            </Col>
-            <Col md={6}  data-aos="slide-right" data-aos-duration="9000">
-              <div className="mx-auto mt-3 px-5 upcoming-event">
-                <h3>About Event</h3>
-                <p style={{textAlign:"justify"}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <h5 style={{textAlign:"left"}}><strong>Date:22/07/2021<br/><br/>Time:11 am to 1 pm</strong></h5>
-              </div>
-            </Col>
-          </Row>
-          <div className="registration-buttons" data-aos="fade-down" data-aos-duration="6000">
-            <Row style={{textAlign:"center"}}>
+        <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading">
+          Upcoming Event
+        </h1>
+        <Row className="mt-5">
+          <Col md={6} data-aos="slide-left" data-aos-duration="9000">
+            <Card className="council-pic-info">
+              <Card.Img src={poster} />
+            </Card>
+          </Col>
+          <Col md={6} data-aos="slide-right" data-aos-duration="9000">
+            <div className="mx-auto mt-3 px-5 upcoming-event">
+              <h3>About Event</h3>
+              <p style={{ textAlign: "justify" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <h5 style={{ textAlign: "left" }}>
+                <strong>
+                  Date:22/07/2021
+                  <br />
+                  <br />
+                  Time:11 am to 1 pm
+                </strong>
+              </h5>
+            </div>
+          </Col>
+        </Row>
+        <div
+          className="registration-buttons"
+          data-aos="fade-down"
+          data-aos-duration="6000"
+        >
+          <Row style={{ textAlign: "center" }}>
             <Col md={6} xs={12}>
               <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7">
-                <Button className="registration-button" size="lg" >Membership Form</Button>
+                <Button className="registration-button" size="lg">
+                  Membership Form
+                </Button>
               </a>
             </Col>
             <Col md={6} xs={12}>
               <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9">
-                <Button className="registration-button"  size="lg" >Register for {buttonText}</Button>
+                <Button className="registration-button" size="lg">
+                  Register for {buttonText}
+                </Button>
               </a>
-              </Col>
-            </Row>
-          </div>
+            </Col>
+          </Row>
+        </div>
 
-          {/* Styled Card 2 Ends */}
-          
-          {/* Styled Card 3 Begins */}
+        {/* Styled Card 2 Ends */}
 
-          <h1 data-aos="zoom-in" data-aos-duration="6000" className="heading mt-5">Our Magazine</h1>
-          <Row className="m-0">
-              <div className="magazine">
-                <div className="card">
-                  <div className="face face1">
-                    <div className="content">
-                      <h2>Redux</h2>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illum ad dolor laudantium enim ipsa libero adipisci culpa </p>
-                      <a href="https://csi-redux.vercel.app/" target="_blank">View our magazine</a>
-                    </div>
-                  </div>
-                  <div className="face face2">
-                    <img alt="magazine's poster" src={magazine_poster}/>
-                  </div>
+        {/* Styled Card 3 Begins */}
+
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration="6000"
+          className="heading mt-5"
+        >
+          Our Magazine
+        </h1>
+        <Row className="m-0">
+          <div className="magazine">
+            <div className="card">
+              <div className="face face1">
+                <div className="content">
+                  <h2>Redux</h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Error illum ad dolor laudantium enim ipsa libero adipisci
+                    culpa{" "}
+                  </p>
+                  <a href="https://csi-redux.vercel.app/" target="_blank">
+                    View our magazine
+                  </a>
                 </div>
               </div>
-          </Row>
+              <div className="face face2">
+                <img alt="magazine's poster" src={magazine_poster} />
+              </div>
+            </div>
+          </div>
+        </Row>
 
-          {/* Styled Card 3 Ends */}
+        {/* Styled Card 3 Ends */}
+      </Container>
 
-        </Container>
-
-        {/* <Row className="registrations">
+      {/* <Row className="registrations">
           <Col md={6} className="p-0">
             <Card.Img className="poster" src={poster}/>
           </Col>
           <Col md={6} style={{padding: "11% 0"}}>
             {/* <Card.Body> */}
 
-              {/* 
+      {/* 
               <Modal
                 size="lg"
                 show={showWorkshopModal}
@@ -296,12 +319,12 @@ const HomeComponent = () => {
                   </>
                 }
               </Modal> */}
-            {/* </Card.Body>
+      {/* </Card.Body>
           </Col>
         </Row>  */}
 
-        {/* Modal for Membership Form */}
-        {/* <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">
+      {/* Modal for Membership Form */}
+      {/* <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">
       { !membershipTaken? 
        <>
         <Modal.Header closeButton>
@@ -456,8 +479,8 @@ const HomeComponent = () => {
                     
                 </> }
           </Modal>  */}
-      </div>
-    );
-}
- 
+    </div>
+  );
+};
+
 export default HomeComponent;
