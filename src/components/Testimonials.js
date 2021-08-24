@@ -15,7 +15,7 @@ export default class Testimonials extends Component {
         data-aos="fade-left"
       >
         <div className="testimonialsBody">
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
+          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student1" />
           <div className="myCarousel">
             <h3 className="studentName darkFont">Student One</h3>
             <h4 className="darkFont">-D10B</h4>
@@ -26,7 +26,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div className="testimonialsBody" >
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
+          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student2" />
           <div className="myCarousel">
             <h3 className="studentName darkFont">Student Two</h3>
             <h4 className="darkFont">-D15B</h4>
@@ -37,7 +37,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div className="testimonialsBody">
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" />
+          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student3" />
           <div className="myCarousel">
             <h3 className="studentName darkFont">Student Three</h3>
             <h4 className='darkFont'>-D20B</h4>

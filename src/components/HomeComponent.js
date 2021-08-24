@@ -3,24 +3,22 @@ import {
   Card,
   Button,
   Col,
-  Row,
-  Modal,
-  Form,
+  Row
 } from "react-bootstrap";
 import { useState } from "react";
 import VES from "../assets/back-img1.jpeg";
 import { Parallax } from "react-parallax";
-import groupImg from "../assets/group-img.jpg";
+// import groupImg from "../assets/group-img.jpg";
 import magazine_poster from "../assets/magazine_poster.JPG";
 import poster from "../assets/poster.jpeg";
 import { motion } from "framer-motion";
 // import QR from "../assets/QR_code.jpg";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 import Counter from "./Counter";
 import "../assets/HomePage/HomeStyle.css";
-import BE from "../assets/HomePage/BE.jpg";
-import SE from "../assets/HomePage/SE.jpg";
-import TE from "../assets/HomePage/TE.jpg";
+// import BE from "../assets/HomePage/BE.jpg";
+// import SE from "../assets/HomePage/SE.jpg";
+// import TE from "../assets/HomePage/TE.jpg";
 import OurTeam from "./OurTeam"
 // const containerVariant = {
 //   hidden: {
@@ -60,7 +58,7 @@ const HomeComponent = () => {
   // const [showWorkshopModal, setShowWorkshopModal] = useState(false);
   // const [isWorkshopSubmitted,setIsWorkshopSubmitted]=useState(false);
   // const [isCSIMember,setIsCSIMember]=useState('Yes');
-  const [buttonText, setButtonText] = useState("Workshop");
+  const [buttonText] = useState("Workshop");
 
   // const handleWorkshopSubmit = () => setIsWorkshopSubmitted(true);
 
@@ -84,12 +82,12 @@ const HomeComponent = () => {
     <div>
       <Container
         fluid
-        className="m-0"
+        className="m-0 p-0"
         data-aos="fade-in"
         data-aos-duration="2000"
       >
         <Parallax bgImage={VES} strength={500}>
-          <div style={{ height: "425px" }}>
+          <div className="title-container">
             <motion.h1
               drag
               dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
@@ -134,14 +132,14 @@ const HomeComponent = () => {
         <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading">
           Upcoming Event
         </h1>
-        <Row className="mt-5">
-          <Col md={6} data-aos="slide-left" data-aos-duration="9000">
+        <Row className="mt-5" style={{overflowX: "hidden"}}>
+          <Col md={6} data-aos="slide-right" data-aos-duration="9000">
             <Card className="council-pic-info">
               <Card.Img src={poster} />
             </Card>
           </Col>
-          <Col md={6} data-aos="slide-right" data-aos-duration="9000">
-            <div className="mx-auto mt-3 px-5 upcoming-event">
+          <Col md={6} data-aos="slide-left" data-aos-duration="9000">
+            <div className="mx-auto mt-3 px-3 px-md-5 upcoming-event">
               <h3>About Event</h3>
               <p style={{ textAlign: "justify" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -170,14 +168,14 @@ const HomeComponent = () => {
         >
           <Row style={{ textAlign: "center" }}>
             <Col md={6} xs={12}>
-              <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7">
+              <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7" rel="noreferrer">
                 <Button className="registration-button" size="lg">
                   Membership Form
                 </Button>
               </a>
             </Col>
             <Col md={6} xs={12}>
-              <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9">
+              <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9" rel="noreferrer">
                 <Button className="registration-button" size="lg">
                   Register for {buttonText}
                 </Button>
@@ -198,17 +196,15 @@ const HomeComponent = () => {
           Our Magazine
         </h1>
         <Row className="m-0">
-          <div className="magazine">
+          <div className="magazine" data-aos="fade-down" data-aos-duration="6000">
             <div className="card">
               <div className="face face1">
                 <div className="content">
-                  <h2>Redux</h2>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Error illum ad dolor laudantium enim ipsa libero adipisci
-                    culpa{" "}
+                  <h3>Redux - Tomorrowland</h3>
+                  <p className="mb-0">
+                    An insight into a vastly developed technological world with some of our bright minds highlighting their point of views in ways like never before.{" "}
                   </p>
-                  <a href="https://csi-redux.vercel.app/" target="_blank">
+                  <a href="https://redux-magazines.vercel.app/" target="_blank" rel="noreferrer">
                     View our magazine
                   </a>
                 </div>

@@ -7,7 +7,7 @@ import { Carousel } from "react-bootstrap";
 const OurTeam = () => {
   return (
     <div>
-      <div className="council-pic-info-sec">
+      <div className="council-pic-info-sec" style={{overflowX: "hidden"}} data-aos="slide-up" data-aos-duration="6000">
         <div className="council-pic-info shadow">
           {/* <img src={TE} alt="" className="council-img" /> */}
         

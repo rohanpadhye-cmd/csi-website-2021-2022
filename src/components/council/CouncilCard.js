@@ -4,11 +4,11 @@ import { FaGithub, FaInstagram, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 const CouncilCard = (props) => {
   return (
     <Col md={4} sm={6} xs={12} className="mb-5">
-      {/* <div class="card-wrapper" style={{ backgroundColor: `${props.bgcol}` }}> */}
-        <div class="card">
-          <div class="card-image">
+      {/* <div className="card-wrapper" style={{ backgroundColor: `${props.bgcol}` }}> */}
+        <div className="card">
+          <div className="card-image">
             <img src={props.imageUrl} alt="Council-img" />
-            <div class="social-icons">
+            <div className="social-icons">
               <ul>
                 <li><a href="https://www.instagram.com/atulkprajapati2000/"><FaInstagram /></a>
                 </li>
@@ -21,9 +21,9 @@ const CouncilCard = (props) => {
               </ul>
             </div>
           </div>
-          <div class="details">
+          <div className="details">
             <h4>{props.name}</h4>
-            <span class="job-title">{props.role}</span>
+            <span className="job-title">{props.role}</span>
           </div>
         </div>
     </Col>

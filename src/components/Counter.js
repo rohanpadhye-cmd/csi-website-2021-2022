@@ -28,14 +28,14 @@ const Counter = () => {
         <Col lg={4} sm={4}>
           <div className="counter-item"> 
           <TiGroup size="40"/>
-          <CountUp end={40} redraw={true}>
+          <CountUp end={300} redraw={true}>
             {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                     <h1><span ref={countUpRef} />+</h1>
                 </VisibilitySensor>
             )}
             </CountUp>
-            <p>Council</p>
+            <p>Members</p>
             </div>
      
         </Col>

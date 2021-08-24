@@ -73,7 +73,7 @@ import { facultyDetails, top3MemberDetails, beMemberDetails, top5MemberDetails, 
       return (
         <div>
           <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Incharges</h1>
-          <div class="map-team-cards faculty-card">
+          <div className="map-team-cards faculty-card">
           {facultyCards}
           </div>
         </div>

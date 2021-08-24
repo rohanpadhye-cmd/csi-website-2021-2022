@@ -21,7 +21,7 @@ const IconBar = () => {
         <>
             <a 
             href="https://www.instagram.com/csi_vesit/?hl=en"
-            target="_blank"><svg
+            target="_blank" rel="noreferrer"><svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-brand-instagram"
                 width="40"
@@ -42,7 +42,7 @@ const IconBar = () => {
             </svg></a>
             <a 
             href="mailto:csi.vesit@ves.ac.in"
-            target="_blank"><svg
+            target="_blank" rel="noreferrer"><svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-mail-forward"
                 width="40"
@@ -64,17 +64,17 @@ const IconBar = () => {
             </svg></a>
             <a 
             href="https://github.com/csi-ves-it/"
-            target="_blank">
+            target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" 
-                class="icon icon-tabler icon-tabler-brand-github" 
+                className="icon icon-tabler icon-tabler-brand-github" 
                 width="40" 
                 height="40" 
                 viewBox="0 0 24 24" 
-                stroke-width="1.5" 
+                strokeWidth="1.5" 
                 stroke="#363537" 
                 fill="#add8e6" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
+                strokeLinecap="round" 
+                strokeLinejoin="round"
                 style={iconStyle(gitHover)}
                 onPointerOver={() => setgitHover(true)}
                 onPointerOut={() => setgitHover(false)}>
@@ -83,17 +83,17 @@ const IconBar = () => {
             </svg></a>
             <a 
             href="https://www.linkedin.com/company/csi-vesit/"
-            target="_blank">
+            target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" 
-                class="icon icon-tabler icon-tabler-brand-linkedin" 
+                className="icon icon-tabler icon-tabler-brand-linkedin" 
                 width="40" 
                 height="40" 
                 viewBox="0 0 24 24" 
-                stroke-width="1.5" 
+                strokeWidth="1.5" 
                 stroke="#363537" 
                 fill="#add8e6" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
+                strokeLinecap="round" 
+                strokeLinejoin="round"
                 style={iconStyle(linkdHover)}
                 onPointerOver={() => setlinkdHover(true)}
                 onPointerOut={() => setlinkdHover(false)}>

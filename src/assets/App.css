@@ -1,6 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;400;600;700&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Secular+One&display=swap");
 
 /* Universal Style Begins*/
 
@@ -11,7 +11,8 @@
 }
 
 .content {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* font-family: "Raleway", sans-serif; */
   scroll-behavior: smooth;
 }
@@ -20,12 +21,12 @@ a {
   text-decoration: none !important;
 }
 
-.heading{
+.heading {
   font-size: 50px;
-  font-family: 'Secular One', sans-serif;
+  font-family: "Secular One", sans-serif;
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1100px) {
   .heading {
     font-size: 40px;
     text-align: center;
@@ -327,6 +328,10 @@ footer svg {
   color: floralwhite;
 }
 
+.title-container {
+  height: 425px;
+}
+
 .jumbotron {
   background-image: url("./back-img1.jpeg");
   background-size: cover;
@@ -369,14 +374,14 @@ footer svg {
   margin: auto;
 }
 
-.magazine{
+.magazine {
   width: 1100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap:15px;
-  margin:0 auto;
+  grid-gap: 15px;
+  margin: 0 auto;
 }
-.magazine .card{
+.magazine .card {
   position: relative;
   width: 300px;
   height: 400px;
@@ -384,10 +389,10 @@ footer svg {
   background: #fff;
   transition: 0.5s;
 }
-.magazine .card:hover{
-  box-shadow: 0 30px 50px rgba(0,0,0,.2);
+.magazine .card:hover {
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
 }
-.magazine .card .face{
+.magazine .card .face {
   position: absolute;
   top: 0;
   left: 0;
@@ -397,35 +402,35 @@ footer svg {
   justify-content: center;
   align-items: center;
 }
-.magazine .card .face.face1{
+.magazine .card .face.face1 {
   box-sizing: border-box;
   padding: 20px;
   text-align: center;
   background: #fff;
   color: #c3073f;
 }
-.magazine .card .face.face1 h2{
-  margin-top: 130px;
+.magazine .card .face.face1 h3 {
+  margin-top: 150px;
 }
 
-.magazine .card .face.face1 a{
+.magazine .card .face.face1 a {
   display: inline-block;
   padding: 5px 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
   color: #c3073f;
-  border:2px solid #c3073f;
+  border: 2px solid #c3073f;
   transition: 0.5s;
 }
-.magazine .card .face.face1 a:hover{
-  color:#fff;
+.magazine .card .face.face1 a:hover {
+  color: #fff;
   background: #c3073f;
 }
-.magazine .card .face.face2{
+.magazine .card .face.face2 {
   background: #c3073f;
   transition: 0.5s;
 }
-.magazine .card:hover .face.face2{
+.magazine .card:hover .face.face2 {
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -435,7 +440,7 @@ footer svg {
   background: transparent;
   /* border:2px solid #c3073f; */
 }
-.magazine .card .face.face2 img{
+.magazine .card .face.face2 img {
   margin: 0px;
   padding: 0;
   font-size: 10em;
@@ -444,8 +449,8 @@ footer svg {
   width: 298px;
   height: 398px;
 }
-.magazine .card:hover .face.face2 img{
-  color:#c3073f;
+.magazine .card:hover .face.face2 img {
+  color: #c3073f;
   font-size: 2em;
   width: 100px;
   height: 150px;
@@ -504,7 +509,11 @@ footer svg {
   /* Home Title Style Begins */
   .csi-vesit {
     font-size: 500% !important;
-    margin: 50vh auto !important;
+    margin: 30vh auto 50vh !important;
+  }
+
+  .title-container {
+    height: 300px;
   }
 
   /* Navbar Style Begins */
@@ -599,7 +608,6 @@ footer svg {
     height: 280px;
   }
 
-
   /* Home page changes */
   .jumbotron {
     padding-top: 1px;
@@ -632,7 +640,7 @@ footer svg {
     font-size: 0.7rem;
   }
   .upcoming-event p {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .upcoming-event h5 {
     font-size: 0.6rem;
@@ -641,7 +649,7 @@ footer svg {
 
 @media screen and (max-width: 426px) {
   .upcoming-event p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .upcoming-event h5 {
     font-size: 0.8rem;
@@ -805,7 +813,7 @@ footer svg {
   margin-right: 10%;
   font-family: "Noto Sans SC", sans-serif;
 }
-.ourMissionCard{
+.ourMissionCard {
   background-color: rgb(41, 93, 141);
 }
 
@@ -816,9 +824,4 @@ footer svg {
   100% {
     background-position: 400px 0;
   }
-
 }
-
-
-
-

@@ -11,7 +11,7 @@ const Loader = () => {
         setTimeout(() => {
             cycleAnimation();
         }, 1500)
-    }, [])
+    },[])
     
     const logoVariants = {
         bounceLogo: {
