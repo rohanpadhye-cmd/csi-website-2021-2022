@@ -194,7 +194,7 @@ export const teMemberDetails = [
   {
     imageUrl: imgs.te4,
     role: "Jr.Technical Officer",
-    name: "Aniket Dewnani",
+    name: "Aniket Devnani",
   },
   {
     imageUrl: imgs.te15,
