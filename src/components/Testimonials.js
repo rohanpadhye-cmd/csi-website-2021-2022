@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import "../assets/App.css"
+import "../assets/App.css";
+import D15A from "../assets/AboutPage/Testimonials/D15A.png";
+import D14 from "../assets/AboutPage/Testimonials/D14.png";
+import D15B from "../assets/AboutPage/Testimonials/D15B.png";
+import D12C from "../assets/AboutPage/Testimonials/D12C.png";
+import D12A from "../assets/AboutPage/Testimonials/D12A.png";
+import D12B from "../assets/AboutPage/Testimonials/D12B.png";
 export default class Testimonials extends Component {
   render() {
     return (
@@ -15,34 +21,85 @@ export default class Testimonials extends Component {
         data-aos="fade-left"
       >
         <div className="testimonialsBody">
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student1" />
+          <img src={D15B} alt="Student1" />
           <div className="myCarousel">
-            <h3 className="studentName darkFont">Student One</h3>
-            <h4 className="darkFont">-D10B</h4>
-            <p className="testimonials-p darkFont">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-            </p>
-          </div>
-        </div>
-
-        <div className="testimonialsBody" >
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student2" />
-          <div className="myCarousel">
-            <h3 className="studentName darkFont">Student Two</h3>
+            <h3 className="studentName darkFont">Raghuttam Parvatikar</h3>
             <h4 className="darkFont">-D15B</h4>
-            <p className="testimonials-p darkFont">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="testimonials-p darkFont" style={{paddingTop:'20px'}}>
+              CSI has introduced me to some important technical domains where it
+              could've taken me months to discover it by myself. I'm grateful to
+              each and every individual in CSI who has helped me.
             </p>
           </div>
         </div>
 
         <div className="testimonialsBody">
-          <img src="https://events.powercommunity.com/wp-content/uploads/2020/07/profile-placeholder.jpg" alt="Student3" />
+          <img src={D12C} alt="Student2" />
           <div className="myCarousel">
-            <h3 className="studentName darkFont">Student Three</h3>
-            <h4 className='darkFont'>-D20B</h4>
+            <h3 className="studentName darkFont">Sneha Karthik</h3>
+            <h4 className="darkFont">-D12C</h4>
             <p className="testimonials-p darkFont">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              CSI vesit workshops definitely helped me hone my skills. there
+              were a lot of concepts that I was able re learn at these short
+              workshops as they taught everything that was beneficial. The
+              instructors made sure that we learned the most in the shortest
+              span of time .
+            </p>
+          </div>
+        </div>
+
+        <div className="testimonialsBody">
+          <img src={D12A} alt="Student3" />
+          <div className="myCarousel">
+            <h3 className="studentName darkFont">Radhika Katiyara</h3>
+            <h4 className="darkFont">-D12A</h4>
+            <p className="testimonials-p darkFont">
+              CSI VESIT workshops helped me alot to improve my coding skills.
+              All sessions were amazing and understandable which were useful in
+              creating projects .I thank each and everyone of this council for
+              conducting such great sessions nd making me learn most of the
+              computer Languages in short span of time!
+            </p>
+          </div>
+        </div>
+
+        <div className="testimonialsBody">
+          <img src={D15A} alt="Student1" />
+          <div className="myCarousel">
+            <h3 className="studentName darkFont">Anish Inamdar</h3>
+            <h4 className="darkFont">-D15A</h4>
+            <p className="testimonials-p darkFont">
+              CSI has introduced me to various subdomains of CS which have
+              helped me understand my interests better. Being member of CSI has
+              been a fun experience where I also got to learn a lot through it's
+              workshops and events. Must recommend to everyone who wants to have
+              fun learning.
+            </p>
+          </div>
+        </div>
+
+        <div className="testimonialsBody">
+          <img src={D14} alt="Student1" />
+          <div className="myCarousel">
+            <h3 className="studentName darkFont">Aayushi Mishra</h3>
+            <h4 className="darkFont">-D14A</h4>
+            <p className="testimonials-p darkFont">
+              CSI covered a lot of relevant and useful topics. This gave me an
+              introduction to the topics which helped me when I delved further
+              into them. In particular, I liked the Github, Python and Bootstrap
+              workshops.
+            </p>
+          </div>
+        </div>
+
+
+        <div className="testimonialsBody">
+          <img src={D12B} alt="Student1" />
+          <div className="myCarousel">
+            <h3 className="studentName darkFont">Prithviraj Chavan</h3>
+            <h4 className="darkFont">-D12B</h4>
+            <p className="testimonials-p darkFont" style={{paddingTop:'20px'}}>
+            CSI has helped me discover many technical domains. All the events were great and I personally had lots of fun taking part in them. I thank all the CSI members who've helped me
             </p>
           </div>
         </div>
