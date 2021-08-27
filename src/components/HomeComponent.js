@@ -8,18 +8,12 @@ import {
 import { useState } from "react";
 import VES from "../assets/back-img1.jpeg";
 import { Parallax } from "react-parallax";
-// import groupImg from "../assets/group-img.jpg";
 import magazine_poster from "../assets/magazine_poster.JPG";
 import poster from "../assets/poster.jpeg";
 import { motion } from "framer-motion";
-// import QR from "../assets/QR_code.jpg";
-// import { Carousel } from "react-responsive-carousel";
 import Counter from "./Counter";
 import "../assets/HomePage/HomeStyle.css";
-// import BE from "../assets/HomePage/BE.jpg";
-// import SE from "../assets/HomePage/SE.jpg";
-// import TE from "../assets/HomePage/TE.jpg";
-import OurTeam from "./OurTeam"
+import { OurTeam } from "./home/OurTeam"
 // const containerVariant = {
 //   hidden: {
 //     opacity: 0,
@@ -103,24 +97,7 @@ const HomeComponent = () => {
 
       <Container fluid className="mt-5">
         <Row>
-          {/* Styled Card 1 Begins */}
-
-          {/* <div>
-              <Col md={6}>
-                <Card className="council-pic-info" data-aos="fade-right" data-aos-duration="1500">
-                  <Card.Img src={groupImg}/>
-                </Card>
-              </Col>
-            <div className="mx-auto mt-3 px-5" data-aos="fade-left" data-aos-duration="1500">
-              <h3 className="heading">Our Team</h3>
-              <p>
-                  Whether it comes to conducting events and workshops or guiding our fellow peers to attain the best of our given knowledge, we at CSI-VESIT have always been dedicated to work for the better good of the society and always will continue to do so as a family. Our council is handpicked from a group of intellectual minds and has always been contributing significantly in various technical and non technical fields for the betterment of our society.
-              </p>
-            </div>
-            </div> */}
-        <OurTeam/>
-
-          {/* Styled Card 1 Ends */}
+          <OurTeam/>
         </Row>
       </Container>
 

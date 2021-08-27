@@ -17,6 +17,7 @@
   text-align: justify;
   font-size: 1.5vw;
   flex: auto;
+  line-height: 40px;
 }
 
 .council-pic-info-txt h1 {
@@ -41,7 +42,7 @@
   border-bottom-left-radius: 15px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .council-pic-info {
     flex-direction: column;
     width: 75%;
@@ -50,7 +51,8 @@
   .council-pic-info-txt {
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
+    line-height: 22px;
   }
 
   .council-img {

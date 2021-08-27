@@ -329,7 +329,7 @@ footer svg {
 }
 
 .title-container {
-  height: 425px;
+  height: 65vh;
 }
 
 .jumbotron {
@@ -511,11 +511,7 @@ footer svg {
     font-size: 500% !important;
     margin: 30vh auto 50vh !important;
   }
-
-  .title-container {
-    height: 300px;
-  }
-
+  
   /* Navbar Style Begins */
 
   .tgl-btn {

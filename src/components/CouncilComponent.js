@@ -26,6 +26,7 @@ import { facultyDetails, top3MemberDetails, beMemberDetails, top5MemberDetails, 
         />
     )
   });
+
   let beMemberCards = beMemberDetails.map((info, index) => {
       return (
           <CouncilCard
@@ -47,6 +48,7 @@ import { facultyDetails, top3MemberDetails, beMemberDetails, top5MemberDetails, 
           />
       )
   });
+
   let teMemberCards = teMemberDetails.map((info, index) => {
       return (
           <CouncilCard
@@ -72,9 +74,8 @@ import { facultyDetails, top3MemberDetails, beMemberDetails, top5MemberDetails, 
   const Faculty = () => {
       return (
         <div>
-          <h1 className="mb-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Incharges</h1>
           <div className="map-team-cards faculty-card">
-          {facultyCards}
+            {facultyCards}
           </div>
         </div>
       );
@@ -135,18 +136,19 @@ const CouncilComponent = () => {
 
   return (
     <Container>
+      <h2 className="mt-4 mb-5 heading" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Faculty Incharges</h2>
       <Carousel
         className="mt-4"
         data-aos="fade-up"
         data-aos-easing="linear"
-        data-aos-duration="1000"
+        data-aos-duration="700"
         indicators={false}
         controls={false}
       >
         <Faculty />
       </Carousel>
 
-      <Row className="justify-content-center" style={{marginBottom:"50px"}} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+      <Row className="justify-content-center" style={{ marginBottom: "50px" }} data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
         <Button
           className={`ml-2 mt-5 w-25 p-2  ${index === 0 ? "contact-btn " : null} `}
           onClick={() => setIndex(0)}
@@ -185,5 +187,4 @@ const CouncilComponent = () => {
   );
 };
 
- 
 export default CouncilComponent;
