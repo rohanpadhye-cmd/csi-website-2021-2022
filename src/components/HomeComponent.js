@@ -172,10 +172,8 @@ const HomeComponent = () => {
         >
           Our Magazine
         </h1>
-        <Row className="m-0" style={{padding:"0 5%"}}>
-  
-         <Col lg={5} md={12}>
-          <div className="magazine" style={{width:"0px"}} data-aos="fade-down" data-aos-duration="6000">
+        <Row className="m-0">
+          <div className="magazine" data-aos="fade-down" data-aos-duration="6000">
             <div className="card">
               <div className="face face1">
                 <div className="content">
@@ -193,19 +191,6 @@ const HomeComponent = () => {
               </div>
             </div>
           </div>
-          </Col>
-          <Col lg={7} md={12} style={{textAlign:"left",fontSize:"1.5rem",margin:"auto 0"}}>
-            <div className="magazine-text">
-               How would it be to refine one's proficiency and live through the CSI-VESIT events held?
-               <br/>
-               That would be pretty epic, right?
-               <br/><br/>
-               Well, this is entirely possible, thanks to our annual magazine REDUX. For us REDUX is our goal of diversifying knowledge, present it innovatively. REDUX includes glimpse events and workshops held throughout the year, brilliant and intellectual articles and about our CSI council.
-               <br/><br/>
-               Sound good? Let’s get to it.
-            </div>
-          </Col>
-
         </Row>
 
         {/* Styled Card 3 Ends */}
