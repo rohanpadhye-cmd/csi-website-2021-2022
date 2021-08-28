@@ -7,6 +7,7 @@ export const lightTheme = {
     styledCouncilCard: '#eeffee',
     carouselCardBody: 'rgb(41, 93, 141)',
     carouselCardText: '#f0ffff',
+    thumb: 'rgb(41, 93, 141)',
 }
 export const darkTheme = {
     body: 'rgb(37, 36, 36)',
@@ -17,4 +18,5 @@ export const darkTheme = {
     styledCouncilCard: '#333',
     carouselCardBody: 'rgb(41, 93, 141)',
     carouselCardText: '#f0ffff',
+    thumb: '#bce3f0',
 }

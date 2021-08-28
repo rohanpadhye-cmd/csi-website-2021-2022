@@ -125,4 +125,17 @@ export const GlobalStyles = createGlobalStyle`
     color: ${'black'} !important;
   }
 
+  .thumbs > .thumb:hover {
+    border-color: ${({ theme }) => theme.thumb};
+  }
+
+  .carousel .control-dots .dot {
+    background-color: #d4f5f5 !important;
+  }
+
+  .carousel .thumb.selected {
+    border-color: ${({ theme }) => theme.thumb};
+    background-color: inherit;
+  }
+
 `

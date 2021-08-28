@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Row , Container, Button } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import WorkCardMap from './work/WorkCardMap';
 import db from '../firebase/FirestoreConnection';
 import magazine_poster_2021 from "../assets/magazine_poster.JPG"
@@ -79,7 +79,7 @@ const WorkComponent = () => {
         setCurrentCollabs(currentCollabs => [...currentCollabs, data]);
       });
     });
-  });
+  }, []);
   
   return(
     // <motion.div
@@ -112,28 +112,17 @@ const WorkComponent = () => {
           {currentTab === "Workshops" && <WorkCardMap infoArray={currentWorkshops} />}
           {currentTab === "Events" && <WorkCardMap infoArray={currentEvents} />}
           {currentTab === "Collabs" && <WorkCardMap infoArray={currentCollabs} />}
-          {currentTab === "Magazines" && <> 
-          {/* <div>
-          <Col lg={4}> */}
-          {/* <Col lg={12}> */}
-          <Row style={{margin:"auto"}}>
-          <Magazine link="https://redux-magazines.vercel.app/" img={magazine_poster_2021} title="Tomorrowland" content="An insight into a vastly developed technological world with some of our bright minds highlighting their point of views in ways like never before." />
-          {/* </Col>
-          <Col lg={4}> */}
-          <Magazine link="https://redux-magazines.vercel.app/redux2020.html" img={magazine_poster_2020} title="Mumbai" content="A delightful look at our develpoing technological era filled with new found interests and innovations topped up with the theme of our beloved city." />
-      
-          {/* </Col>
-          <Col lg={4}> */}
-          <Magazine link="https://redux-magazines.vercel.app/redux2019.html" img={magazine_poster_2019} title="Cynosure" content="Providing a very unique insight at the first incarnation of various types of technological boons we've all been relishing today. Also displaying the evolution of many technical wonders from their first invention." />
-          </Row>
-          {/* </Col> */}
-          {/* </Col> */}
-         
-         
-         
-          
-          {/* </div> */}
-          
+          {currentTab === "Magazines" && 
+          <>
+            <Col md={{span: 3, offset: 1}}>
+              <Magazine link="https://redux-magazines.vercel.app/" img={magazine_poster_2021} title="Tomorrowland" content="An insight into a vastly developed technological world with some of our bright minds highlighting their point of views in ways like never before." />
+            </Col>
+            <Col md={{span: 3}} className="ml-md-5 pl-md-5">
+              <Magazine link="https://redux-magazines.vercel.app/redux2020.html" img={magazine_poster_2020} title="Mumbai" content="A delightful look at our develpoing technological era filled with new found interests and innovations topped up with the theme of our beloved city." />
+            </Col>
+            <Col md={{span: 3}} className="ml-md-5 pl-md-5">
+              <Magazine link="https://redux-magazines.vercel.app/redux2019.html" img={magazine_poster_2019} title="Cynosure" content="Providing a very unique insight at the first incarnation of various types of technological boons we've all been relishing today. Also displaying the evolution of many technical wonders from their first invention." />
+            </Col>
           </>}
         </Row>
       </Container>
