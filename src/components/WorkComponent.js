@@ -32,7 +32,7 @@ import magazine_poster_2019 from "../assets/csi2019magz.jpg"
 const Magazine = ({link,img,title,content}) => {
   return(
     
-          <div className="magazine" style={{width:'unset'}}>
+          <div className="magazine-workshop" style={{width:'unset'}}>
                     <div className="card">
                       <div className="face face1">
                         <div className="content">
@@ -45,7 +45,7 @@ const Magazine = ({link,img,title,content}) => {
                         <img alt="magazine's poster" src={img}/>
                       </div>
                     </div>
-                  </div>
+          </div>
     
   )
 }
@@ -62,7 +62,7 @@ const WorkComponent = () => {
       querySnapshot.forEach(workshop => {
         let data = workshop.data();
         setCurrentWorkshops(currentWorkshops => [...currentWorkshops, data]);
-        console.log(currentWorkshops);
+        // console.log(currentWorkshops);
       });
     });
     
@@ -114,13 +114,13 @@ const WorkComponent = () => {
           {currentTab === "Collabs" && <WorkCardMap infoArray={currentCollabs} />}
           {currentTab === "Magazines" && 
           <>
-            <Col md={{span: 3, offset: 1}}>
+            <Col lg={{span: 3, offset: 1}} md={{span:12}} className="">
               <Magazine link="https://redux-magazines.vercel.app/" img={magazine_poster_2021} title="Tomorrowland" content="An insight into a vastly developed technological world with some of our bright minds highlighting their point of views in ways like never before." />
             </Col>
-            <Col md={{span: 3}} className="ml-md-5 pl-md-5">
+            <Col lg={{span: 3}} md={{span:12}} className="ml-lg-5 pl-lg-5">
               <Magazine link="https://redux-magazines.vercel.app/redux2020.html" img={magazine_poster_2020} title="Mumbai" content="A delightful look at our develpoing technological era filled with new found interests and innovations topped up with the theme of our beloved city." />
             </Col>
-            <Col md={{span: 3}} className="ml-md-5 pl-md-5">
+            <Col lg={{span: 3}} md={{span:12}} className="ml-lg-5 pl-lg-5">
               <Magazine link="https://redux-magazines.vercel.app/redux2019.html" img={magazine_poster_2019} title="Cynosure" content="Providing a very unique insight at the first incarnation of various types of technological boons we've all been relishing today. Also displaying the evolution of many technical wonders from their first invention." />
             </Col>
           </>}

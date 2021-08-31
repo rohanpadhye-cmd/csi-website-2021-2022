@@ -72,7 +72,7 @@ export const beMemberDetails = [
     name: "Abhishek Joshi",
   },
   {
-    imageUrl: imgs.be7,
+    imageUrl: imgs.be9,
     role: "Sr.Public Relations Officer",
     name: "Arya Paryani",
   },
@@ -194,7 +194,7 @@ export const teMemberDetails = [
   {
     imageUrl: imgs.te4,
     role: "Jr.Technical Officer",
-    name: "Aniket Devnani",
+    name: "Aniket Dewnani",
   },
   {
     imageUrl: imgs.te15,
