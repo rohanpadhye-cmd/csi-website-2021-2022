@@ -1,19 +1,14 @@
-import {
-  Container,
-  Card,
-  Button,
-  Col,
-  Row
-} from "react-bootstrap";
+import { Container, Card, Button, Col, Row } from "react-bootstrap";
 import { useState } from "react";
 import VES from "../assets/back-img1.jpeg";
+import CLG from "../assets/Jumbotron/clg.JPG"
 import { Parallax } from "react-parallax";
 import magazine_poster from "../assets/magazine_poster.JPG";
 import poster from "../assets/poster.jpeg";
 import { motion } from "framer-motion";
 import Counter from "./Counter";
 import "../assets/HomePage/HomeStyle.css";
-import { OurTeam } from "./home/OurTeam"
+import { OurTeam } from "./home/OurTeam";
 // const containerVariant = {
 //   hidden: {
 //     opacity: 0,
@@ -80,7 +75,7 @@ const HomeComponent = () => {
         data-aos="fade-in"
         data-aos-duration="2000"
       >
-        <Parallax bgImage={VES} strength={500}>
+        <Parallax bgImage={CLG} strength={500}>
           <div className="title-container">
             <motion.h1
               drag
@@ -97,7 +92,7 @@ const HomeComponent = () => {
 
       <Container fluid className="mt-5">
         <Row>
-          <OurTeam/>
+          <OurTeam />
         </Row>
       </Container>
 
@@ -106,16 +101,12 @@ const HomeComponent = () => {
       <Container fluid className="mt-5">
         {/* Styled Card 2 Begins */}
 
-        <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading">
-          Upcoming Event
-        </h1>
-        <Row className="mt-5" style={{overflowX: "hidden"}}>
-          <Col md={6} data-aos="slide-right" data-aos-duration="9000">
-            <Card className="council-pic-info">
-              <Card.Img src={poster} />
-            </Card>
-          </Col>
-          <Col md={6} data-aos="slide-left" data-aos-duration="9000">
+        <div className="upcomingEvent-sec">
+          <h1 data-aos="zoom-in" data-aos-duration="9000" className="heading ec-h1" >
+            Upcoming Event
+          </h1>
+          <div className="upcomingEventContent about-content">
+            <img src={poster} alt="" className />
             <div className="mx-auto mt-3 px-3 px-md-5 upcoming-event">
               <h3>About Event</h3>
               <p style={{ textAlign: "justify" }}>
@@ -136,337 +127,113 @@ const HomeComponent = () => {
                 </strong>
               </h5>
             </div>
-          </Col>
-        </Row>
-        <div
-          className="registration-buttons"
-          data-aos="fade-down"
-          data-aos-duration="6000"
-        >
-          <Row style={{ textAlign: "center" }}>
-            <Col md={6} xs={12}>
-              <a target="_blank" href="https://forms.gle/XcSa8k2d1zZyMwkZ7" rel="noreferrer">
-                <Button className="registration-button" size="lg">
-                  Membership Form
-                </Button>
-              </a>
-            </Col>
-            <Col md={6} xs={12}>
-              <a target="_blank" href="https://forms.gle/2Y9Dc9QdEj7xMTGG9" rel="noreferrer">
-                <Button className="registration-button" size="lg">
-                  Register for {buttonText}
-                </Button>
-              </a>
-            </Col>
-          </Row>
-        </div>
+          </div>
 
+          <div
+            className="registration-buttons"
+            data-aos="fade-down"
+            data-aos-duration="6000"
+          >
+            <Row style={{ textAlign: "center" }}>
+              <Col md={6} xs={12}>
+                <a
+                  target="_blank"
+                  href="https://forms.gle/XcSa8k2d1zZyMwkZ7"
+                  rel="noreferrer"
+                >
+                  <Button className="registration-button" size="lg">
+                    Membership Form
+                  </Button>
+                </a>
+              </Col>
+              <Col md={6} xs={12}>
+                <a
+                  target="_blank"
+                  href="https://forms.gle/2Y9Dc9QdEj7xMTGG9"
+                  rel="noreferrer"
+                >
+                  <Button className="registration-button" size="lg">
+                    Register for {buttonText}
+                  </Button>
+                </a>
+              </Col>
+            </Row>
+          </div>
+        </div>
         {/* Styled Card 2 Ends */}
 
         {/* Styled Card 3 Begins */}
 
+      <div className="ourMag-Sec">
+
         <h1
           data-aos="zoom-in"
           data-aos-duration="6000"
-          className="heading mt-5"
+          className="heading mt-5 ec-h1"
         >
           Our Magazine
         </h1>
-        <Row className="m-0" style={{padding:"0 5%"}}>
-  
-         <Col lg={5} md={12}>
-          <div className="magazine" style={{width:"0px"}} data-aos="fade-down" data-aos-duration="6000">
-            <div className="card">
-              <div className="face face1">
-                <div className="content">
-                  <h3>Redux - Tomorrowland</h3>
-                  <p className="mb-0">
-                    An insight into a vastly developed technological world with some of our bright minds highlighting their point of views in ways like never before.{" "}
-                  </p>
-                  <a href="https://redux-magazines.vercel.app/" target="_blank" rel="noreferrer">
-                    View our magazine
-                  </a>
+          <Row className="m-0" style={{ padding: "0 5%" }}>
+            <Col lg={5} md={12}>
+            <div
+              className="magazine"
+              style={{ width: "0px" }}
+              data-aos="fade-down"
+              data-aos-duration="6000"
+            >
+
+              {/* CARD  */}
+              <div className="card">
+                <div className="face face1">
+                  <div className="content">
+                    <h3>Redux - Tomorrowland</h3>
+                    <p className="mb-0">
+                      An insight into a vastly developed technological world
+                      with some of our bright minds highlighting their point of
+                      views in ways like never before.{" "}
+                    </p>
+                    <a
+                      href="https://redux-magazines.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View our magazine
+                    </a>
+                  </div>
+                </div>
+                <div className="face face2">
+                  <img alt="magazine's poster" src={magazine_poster} />
                 </div>
               </div>
-              <div className="face face2">
-                <img alt="magazine's poster" src={magazine_poster} />
-              </div>
             </div>
-          </div>
           </Col>
-          <Col lg={7} md={12} style={{textAlign:"left",fontSize:"1.5rem",margin:"auto 0"}}>
+          <Col
+            lg={7}
+            md={12}
+            style={{ textAlign: "left", fontSize: "1.5rem", margin: "auto 0" }}
+          >
             <div className="magazine-text">
-               How would it be to refine one's proficiency and live through the CSI-VESIT events held?
-               <br/>
-               That would be pretty epic, right?
-               <br/><br/>
-               Well, this is entirely possible, thanks to our annual magazine REDUX. For us REDUX is our goal of diversifying knowledge, present it innovatively. REDUX includes glimpse events and workshops held throughout the year, brilliant and intellectual articles and about our CSI council.
-               <br/><br/>
-               Sound good? Let’s get to it.
+              How would it be to refine one's proficiency and live through the
+              CSI-VESIT events held?
+              <br />
+              That would be pretty epic, right?
+              <br />
+              <br />
+              Well, this is entirely possible, thanks to our annual magazine
+              REDUX. For us REDUX is our goal of diversifying knowledge, present
+              it innovatively. REDUX includes glimpse events and workshops held
+              throughout the year, brilliant and intellectual articles and about
+              our CSI council.
+              <br />
+              <br />
+              Sound good? Let’s get to it.
             </div>
           </Col>
-
         </Row>
+        </div>
 
         {/* Styled Card 3 Ends */}
       </Container>
-
-      {/* <Row className="registrations">
-          <Col md={6} className="p-0">
-            <Card.Img className="poster" src={poster}/>
-          </Col>
-          <Col md={6} style={{padding: "11% 0"}}>
-            {/* <Card.Body> */}
-
-      {/* 
-              <Modal
-                size="lg"
-                show={showWorkshopModal}
-                onHide={handleWorkshopClose}            
-              >
-                {!isWorkshopSubmitted ? 
-                  <>
-                  <Modal.Header closeButton>
-                    <Modal.Title>
-                      CSI-VESIT PHP & LARAVEL WORKSHOP <br />
-                     <p style={{fontSize:"15px"}}>CSI-VESIT presents PHP & LARAVEL workshop which will enable users to build robust and swift web applications having a speed improvement of about 700% as compared to other websites!<br />
-                      <br />
-                      Date : 20th and 21st February, 2021<br />
-                      Time : 11am to 1pm<br />
-                      Platform : Google Meet<br />
-                      <br />
-                      NOTE: This workshop is exclusively for CSI members.</p>
-                    </Modal.Title>
-                  </Modal.Header>
-
-                    <Modal.Body>
-                      <Form onSubmit={handleWorkshopSubmit}> 
-
-                        <Form.Row>
-                          <Form.Group as={Col} xs="6" controlId="FullName" md={{span:4}}>
-                            <Form.Label><h5>Full Name</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Full Name"
-                            required />
-                          </Form.Group>
-                        </Form.Row>
-
-                        <Form.Row>
-                          <Form.Group as={Col} xs="6" controlId="Class" md={{span:4}}>
-                            <Form.Label><h5>Class</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Class"
-                            required />
-                          </Form.Group>
-
-                          <Form.Group as={Col} xs="6" controlId="ContactNo" md={{span:4,offset:1}}>
-                            <Form.Label><h5>Contact No.</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Contact No."
-                            required />
-                          </Form.Group>                          
-                        </Form.Row>
-
-                        <Form.Row >
-                          <Form.Group as={Col} as={Row} xs="6" controlId="CSIMember">
-                            <Form.Label className="ml-1" column lg="6" xs="6"><h5>CSI Member?</h5></Form.Label>
-                            <Col xs="6">
-                            <Form.Control as="select" defaultValue="Choose..." onChange={CSIMemberDropdown}>
-                              <option>Yes</option>
-                              <option>No</option>
-                            </Form.Control>
-                            </Col>
-                          </Form.Group>
-                        </Form.Row>
-
-                        <hr></hr>
-
-                        <Form.Row>
-                          <Form.Group controlId="CSIMember">
-                            <Button variant="primary" type="submit" >Submit</Button>
-                            <Button className="ml-3" variant="secondary" onClick={handleWorkshopClose}>Close</Button>
-                          </Form.Group>
-                        </Form.Row>
-
-                      </Form>
-                    </Modal.Body>
-                  </> : 
-                  <>
-                    <Modal.Header closeButton>
-                      CSI-VESIT PHP & LARAVEL WORKSHOP 
-                    </Modal.Header>
-
-                    <Modal.Body>
-                      {isCSIMember === 'Yes' ? <h5>You have successfully registered for the workshop.</h5> : <h5>Please fill the Membership form and then you can register for this workshop </h5>}
-                      <hr></hr>
-                      <Button variant="secondary" onClick={handleWorkshopClose}>Close</Button>
-                    </Modal.Body> 
-                  </>
-                }
-              </Modal> */}
-      {/* </Card.Body>
-          </Col>
-        </Row>  */}
-
-      {/* Modal for Membership Form */}
-      {/* <Modal className="registration-modal" show={showMembershipModal} onHide={handleClose} animation={true} size="lg">
-      { !membershipTaken? 
-       <>
-        <Modal.Header closeButton>
-                <Modal.Title>
-                          CSI-VESIT MEMBERSHIP FORM<br/>
-                          <p style={{fontSize:"15px"}}>For any Queries ,CONTACT:<br/>
-                          Fayzaan Qureshi ( Co-Chairperson) - 9819186523<br/>
-                          Saloni Ingle (Jr. Treasurer) - 9370550921<br/>
-                          Saurav Telge(Operations Secretary) - 9821505562
-                          <br/><br/>
-                          NOTE : There will not be a Resubmit options so Please fill the Form correctly
-                          <br/><br/>
-                          The name and photo associated with your Google account will be recorded when you upload files and submit this form.</p>
-                </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-                    
-            <Form onSubmit={handleSubmit}>
-                  <Form.Row>
-                     <Form.Group as={Col} xs="6" md={{span:4}}>
-                         <Form.Label><h5>Email Address</h5></Form.Label>
-                         <Form.Control 
-                         type="email" 
-                         placeholder="Enter Email Address" 
-                         required/>
-                      </Form.Group>
-
-                      <Form.Group as={Col} xs="6" controlId="FirstName" md={{span:4,offset:1}}>
-                            <Form.Label><h5>Full Name</h5></Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Your Full Name"
-                            required />
-                      </Form.Group>
-                  </Form.Row>
-
-                      <Form.Row>
-                        <Form.Group as={Col} md="4" xs="6" md={{span:3}}>
-                              <Form.Label className="form-label"><h5>Date Of Birth</h5></Form.Label>
-                              <Form.Control type="date" name="dob" placeholder="Date Of Birth" required></Form.Control>
-                        </Form.Group>
-                       <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
-                               <Form.Label className="form-label"><h5>Class</h5></Form.Label>
-                               <Form.Control as="select" defaultValue="" required>
-                                 <option>D6</option>
-                                 <option>D7A</option>
-                                 <option>D7B</option>
-                                 <option>D7C</option>
-                                 <option>D7A</option>
-                                 <option>D8</option>
-                                 <option>D9A</option>
-                                 <option>D9B</option>
-                                 <option>D10A</option>
-                                 <option>D10B</option>
-                                 <option>MCA</option>
-                               </Form.Control>
-                        </Form.Group>
-                        <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
-                          <Form.Label className="form-label"><h5>Gender</h5></Form.Label>
-                          <Form.Control as="select" defaultValue="" required>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
-                          </Form.Control>
-                        </Form.Group>
-
-                     
-                        <Form.Group as={Col} md="4" xs="6" md={{span:3}}>  
-                           <Form.Label className="form-label"><h5>Contact No</h5></Form.Label>
-                            <Form.Control 
-                            type="text" 
-                            placeholder="Your Contact No." 
-                            required/>
-                        </Form.Group>
-
-                        <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
-                           <Form.Label className="form-label"><h5>Degree</h5></Form.Label>
-                           <Form.Control as="select" 
-                           defaultValue="" 
-                           required>
-                             <option>BE</option>
-                             <option>MCA</option>
-                           </Form.Control>
-                        </Form.Group>
-
-                       <Form.Group as={Col} md="4" xs="6" md={{span:3,offset:1}}>
-                         <Form.Label className="form-label"><h5>Year</h5></Form.Label>
-                         <Form.Control 
-                         as="select" 
-                         defaultValue="" 
-                         required>
-                           <option>SE</option>
-                           <option>TE</option>
-                           <option>FE</option>
-                         </Form.Control>
-                       </Form.Group>
-                         
-                    </Form.Row>
-                      
-                    <Form.Label className="form-label"><h5>Payment Method(To above mobile number only i.e 9370550921)</h5></Form.Label>   
-                    <Form.Row>  
-                      <Form.Group as={Col} xs="4">
-                         
-                         <Form.Control as="select" defaultValue="">
-                         <option>Google Pay</option>
-                         <option>Paytm</option>
-                         <option>PhonePe</option>
-                         <option>Other</option>
-                         </Form.Control>
-                         <Form.Text className="text-muted">
-                         Write for csi membership_Name_class in what's this for of gpay
-                         </Form.Text>
-                         
-                      </Form.Group>
-                    </Form.Row>
-                    
-
-                      <Form.Group>
-                         <Form.Label className="form-label"><h5>Use this QR code for PhonePe ,Patym or any other UPI Payment options</h5></Form.Label>
-                         <Row>
-                            <Col>
-                            <img className="mx-auto" src={QR} style={{display:"block"}} alt="QR Code"/>
-                            </Col>
-                         </Row>
-                      </Form.Group>  
-
-                      <Form.Group>
-                         <Form.File className="position-relative" required name="file" label="Screenshots/Receipt of Payment completed " feedbackTooltip/>
-                      </Form.Group>
-                      <hr/>
-                      <Form.Row>
-                          <Form.Group>
-                            <Button variant="primary" type="submit">Submit</Button>
-                            <Button className="ml-3" variant="secondary" onClick={handleClose}>Close</Button>
-                          </Form.Group>
-                      </Form.Row>
-
-                </Form>
-        </Modal.Body>
-                  
-                </>  :
-                <>
-                <Modal.Header closeButton>
-                      CSI-VESIT MEMBERSHIP FORM
-                </Modal.Header>
-                <Modal.Body>
-                      <h5>Thanks For Submitting Form</h5>
-                      <hr/>
-                      <Button variant="secondary" onClick={handleClose}>Close</Button>
-                </Modal.Body>
-                       
-                    
-                </> }
-          </Modal>  */}
     </div>
   );
 };

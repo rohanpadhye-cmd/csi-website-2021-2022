@@ -8,7 +8,10 @@ import workshop from "../assets/Workshop.jpg";
 
 const AboutPage = () => (
 <div className='aboutpage' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+  
   <div className="px-md-5 py-md-5 mx-3">
+
+    
     <div className="about-section">
       <div className="about-content shadow">
         <div className="about-text">

@@ -137,5 +137,13 @@ export const GlobalStyles = createGlobalStyle`
     border-color: ${({ theme }) => theme.thumb};
     background-color: inherit;
   }
+  .upcomingEvent-sec{
+    background-color: ${({ theme }) => theme.styledCard} !important;
+
+  }
+
+  .ourMag-Sec{
+    background-color: ${({ theme }) => theme.styledCard} !important;
+  }
 
 `
